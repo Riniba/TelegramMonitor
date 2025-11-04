@@ -56,7 +56,7 @@ public sealed class TelegramClientManager : ISingleton, IAsyncDisposable
         var result = await _client.Login(firstArg);
 
         while (result is "name")
-            result = await _client.Login("by riniba");
+            result = await _client.Login("TelegramMonitor");
 
         return result switch
         {
@@ -104,7 +104,7 @@ public sealed class TelegramClientManager : ISingleton, IAsyncDisposable
         var result = await _client.Login(phone);
 
         while (result is "name")
-            result = await _client.Login("by riniba");
+            result = await _client.Login("TelegramMonitor");
 
         return result switch
         {

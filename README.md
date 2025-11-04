@@ -1,10 +1,3 @@
-### AD -- 机场推广
-
-**机场 - 老百姓自己的机场**：[https://老百姓自己的机场.com](https://老百姓自己的机场.com)  
-**机场 - 人民机场**：[https://renminjichang.com](https://renminjichang.com)  
-**百姓机场为百姓，人民机场为人民** 
-
-
 ## 账号与频道准备
 - 准备一个 Telegram 账号
 - 该账号会监听当前账号下面所有的消息，包括群组/频道/私聊消息。
@@ -21,9 +14,6 @@
 
 ## 其他说明
 - 本软件免费无毒，可在虚拟机中运行进行长期挂机。
-- Telegram 联系作者：https://t.me/Riniba
-- Telegram 交流群：https://t.me/RinibaGroup
-- Telegram 发布频道：https://t.me/RinibaChannel
 
   
 
