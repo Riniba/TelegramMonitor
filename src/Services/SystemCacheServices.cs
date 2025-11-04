@@ -2,8 +2,6 @@ namespace TelegramMonitor;
 
 public class SystemCacheServices : ISingleton
 {
-    private const string AD_KEY = "telegramMonitor_advertisement";
-
     private readonly ISqlSugarClient _db;
     private readonly IMemoryCache _cache;
 
@@ -69,11 +67,5 @@ public class SystemCacheServices : ISingleton
         await _db.Deleteable<KeywordConfig>().In(idArr).ExecuteCommandAsync();
     }
 
-    public void SetAdvertisement(List<string> ads) =>
-        _cache.Set(AD_KEY, ads, TimeSpan.FromHours(1));
-
-    public string GetAdvertisement() =>
-        (_cache.Get<List<string>>(AD_KEY) is { Count: > 0 } ads)
-            ? ads[Random.Shared.Next(ads.Count)]
-            : string.Empty;
+    
 }

@@ -513,7 +513,7 @@ public sealed class TelegramClientManager : ISingleton, IAsyncDisposable
 
         var msgContent = message.FormatForMonitor(
             sendEntity,
-            finalKeywords, _systemCacheServices.GetAdvertisement());
+            finalKeywords, string.Empty);
 
         await SendMonitorMessageAsync(message, msgContent);
     }
