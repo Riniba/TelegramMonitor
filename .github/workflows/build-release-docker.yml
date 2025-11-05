@@ -129,7 +129,7 @@ jobs:
           docker buildx build \
             --platform linux/amd64,linux/arm64 \
             --build-arg BIN_NAME=TelegramMonitor \
-            --label "org.opencontainers.image.source=https://github.com/${{ github.repository }}" \
+            
             --label "org.opencontainers.image.revision=${{ github.sha }}" \
             --label "org.opencontainers.image.created=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" \
             --provenance=false \
@@ -145,7 +145,7 @@ jobs:
           docker buildx imagetools inspect $IMAGE_NAME_LC:${{ steps.ver.outputs.VERSION }}
 
   release:
-    if: github.repository == 'Riniba/TelegramMonitor'
+    if: github.repository != ''
     needs: [prepare, build]
     runs-on: ubuntu-latest
     steps:

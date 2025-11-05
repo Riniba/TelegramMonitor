@@ -81,6 +81,46 @@ async function api(url, options) {
 }// DOM元素引用
 const tbody = document.getElementById('kwBody');
 
+// 单个添加表单元素
+const sContent = document.getElementById('sContent');
+const sType = document.getElementById('sType');
+const sAction = document.getElementById('sAction');
+const sCase = document.getElementById('sCase');
+const sBold = document.getElementById('sBold');
+const sItalic = document.getElementById('sItalic');
+const sUnder = document.getElementById('sUnder');
+const sStrike = document.getElementById('sStrike');
+const sQuote = document.getElementById('sQuote');
+const sMono = document.getElementById('sMono');
+const sSpoil = document.getElementById('sSpoil');
+
+// 文本批量添加表单元素
+const txtKeywords = document.getElementById('txtKeywords');
+const tType = document.getElementById('tType');
+const tAction = document.getElementById('tAction');
+const tCase = document.getElementById('tCase');
+const tBold = document.getElementById('tBold');
+const tItalic = document.getElementById('tItalic');
+const tUnder = document.getElementById('tUnder');
+const tStrike = document.getElementById('tStrike');
+const tQuote = document.getElementById('tQuote');
+const tMono = document.getElementById('tMono');
+const tSpoil = document.getElementById('tSpoil');
+
+// 编辑表单元素
+const eId = document.getElementById('eId');
+const eContent = document.getElementById('eContent');
+const eType = document.getElementById('eType');
+const eAction = document.getElementById('eAction');
+const eCase = document.getElementById('eCase');
+const eBold = document.getElementById('eBold');
+const eItalic = document.getElementById('eItalic');
+const eUnder = document.getElementById('eUnder');
+const eStrike = document.getElementById('eStrike');
+const eQuote = document.getElementById('eQuote');
+const eMono = document.getElementById('eMono');
+const eSpoil = document.getElementById('eSpoil');
+
 /**
  * 生成样式字符串
  * @param {Object} keyword - 关键词对象
@@ -161,32 +201,44 @@ async function deleteSelected() {
  * 添加单个关键词
  */
 async function addSingle() {
-    const keywordData = {
-        keywordContent: sContent.value.trim(),
-        keywordType: +sType.value,
-        keywordAction: +sAction.value,
-        isCaseSensitive: sCase.checked,
-        isBold: sBold.checked,
-        isItalic: sItalic.checked,
-        isUnderline: sUnder.checked,
-        isStrikeThrough: sStrike.checked,
-        isQuote: sQuote.checked,
-        isMonospace: sMono.checked,
-        isSpoiler: sSpoil.checked
-    };
-    
-    if (!keywordData.keywordContent) {
-        toast('内容不能为空', false);
-        return;
+    try {
+        if (!sContent || !sType || !sAction) {
+            toast('表单元素未找到', false);
+            return;
+        }
+        
+        const keywordData = {
+            keywordContent: sContent.value.trim(),
+            keywordType: +sType.value,
+            keywordAction: +sAction.value,
+            isCaseSensitive: sCase ? sCase.checked : false,
+            isBold: sBold ? sBold.checked : false,
+            isItalic: sItalic ? sItalic.checked : false,
+            isUnderline: sUnder ? sUnder.checked : false,
+            isStrikeThrough: sStrike ? sStrike.checked : false,
+            isQuote: sQuote ? sQuote.checked : false,
+            isMonospace: sMono ? sMono.checked : false,
+            isSpoiler: sSpoil ? sSpoil.checked : false
+        };
+        
+        if (!keywordData.keywordContent) {
+            toast('内容不能为空', false);
+            return;
+        }
+        
+        await api(`${API}/add`, {
+            method: 'POST',
+            body: JSON.stringify(keywordData)
+        });
+        
+        toast('添加成功');
+        // 清空表单
+        if (sContent) sContent.value = '';
+        refresh();
+    } catch (error) {
+        console.error('添加关键词失败:', error);
+        toast('添加失败', false);
     }
-    
-    await api(`${API}/add`, {
-        method: 'POST',
-        body: JSON.stringify(keywordData)
-    });
-    
-    toast('添加成功');
-    refresh();
 }// DOM元素引用
 const dynamicRows = document.getElementById('dynamicRows');
 
@@ -255,103 +307,144 @@ async function uploadRows() {
  * 上传文本关键词
  */
 async function uploadText() {
-    const keywords = txtKeywords.value
-        .split('
-')
-        .map(line => line.trim())
-        .filter(Boolean);
-    
-    if (!keywords.length) {
-        toast('文本为空', false);
-        return;
+    try {
+        if (!txtKeywords || !tType || !tAction) {
+            toast('表单元素未找到', false);
+            return;
+        }
+        
+        const keywords = txtKeywords.value
+            .split('\n')
+            .map(line => line.trim())
+            .filter(Boolean);
+        
+        if (!keywords.length) {
+            toast('文本为空', false);
+            return;
+        }
+        
+        const styleOptions = {
+            isCaseSensitive: tCase ? tCase.checked : false,
+            isBold: tBold ? tBold.checked : false,
+            isItalic: tItalic ? tItalic.checked : false,
+            isUnderline: tUnder ? tUnder.checked : false,
+            isStrikeThrough: tStrike ? tStrike.checked : false,
+            isQuote: tQuote ? tQuote.checked : false,
+            isMonospace: tMono ? tMono.checked : false,
+            isSpoiler: tSpoil ? tSpoil.checked : false
+        };
+        
+        const keywordData = keywords.map(keyword => ({
+            keywordContent: keyword,
+            keywordType: +tType.value,
+            keywordAction: +tAction.value,
+            ...styleOptions
+        }));
+        
+        await api(`${API}/batchadd`, {
+            method: 'POST',
+            body: JSON.stringify(keywordData)
+        });
+        
+        toast('批量添加成功');
+        // 清空表单
+        if (txtKeywords) txtKeywords.value = '';
+        refresh();
+    } catch (error) {
+        console.error('批量添加失败:', error);
+        toast('批量添加失败', false);
     }
-    
-    const styleOptions = {
-        isCaseSensitive: tCase.checked,
-        isBold: tBold.checked,
-        isItalic: tItalic.checked,
-        isUnderline: tUnder.checked,
-        isStrikeThrough: tStrike.checked,
-        isQuote: tQuote.checked,
-        isMonospace: tMono.checked,
-        isSpoiler: tSpoil.checked
-    };
-    
-    const keywordData = keywords.map(keyword => ({
-        keywordContent: keyword,
-        keywordType: +tType.value,
-        keywordAction: +tAction.value,
-        ...styleOptions
-    }));
-    
-    await api(`${API}/batchadd`, {
-        method: 'POST',
-        body: JSON.stringify(keywordData)
-    });
-    
-    toast('批量添加成功');
-    refresh();
 }/**
  * 填充编辑表单
  * @param {Object} keyword - 关键词对象
  */
 function fillEdit(keyword) {
+    if (!eId || !eContent || !eType || !eAction) {
+        console.error('编辑表单元素未找到');
+        return;
+    }
+    
     eId.value = keyword.id;
     eContent.value = keyword.keywordContent;
     
-    const typeKeys = Object.keys(typeMap);
-    const actionKeys = Object.keys(actionMap);
-    
-    eType.value = typeKeys.indexOf(keyword.keywordType);
-    eAction.value = actionKeys.indexOf(keyword.keywordAction);
+    // 直接使用数值，因为HTML中的option value就是数值
+    eType.value = keyword.keywordType;
+    eAction.value = keyword.keywordAction;
     
     // 设置样式选项
-    eCase.checked = keyword.isCaseSensitive;
-    eBold.checked = keyword.isBold;
-    eItalic.checked = keyword.isItalic;
-    eUnder.checked = keyword.isUnderline;
-    eStrike.checked = keyword.isStrikeThrough;
-    eQuote.checked = keyword.isQuote;
-    eMono.checked = keyword.isMonospace;
-    eSpoil.checked = keyword.isSpoiler;
+    if (eCase) eCase.checked = keyword.isCaseSensitive || false;
+    if (eBold) eBold.checked = keyword.isBold || false;
+    if (eItalic) eItalic.checked = keyword.isItalic || false;
+    if (eUnder) eUnder.checked = keyword.isUnderline || false;
+    if (eStrike) eStrike.checked = keyword.isStrikeThrough || false;
+    if (eQuote) eQuote.checked = keyword.isQuote || false;
+    if (eMono) eMono.checked = keyword.isMonospace || false;
+    if (eSpoil) eSpoil.checked = keyword.isSpoiler || false;
 }/**
  * 打开编辑模态框
  * @param {Object} keyword - 关键词对象
  */
 function openEdit(keyword) {
-    fillEdit(keyword);
-    editModal.showModal();
+    try {
+        fillEdit(keyword);
+        if (editModal) {
+            editModal.showModal();
+        } else {
+            toast('编辑对话框未找到', false);
+        }
+    } catch (error) {
+        console.error('打开编辑失败:', error);
+        toast('打开编辑失败', false);
+    }
 }
 
 /**
  * 保存编辑
  */
 async function saveEdit() {
-    const keywordData = {
-        id: +eId.value,
-        keywordContent: eContent.value.trim(),
-        keywordType: +eType.value,
-        keywordAction: +eAction.value,
-        isCaseSensitive: eCase.checked,
-        isBold: eBold.checked,
-        isItalic: eItalic.checked,
-        isUnderline: eUnder.checked,
-        isStrikeThrough: eStrike.checked,
-        isQuote: eQuote.checked,
-        isMonospace: eMono.checked,
-        isSpoiler: eSpoil.checked
-    };
-    
-    await api(`${API}/update`, {
-        method: 'PUT',
-        body: JSON.stringify(keywordData)
-    });
-    
-    toast('修改成功');
-    refresh();
+    try {
+        if (!eId || !eContent || !eType || !eAction) {
+            toast('编辑表单元素未找到', false);
+            return;
+        }
+        
+        const keywordData = {
+            id: +eId.value,
+            keywordContent: eContent.value.trim(),
+            keywordType: +eType.value,
+            keywordAction: +eAction.value,
+            isCaseSensitive: eCase ? eCase.checked : false,
+            isBold: eBold ? eBold.checked : false,
+            isItalic: eItalic ? eItalic.checked : false,
+            isUnderline: eUnder ? eUnder.checked : false,
+            isStrikeThrough: eStrike ? eStrike.checked : false,
+            isQuote: eQuote ? eQuote.checked : false,
+            isMonospace: eMono ? eMono.checked : false,
+            isSpoiler: eSpoil ? eSpoil.checked : false
+        };
+        
+        if (!keywordData.keywordContent) {
+            toast('关键词内容不能为空', false);
+            return;
+        }
+        
+        await api(`${API}/update`, {
+            method: 'PUT',
+            body: JSON.stringify(keywordData)
+        });
+        
+        toast('修改成功');
+        if (editModal) {
+            editModal.close();
+        }
+        refresh();
+    } catch (error) {
+        console.error('保存编辑失败:', error);
+        toast('保存失败', false);
+    }
 }// 标签页切换功能
 document.querySelectorAll('[role=tab]').forEach(tab => {
-    tab.onclick = () => {
+    tab.addEventListener('click', () => {
         // 移除所有标签的激活状态
         document.querySelectorAll('[role=tab]').forEach(t => 
             t.classList.remove('tab-active')
@@ -362,13 +455,21 @@ document.querySelectorAll('[role=tab]').forEach(tab => {
         
         // 切换面板显示
         ['list', 'single', 'batch', 'text'].forEach(panelName => {
-            document.getElementById('panel-' + panelName)
-                .classList.toggle('hidden', !tab.id.endsWith(panelName));
+            const panel = document.getElementById('panel-' + panelName);
+            if (panel) {
+                panel.classList.toggle('hidden', !tab.id.endsWith(panelName));
+            }
         });
-    };
+    });
 });
 
-
+// DOM元素引用 - 确保所有元素都存在
+const editModal = document.getElementById('editModal');
 
 // 初始化数据
-refresh();
+document.addEventListener('DOMContentLoaded', () => {
+    refresh().catch(error => {
+        console.error('初始化失败:', error);
+        toast('初始化失败，请刷新页面', false);
+    });
+});

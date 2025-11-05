@@ -1,8 +1,6 @@
 // Telegram Monitor 前端脚本
 // 反混淆版本 - 恢复可读性
 
-'; '\x2028';
-
 // API端点
 const API = '/api/telegram';
 
@@ -128,7 +126,18 @@ async function fetchState() {
  * 代理类型改变事件处理
  */
 function proxyTypeChanged() {
-    proxyUrl.disabled = proxyType.value === '0';
+    if (proxyUrl && proxyType) {
+        proxyUrl.disabled = proxyType.value === '0';
+        if (proxyType.value === '0') {
+            proxyUrl.placeholder = "选择代理类型后输入...";
+        } else if (proxyType.value === '1') {
+            proxyUrl.disabled = false;
+            proxyUrl.placeholder = "格式: host:port 或 host:port:username:password";
+        } else if (proxyType.value === '2') {
+            proxyUrl.disabled = false;
+            proxyUrl.placeholder = "格式: http://t.me/proxy...";
+        }
+    }
 }
 
 /**
@@ -311,83 +320,115 @@ function handleLoginResponse(response) {
  * 加载对话列表
  */
 async function loadDialogs() {
-    const { data: dialogs } = await api(API + '/dialogs');
-    dialogList.innerHTML = dialogs.map(dialog => 
-        '<option value="' + dialog.id + '">' + dialog.displayTitle + '</option>'
-    ).join('');
-    toast('会话已加载');
+    try {
+        const { data: dialogs } = await api(API + '/dialogs');
+        if (dialogList && dialogs) {
+            dialogList.innerHTML = dialogs.map(dialog => 
+                '<option value="' + dialog.id + '">' + dialog.displayTitle + '</option>'
+            ).join('');
+            toast('会话已加载');
+        }
+    } catch (error) {
+        console.error('加载对话列表失败:', error);
+        toast('加载会话失败', false);
+    }
 }
 
 /**
  * 设置监控目标
  */
 async function setTarget() {
-    if (!dialogList.value) {
-        toast('请选择会话', false);
-        return;
+    try {
+        if (!dialogList || !dialogList.value) {
+            toast('请选择会话', false);
+            return;
+        }
+        
+        await api(API + '/target', {
+            method: 'POST',
+            body: dialogList.value
+        });
+        
+        toast('已设置目标');
+    } catch (error) {
+        console.error('设置目标失败:', error);
+        toast('设置目标失败', false);
     }
-    
-    await api(API + '/target', {
-        method: 'POST',
-        body: dialogList.value
-    });
-    
-    toast('已设置目标');
 }
 
 /**
  * 启动监控
  */
 async function startMonitor() {
-    const { data: response } = await api(API + '/start', {
-        method: 'POST'
-    });
-    
-    let isSuccess = false;
-    let message = '';
-    
-    switch (response) {
-        case 'Started':
-            isSuccess = true;
-            message = '启动成功';
-            break;
-        case 'MissingTarget':
-            message = '未设置目标群';
-            break;
-        case 'NoUserInfo':
-            message = '未获取到用户信息';
-            break;
-        case 'AlreadyRunning':
-            isSuccess = true;
-            message = '已在运行';
-            break;
-        case 'Error':
-            message = '未登录';
-            break;
-        default:
-            message = '未知状态: ' + response;
+    try {
+        const { data: response } = await api(API + '/start', {
+            method: 'POST'
+        });
+        
+        let isSuccess = false;
+        let message = '';
+        
+        switch (response) {
+            case 'Started':
+                isSuccess = true;
+                message = '启动成功';
+                break;
+            case 'MissingTarget':
+                message = '未设置目标群';
+                break;
+            case 'NoUserInfo':
+                message = '未获取到用户信息';
+                break;
+            case 'AlreadyRunning':
+                isSuccess = true;
+                message = '已在运行';
+                break;
+            case 'Error':
+                message = '未登录';
+                break;
+            default:
+                message = '未知状态: ' + response;
+        }
+        
+        toast(message, isSuccess);
+        state.mon = isSuccess;
+        applyState();
+    } catch (error) {
+        console.error('启动监控失败:', error);
+        toast('启动监控失败', false);
     }
-    
-    toast(message, isSuccess);
-    state.mon = isSuccess;
-    applyState();
 }
 
 /**
  * 停止监控
  */
 async function stopMonitor() {
-    await api(API + '/stop', {
-        method: 'POST'
-    });
-    
-    toast('已停止');
-    state.mon = false;
-    applyState();
+    try {
+        await api(API + '/stop', {
+            method: 'POST'
+        });
+        
+        toast('已停止');
+        state.mon = false;
+        applyState();
+    } catch (error) {
+        console.error('停止监控失败:', error);
+        toast('停止监控失败', false);
+    }
 }
 
 
-proxyTypeChanged();
-fetchState();
-
-'\x2029';
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+    // 设置代理类型变更事件
+    const proxyTypeElement = document.getElementById('proxyType');
+    if (proxyTypeElement) {
+        proxyTypeElement.addEventListener('change', proxyTypeChanged);
+    }
+    
+    // 获取初始状态
+    fetchState().catch(error => {
+        console.error('获取状态失败:', error);
+        toast('获取状态失败', false);
+    });
+});
