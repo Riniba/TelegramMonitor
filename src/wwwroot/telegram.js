@@ -1,6 +1,393 @@
-; '\x2028';const \u0041\u0050\u0049='/api/telegram';const \u0074\u006f\u0061\u0073\u0074\u0042\u006f\u0078=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('toast');\u0074\u006f\u0061\u0073\u0074\u0042\u006f\u0078.\u0073\u0074\u0079\u006c\u0065.\u007a\u0049\u006e\u0064\u0065\u0078='9999';function \u0074\u006f\u0061\u0073\u0074(Z,M=true){const rJ=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006c\u0065\u006d\u0065\u006e\u0074('div');rJ.\u0072\u006f\u006c\u0065='alert';rJ.\u0063\u006c\u0061\u0073\u0073\u004e\u0061\u006d\u0065=`alert alert-${M?'success':'error'} alert-horizontal shadow-lg`;rJ.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c=`<span>${Z}</span>`;\u0074\u006f\u0061\u0073\u0074\u0042\u006f\u0078.\u0061\u0070\u0070\u0065\u006e\u0064\u0043\u0068\u0069\u006c\u0064(rJ);\u0073\u0065\u0074\u0054\u0069\u006d\u0065\u006f\u0075\u0074(()=>rJ.\u0072\u0065\u006d\u006f\u0076\u0065(),4000);}async function \u0061\u0070\u0069(CA,hJ){const Xe=await \u0066\u0065\u0074\u0063\u0068(CA,{\u0068\u0065\u0061\u0064\u0065\u0072\u0073:{'Content-Type':'application/json'},...hJ});const rX=await Xe.\u0074\u0065\u0078\u0074();let bj={};try{bj=rX?\u004a\u0053\u004f\u004e.\u0070\u0061\u0072\u0073\u0065(rX):{};}catch{}if(!Xe.\u006f\u006b||bj.\u0073\u0075\u0063\u0063\u0065\u0065\u0064\u0065\u0064===false){const hZ=bj.\u0065\u0072\u0072\u006f\u0072\u0073&&(typeof bj.\u0065\u0072\u0072\u006f\u0072\u0073==='string'?bj.\u0065\u0072\u0072\u006f\u0072\u0073:\u004f\u0062\u006a\u0065\u0063\u0074.\u0076\u0061\u006c\u0075\u0065\u0073(bj.\u0065\u0072\u0072\u006f\u0072\u0073)[0][0])||bj.\u006d\u0065\u0073\u0073\u0061\u0067\u0065||rX||'\u5931\u8d25';\u0074\u006f\u0061\u0073\u0074(hZ,false);throw new \u0045\u0072\u0072\u006f\u0072(hZ);}return bj;}const \u006f\u0075\u0074=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('out');const \u006c\u006f\u0067=Me=>{\u0063\u006f\u006e\u0073\u006f\u006c\u0065.\u006c\u006f\u0067(typeof Me==='string'?Me:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(Me,null,2));};const \u0070\u0072\u006f\u0078\u0079\u0054\u0079\u0070\u0065=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('proxyType');const \u0070\u0072\u006f\u0078\u0079\u0055\u0072\u006c=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('proxyUrl');const \u0064\u0069\u0061\u006c\u006f\u0067\u004c\u0069\u0073\u0074=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('dialogList');const \u0062\u0074\u006e\u0073={\u006c\u006f\u0061\u0064:\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('btnLoadDialogs'),\u0074\u0061\u0072\u0067\u0065\u0074:\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('btnSetTarget'),\u0073\u0074\u0061\u0072\u0074:\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('btnStart'),\u0073\u0074\u006f\u0070:\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('btnStop')};let \u0073\u0074\u0061\u0074\u0065={\u006c\u006f\u0067\u0067\u0065\u0064:false,\u006d\u006f\u006e:false};function \u0061\u0070\u0070\u006c\u0079\u0053\u0074\u0061\u0074\u0065(){\u0062\u0074\u006e\u0073.\u006c\u006f\u0061\u0064.\u0064\u0069\u0073\u0061\u0062\u006c\u0065\u0064=!\u0073\u0074\u0061\u0074\u0065.\u006c\u006f\u0067\u0067\u0065\u0064;\u0064\u0069\u0061\u006c\u006f\u0067\u004c\u0069\u0073\u0074.\u0064\u0069\u0073\u0061\u0062\u006c\u0065\u0064=!\u0073\u0074\u0061\u0074\u0065.\u006c\u006f\u0067\u0067\u0065\u0064;\u0062\u0074\u006e\u0073.\u0074\u0061\u0072\u0067\u0065\u0074.\u0064\u0069\u0073\u0061\u0062\u006c\u0065\u0064=!\u0073\u0074\u0061\u0074\u0065.\u006c\u006f\u0067\u0067\u0065\u0064;\u0062\u0074\u006e\u0073.\u0073\u0074\u0061\u0072\u0074.\u0064\u0069\u0073\u0061\u0062\u006c\u0065\u0064=!\u0073\u0074\u0061\u0074\u0065.\u006c\u006f\u0067\u0067\u0065\u0064||\u0073\u0074\u0061\u0074\u0065.\u006d\u006f\u006e;\u0062\u0074\u006e\u0073.\u0073\u0074\u006f\u0070.\u0064\u0069\u0073\u0061\u0062\u006c\u0065\u0064=!\u0073\u0074\u0061\u0074\u0065.\u006c\u006f\u0067\u0067\u0065\u0064||!\u0073\u0074\u0061\u0074\u0065.\u006d\u006f\u006e;}async function \u0066\u0065\u0074\u0063\u0068\u0053\u0074\u0061\u0074\u0065(){const{\u0064\u0061\u0074\u0061:jt}=await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/status`);\u0073\u0074\u0061\u0074\u0065={\u006c\u006f\u0067\u0067\u0065\u0064:jt.\u006c\u006f\u0067\u0067\u0065\u0064\u0049\u006e,\u006d\u006f\u006e:jt.\u006d\u006f\u006e\u0069\u0074\u006f\u0072\u0069\u006e\u0067};\u0061\u0070\u0070\u006c\u0079\u0053\u0074\u0061\u0074\u0065();if(\u0073\u0074\u0061\u0074\u0065.\u006c\u006f\u0067\u0067\u0065\u0064)\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('btnLogin').\u0069\u006e\u006e\u0065\u0072\u0054\u0065\u0078\u0074='\u5df2\u767b\u5f55 (\u70b9\u51fb\u91cd\u65b0\u767b\u5f55)';else \u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('btnLogin').\u0069\u006e\u006e\u0065\u0072\u0054\u0065\u0078\u0074='\u767b\u5f55';}function \u0070\u0072\u006f\u0078\u0079\u0054\u0079\u0070\u0065\u0043\u0068\u0061\u006e\u0067\u0065\u0064(){\u0070\u0072\u006f\u0078\u0079\u0055\u0072\u006c.\u0064\u0069\u0073\u0061\u0062\u006c\u0065\u0064=\u0070\u0072\u006f\u0078\u0079\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065==='0';}async function \u0073\u0065\u0074\u0050\u0072\u006f\u0078\u0079(){const CA=\u0070\u0072\u006f\u0078\u0079\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065==='0'?'':\u0070\u0072\u006f\u0078\u0079\u0055\u0072\u006c.\u0076\u0061\u006c\u0075\u0065.\u0074\u0072\u0069\u006d();const AC=\u0073\u0074\u0061\u0074\u0065.\u006d\u006f\u006e;try{if(AC){\u0074\u006f\u0061\u0073\u0074('\u6b63\u5728\u505c\u6b62\u76d1\u63a7\u4ee5\u5e94\u7528\u65b0\u4ee3\u7406...');}const ZJ=await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/proxy`,{\u006d\u0065\u0074\u0068\u006f\u0064:'POST',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079({\u0074\u0079\u0070\u0065:+\u0070\u0072\u006f\u0078\u0079\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065,\u0075\u0072\u006c:CA})});const hX=ZJ.\u0064\u0061\u0074\u0061;\u006c\u006f\u0067('\u4ee3\u7406\u8bbe\u7f6e\u54cd\u5e94:',hX);switch(hX){case'LoggedIn':\u0074\u006f\u0061\u0073\u0074('\u4ee3\u7406\u5df2\u8bbe\u7f6e\uff0c\u767b\u5f55\u72b6\u6001\u5df2\u4fdd\u6301');if(AC){\u0074\u006f\u0061\u0073\u0074('\u76d1\u63a7\u5df2\u6062\u590d');}break;case'NotLoggedIn':\u0074\u006f\u0061\u0073\u0074('\u4ee3\u7406\u5df2\u8bbe\u7f6e\uff0c\u4f46\u9700\u8981\u91cd\u65b0\u767b\u5f55',false);\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('btnLogin').\u0069\u006e\u006e\u0065\u0072\u0054\u0065\u0078\u0074='\u767b\u5f55';break;case'WaitingForVerificationCode':case'WaitingForPassword':\u0074\u006f\u0061\u0073\u0074('\u4ee3\u7406\u5df2\u8bbe\u7f6e\uff0c\u9700\u8981\u989d\u5916\u9a8c\u8bc1',false);\u006f\u0070\u0065\u006e\u004c\u006f\u0067\u0069\u006e\u0057\u0069\u0074\u0068\u0053\u0074\u0061\u0074\u0065(hX);break;default:\u0074\u006f\u0061\u0073\u0074('\u4ee3\u7406\u5df2\u8bbe\u7f6e');break;}await \u0066\u0065\u0074\u0063\u0068\u0053\u0074\u0061\u0074\u0065();}catch(rM){\u0074\u006f\u0061\u0073\u0074(`\u8bbe\u7f6e\u4ee3\u7406\u5931\u8d25: ${rM.\u006d\u0065\u0073\u0073\u0061\u0067\u0065}`,false);}}let \u0073\u0074\u0065\u0070=0,\u0063\u0075\u0072\u0072\u0065\u006e\u0074\u0050\u0068\u006f\u006e\u0065='';const \u006c\u006f\u0067\u0069\u006e\u004d\u006f\u0064\u0061\u006c=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('loginModal');const \u0074\u0069\u0074\u006c\u0065=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('loginTitle');const \u0069\u006e\u0070=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('stepInput');function \u006f\u0070\u0065\u006e\u004c\u006f\u0067\u0069\u006e\u0057\u0069\u0074\u0068\u0053\u0074\u0061\u0074\u0065(hX){\u0073\u0074\u0065\u0070=hX==='WaitingForVerificationCode'?1:2;if(\u0073\u0074\u0065\u0070===1){\u0074\u0069\u0074\u006c\u0065.\u0074\u0065\u0078\u0074\u0043\u006f\u006e\u0074\u0065\u006e\u0074='\u8f93\u5165\u9a8c\u8bc1\u7801';\u0069\u006e\u0070.\u0070\u006c\u0061\u0063\u0065\u0068\u006f\u006c\u0064\u0065\u0072='\u77ed\u4fe1\u9a8c\u8bc1\u7801';}else{\u0074\u0069\u0074\u006c\u0065.\u0074\u0065\u0078\u0074\u0043\u006f\u006e\u0074\u0065\u006e\u0074='\u8f93\u5165 2FA \u5bc6\u7801';\u0069\u006e\u0070.\u0070\u006c\u0061\u0063\u0065\u0068\u006f\u006c\u0064\u0065\u0072='\u8d26\u6237\u5bc6\u7801';}\u0069\u006e\u0070.\u0076\u0061\u006c\u0075\u0065='';\u006c\u006f\u0067\u0069\u006e\u004d\u006f\u0064\u0061\u006c.\u0073\u0068\u006f\u0077\u004d\u006f\u0064\u0061\u006c();}function \u006f\u0070\u0065\u006e\u004c\u006f\u0067\u0069\u006e(){\u0073\u0074\u0065\u0070=0;\u0074\u0069\u0074\u006c\u0065.\u0074\u0065\u0078\u0074\u0043\u006f\u006e\u0074\u0065\u006e\u0074='\u624b\u673a\u53f7\u767b\u5f55';\u0069\u006e\u0070.\u0070\u006c\u0061\u0063\u0065\u0068\u006f\u006c\u0064\u0065\u0072='+8613812345678';\u0069\u006e\u0070.\u0076\u0061\u006c\u0075\u0065='';\u006c\u006f\u0067\u0069\u006e\u004d\u006f\u0064\u0061\u006c.\u0073\u0068\u006f\u0077\u004d\u006f\u0064\u0061\u006c();}async function \u006c\u006f\u0067\u0069\u006e\u0053\u0074\u0065\u0070(){const re=\u0069\u006e\u0070.\u0076\u0061\u006c\u0075\u0065.\u0074\u0072\u0069\u006d();if(!re){\u0074\u006f\u0061\u0073\u0074('\u8f93\u5165\u4e0d\u80fd\u4e3a\u7a7a',false);return;}try{if(\u0073\u0074\u0065\u0070===0){\u0063\u0075\u0072\u0072\u0065\u006e\u0074\u0050\u0068\u006f\u006e\u0065=re;}const MS=\u0073\u0074\u0065\u0070===0?{\u0070\u0068\u006f\u006e\u0065\u004e\u0075\u006d\u0062\u0065\u0072:re,\u006c\u006f\u0067\u0069\u006e\u0049\u006e\u0066\u006f:''}:{\u0070\u0068\u006f\u006e\u0065\u004e\u0075\u006d\u0062\u0065\u0072:\u0063\u0075\u0072\u0072\u0065\u006e\u0074\u0050\u0068\u006f\u006e\u0065,\u006c\u006f\u0067\u0069\u006e\u0049\u006e\u0066\u006f:re};const ZJ=await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/login`,{\u006d\u0065\u0074\u0068\u006f\u0064:'POST',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(MS)});\u006c\u006f\u0067(ZJ);if(ZJ&&typeof ZJ==='object'){if(ZJ.\u0064\u0061\u0074\u0061!==\u0075\u006e\u0064\u0065\u0066\u0069\u006e\u0065\u0064){\u0068\u0061\u006e\u0064\u006c\u0065\u004c\u006f\u0067\u0069\u006e\u0052\u0065\u0073\u0070\u006f\u006e\u0073\u0065(ZJ.\u0064\u0061\u0074\u0061);}else{\u0068\u0061\u006e\u0064\u006c\u0065\u004c\u006f\u0067\u0069\u006e\u0052\u0065\u0073\u0070\u006f\u006e\u0073\u0065(ZJ);}}else{\u0074\u006f\u0061\u0073\u0074('\u767b\u5f55\u54cd\u5e94\u683c\u5f0f\u9519\u8bef',false);\u006c\u006f\u0067\u0069\u006e\u004d\u006f\u0064\u0061\u006c.\u0063\u006c\u006f\u0073\u0065();}}catch(rM){\u0074\u006f\u0061\u0073\u0074(`\u767b\u5f55\u65f6\u51fa\u9519: ${rM.\u006d\u0065\u0073\u0073\u0061\u0067\u0065}`,false);\u006c\u006f\u0067\u0069\u006e\u004d\u006f\u0064\u0061\u006c.\u0063\u006c\u006f\u0073\u0065();}}function \u0068\u0061\u006e\u0064\u006c\u0065\u004c\u006f\u0067\u0069\u006e\u0052\u0065\u0073\u0070\u006f\u006e\u0073\u0065(jt){if(typeof jt!=='string'){\u0074\u006f\u0061\u0073\u0074('\u767b\u5f55\u54cd\u5e94\u683c\u5f0f\u9519\u8bef',false);\u006c\u006f\u0067\u0069\u006e\u004d\u006f\u0064\u0061\u006c.\u0063\u006c\u006f\u0073\u0065();return;}switch(jt){case'WaitingForVerificationCode':\u0073\u0074\u0065\u0070=1;\u0074\u0069\u0074\u006c\u0065.\u0074\u0065\u0078\u0074\u0043\u006f\u006e\u0074\u0065\u006e\u0074='\u8f93\u5165\u9a8c\u8bc1\u7801';\u0069\u006e\u0070.\u0076\u0061\u006c\u0075\u0065='';\u0069\u006e\u0070.\u0070\u006c\u0061\u0063\u0065\u0068\u006f\u006c\u0064\u0065\u0072='\u77ed\u4fe1\u9a8c\u8bc1\u7801';break;case'WaitingForPassword':\u0073\u0074\u0065\u0070=2;\u0074\u0069\u0074\u006c\u0065.\u0074\u0065\u0078\u0074\u0043\u006f\u006e\u0074\u0065\u006e\u0074='\u8f93\u5165 2FA \u5bc6\u7801';\u0069\u006e\u0070.\u0076\u0061\u006c\u0075\u0065='';\u0069\u006e\u0070.\u0070\u006c\u0061\u0063\u0065\u0068\u006f\u006c\u0064\u0065\u0072='\u8d26\u6237\u5bc6\u7801';break;case'LoggedIn':\u0074\u006f\u0061\u0073\u0074('\u767b\u5f55\u6210\u529f');\u006c\u006f\u0067\u0069\u006e\u004d\u006f\u0064\u0061\u006c.\u0063\u006c\u006f\u0073\u0065();\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('btnLogin').\u0069\u006e\u006e\u0065\u0072\u0054\u0065\u0078\u0074='\u5df2\u767b\u5f55 (\u70b9\u51fb\u91cd\u65b0\u767b\u5f55)';\u0066\u0065\u0074\u0063\u0068\u0053\u0074\u0061\u0074\u0065().\u0063\u0061\u0074\u0063\u0068(AZ=>\u0074\u006f\u0061\u0073\u0074(`\u83b7\u53d6\u72b6\u6001\u5931\u8d25: ${AZ.\u006d\u0065\u0073\u0073\u0061\u0067\u0065}`,false));break;case'NotLoggedIn':\u0074\u006f\u0061\u0073\u0074('\u767b\u5f55\u5931\u8d25',false);\u006c\u006f\u0067\u0069\u006e\u004d\u006f\u0064\u0061\u006c.\u0063\u006c\u006f\u0073\u0065();break;default:\u0074\u006f\u0061\u0073\u0074(`\u767b\u5f55\u72b6\u6001\u672a\u77e5: ${jt}`,false);\u006c\u006f\u0067\u0069\u006e\u004d\u006f\u0064\u0061\u006c.\u0063\u006c\u006f\u0073\u0065();}}async function \u006c\u006f\u0061\u0064\u0044\u0069\u0061\u006c\u006f\u0067\u0073(){const{\u0064\u0061\u0074\u0061:jt}=await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/dialogs`);\u0064\u0069\u0061\u006c\u006f\u0067\u004c\u0069\u0073\u0074.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c=jt.\u006d\u0061\u0070(rJ=>`<option value="${rJ.\u0069\u0064}">${rJ.\u0064\u0069\u0073\u0070\u006c\u0061\u0079\u0054\u0069\u0074\u006c\u0065}</option>`).\u006a\u006f\u0069\u006e('');\u0074\u006f\u0061\u0073\u0074('\u4f1a\u8bdd\u5df2\u52a0\u8f7d');}async function \u0073\u0065\u0074\u0054\u0061\u0072\u0067\u0065\u0074(){if(!\u0064\u0069\u0061\u006c\u006f\u0067\u004c\u0069\u0073\u0074.\u0076\u0061\u006c\u0075\u0065){\u0074\u006f\u0061\u0073\u0074('\u8bf7\u9009\u62e9\u4f1a\u8bdd',false);return;}await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/target`,{\u006d\u0065\u0074\u0068\u006f\u0064:'POST',\u0062\u006f\u0064\u0079:\u0064\u0069\u0061\u006c\u006f\u0067\u004c\u0069\u0073\u0074.\u0076\u0061\u006c\u0075\u0065});\u0074\u006f\u0061\u0073\u0074('\u5df2\u8bbe\u7f6e\u76ee\u6807');}async function \u0073\u0074\u0061\u0072\u0074\u004d\u006f\u006e\u0069\u0074\u006f\u0072(){const{\u0064\u0061\u0074\u0061:jt}=await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/start`,{\u006d\u0065\u0074\u0068\u006f\u0064:'POST'});let Sh=false;let XZ='';switch(jt){case'Started':Sh=true;XZ='\u542f\u52a8\u6210\u529f';break;case'MissingTarget':XZ='\u672a\u8bbe\u7f6e\u76ee\u6807\u7fa4';break;case'NoUserInfo':XZ='\u672a\u83b7\u53d6\u5230\u7528\u6237\u4fe1\u606f';break;case'AlreadyRunning':Sh=true;XZ='\u5df2\u5728\u8fd0\u884c';break;case'Error':XZ='\u672a\u767b\u5f55';break;default:XZ=`\u672a\u77e5\u72b6\u6001: ${jt}`;}\u0074\u006f\u0061\u0073\u0074(`${XZ}`,Sh);\u0073\u0074\u0061\u0074\u0065.\u006d\u006f\u006e=Sh;\u0061\u0070\u0070\u006c\u0079\u0053\u0074\u0061\u0074\u0065();}async function \u0073\u0074\u006f\u0070\u004d\u006f\u006e\u0069\u0074\u006f\u0072(){await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/stop`,{\u006d\u0065\u0074\u0068\u006f\u0064:'POST'});\u0074\u006f\u0061\u0073\u0074('\u5df2\u505c\u6b62');\u0073\u0074\u0061\u0074\u0065.\u006d\u006f\u006e=false;\u0061\u0070\u0070\u006c\u0079\u0053\u0074\u0061\u0074\u0065();}function \u0061\u0064\u0064\u0043\u006f\u0070\u0079\u0072\u0069\u0067\u0068\u0074(){const SC=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006c\u0065\u006d\u0065\u006e\u0074('div');SC.\u0073\u0074\u0079\u006c\u0065.\u0063\u0073\u0073\u0054\u0065\u0078\u0074='position:fixed;top:0;left:0;width:100%;background-color:#f0f0f0;padding:10px;text-align:center;z-index:1000;box-shadow:0 2px 4px rgba(0,0,0,0.1);';SC.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c=`
-        <span style="margin-right:15px;">\u4f5c\u8005 <a href="https://t.me/" target="_blank" style="text-decoration:none;color:#0088cc;font-weight:bold;"></a></span>
-        <span style="margin-right:15px;"></span>
-        <span style="margin-right:15px;">\u4ea4\u6d41\u7fa4 <a href="https://t.me/RinibaGroup" target="_blank" style="text-decoration:none;color:#0088cc;font-weight:bold;">Telegram</a></span>
-        <span><a href="https://github.com/Riniba/TelegramMonitor/wiki/%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B" target="_blank" style="text-decoration:none;color:#0088cc;font-weight:bold;">\u5173\u952e\u8bcd\u914d\u7f6e\u8bf4\u660e</a></span>
-    `;\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0062\u006f\u0064\u0079.\u0069\u006e\u0073\u0065\u0072\u0074\u0042\u0065\u0066\u006f\u0072\u0065(SC,\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0062\u006f\u0064\u0079.\u0066\u0069\u0072\u0073\u0074\u0043\u0068\u0069\u006c\u0064);\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0062\u006f\u0064\u0079.\u0073\u0074\u0079\u006c\u0065.\u0070\u0061\u0064\u0064\u0069\u006e\u0067\u0054\u006f\u0070=SC.\u006f\u0066\u0066\u0073\u0065\u0074\u0048\u0065\u0069\u0067\u0068\u0074+10+'px';}\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0061\u0064\u0064\u0045\u0076\u0065\u006e\u0074\u004c\u0069\u0073\u0074\u0065\u006e\u0065\u0072('DOMContentLoaded',\u0061\u0064\u0064\u0043\u006f\u0070\u0079\u0072\u0069\u0067\u0068\u0074);\u0070\u0072\u006f\u0078\u0079\u0054\u0079\u0070\u0065\u0043\u0068\u0061\u006e\u0067\u0065\u0064();\u0066\u0065\u0074\u0063\u0068\u0053\u0074\u0061\u0074\u0065();'\x2029';
+// Telegram Monitor 前端脚本
+// 反混淆版本 - 恢复可读性
+
+'; '\x2028';
+
+// API端点
+const API = '/api/telegram';
+
+// DOM元素引用
+const toastBox = document.getElementById('toast');
+toastBox.style.zIndex = '9999';
+
+/**
+ * 显示提示消息
+ * @param {string} message - 消息内容
+ * @param {boolean} isSuccess - 是否为成功消息
+ */
+function toast(message, isSuccess = true) {
+    const toastElement = document.createElement('div');
+    toastElement.role = 'alert';
+    toastElement.className = 'alert alert-' + (isSuccess ? 'success' : 'error') + ' alert-horizontal shadow-lg';
+    toastElement.innerHTML = '<span>' + message + '</span>';
+    toastBox.appendChild(toastElement);
+    setTimeout(() => toastElement.remove(), 4000);
+}
+
+/**
+ * API请求封装
+ * @param {string} url - 请求URL
+ * @param {Object} options - 请求选项
+ * @returns {Promise} API响应
+ */
+async function api(url, options) {
+    const response = await fetch(url, {
+        headers: { 'Content-Type': 'application/json' },
+        ...options
+    });
+    
+    const responseText = await response.text();
+    let data = {};
+    
+    try {
+        data = responseText ? JSON.parse(responseText) : {};
+    } catch {
+        // JSON解析失败时忽略
+    }
+    
+    if (!response.ok || data.succeeded === false) {
+        const errorMessage = data.errors && 
+            (typeof data.errors === 'string' ? 
+                data.errors : 
+                Object.values(data.errors)[0][0]) || 
+            data.message || 
+            responseText || 
+            '失败';
+        
+        toast(errorMessage, false);
+        throw new Error(errorMessage);
+    }
+    
+    return data;
+}
+
+// 输出元素
+const out = document.getElementById('out');
+
+/**
+ * 控制台日志输出
+ * @param {*} message - 日志内容
+ */
+const log = (message) => {
+    console.log(typeof message === 'string' ? message : JSON.stringify(message, null, 2));
+};
+
+// 代理相关元素
+const proxyType = document.getElementById('proxyType');
+const proxyUrl = document.getElementById('proxyUrl');
+
+// 对话框列表
+const dialogList = document.getElementById('dialogList');
+
+// 按钮引用
+const btns = {
+    load: document.getElementById('btnLoadDialogs'),
+    target: document.getElementById('btnSetTarget'),
+    start: document.getElementById('btnStart'),
+    stop: document.getElementById('btnStop')
+};
+
+// 应用状态
+let state = {
+    logged: false,
+    mon: false
+};
+
+/**
+ * 应用状态到UI
+ */
+function applyState() {
+    btns.load.disabled = !state.logged;
+    dialogList.disabled = !state.logged;
+    btns.target.disabled = !state.logged;
+    btns.start.disabled = !state.logged || state.mon;
+    btns.stop.disabled = !state.logged || !state.mon;
+}
+
+/**
+ * 获取服务器状态
+ */
+async function fetchState() {
+    const { data: statusData } = await api(API + '/status');
+    
+    state = {
+        logged: statusData.loggedIn,
+        mon: statusData.monitoring
+    };
+    
+    applyState();
+    
+    if (state.logged) {
+        document.getElementById('btnLogin').innerText = '已登录 (点击重新登录)';
+    } else {
+        document.getElementById('btnLogin').innerText = '登录';
+    }
+}
+
+/**
+ * 代理类型改变事件处理
+ */
+function proxyTypeChanged() {
+    proxyUrl.disabled = proxyType.value === '0';
+}
+
+/**
+ * 设置代理
+ */
+async function setProxy() {
+    const proxyUrlValue = proxyType.value === '0' ? '' : proxyUrl.value.trim();
+    const wasMonitoring = state.mon;
+    
+    try {
+        if (wasMonitoring) {
+            toast('正在停止监控以应用新代理...');
+        }
+        
+        const response = await api(API + '/proxy', {
+            method: 'POST',
+            body: JSON.stringify({
+                type: +proxyType.value,
+                url: proxyUrlValue
+            })
+        });
+        
+        const proxyResponse = response.data;
+        log('代理设置响应:', proxyResponse);
+        
+        switch (proxyResponse) {
+            case 'LoggedIn':
+                toast('代理已设置，登录状态已保持');
+                if (wasMonitoring) {
+                    toast('监控已恢复');
+                }
+                break;
+            case 'NotLoggedIn':
+                toast('代理已设置，但需要重新登录', false);
+                document.getElementById('btnLogin').innerText = '登录';
+                break;
+            case 'WaitingForVerificationCode':
+            case 'WaitingForPassword':
+                toast('代理已设置，需要额外验证', false);
+                openLoginWithState(proxyResponse);
+                break;
+            default:
+                toast('代理已设置');
+                break;
+        }
+        
+        await fetchState();
+    } catch (error) {
+        toast('设置代理失败: ' + error.message, false);
+    }
+}
+
+// 登录相关变量
+let step = 0;
+let currentPhone = '';
+
+// 登录相关DOM元素
+const loginModal = document.getElementById('loginModal');
+const title = document.getElementById('loginTitle');
+const inp = document.getElementById('stepInput');
+
+/**
+ * 根据状态打开登录对话框
+ * @param {string} loginState - 登录状态
+ */
+function openLoginWithState(loginState) {
+    step = loginState === 'WaitingForVerificationCode' ? 1 : 2;
+    
+    if (step === 1) {
+        title.textContent = '输入验证码';
+        inp.placeholder = '短信验证码';
+    } else {
+        title.textContent = '输入 2FA 密码';
+        inp.placeholder = '账户密码';
+    }
+    
+    inp.value = '';
+    loginModal.showModal();
+}
+
+/**
+ * 打开登录对话框
+ */
+function openLogin() {
+    step = 0;
+    title.textContent = '手机号登录';
+    inp.placeholder = '+8613812345678';
+    inp.value = '';
+    loginModal.showModal();
+}
+
+/**
+ * 执行登录步骤
+ */
+async function loginStep() {
+    const inputValue = inp.value.trim();
+    
+    if (!inputValue) {
+        toast('输入不能为空', false);
+        return;
+    }
+    
+    try {
+        if (step === 0) {
+            currentPhone = inputValue;
+        }
+        
+        const loginData = step === 0 ? {
+            phoneNumber: inputValue,
+            loginInfo: ''
+        } : {
+            phoneNumber: currentPhone,
+            loginInfo: inputValue
+        };
+        
+        const response = await api(API + '/login', {
+            method: 'POST',
+            body: JSON.stringify(loginData)
+        });
+        
+        log(response);
+        
+        if (response && typeof response === 'object') {
+            if (response.data !== undefined) {
+                handleLoginResponse(response.data);
+            } else {
+                handleLoginResponse(response);
+            }
+        } else {
+            toast('登录响应格式错误', false);
+            loginModal.close();
+        }
+    } catch (error) {
+        toast('登录时出错: ' + error.message, false);
+        loginModal.close();
+    }
+}
+
+/**
+ * 处理登录响应
+ * @param {string} response - 登录响应
+ */
+function handleLoginResponse(response) {
+    if (typeof response !== 'string') {
+        toast('登录响应格式错误', false);
+        loginModal.close();
+        return;
+    }
+    
+    switch (response) {
+        case 'WaitingForVerificationCode':
+            step = 1;
+            title.textContent = '输入验证码';
+            inp.value = '';
+            inp.placeholder = '短信验证码';
+            break;
+        case 'WaitingForPassword':
+            step = 2;
+            title.textContent = '输入 2FA 密码';
+            inp.value = '';
+            inp.placeholder = '账户密码';
+            break;
+        case 'LoggedIn':
+            toast('登录成功');
+            loginModal.close();
+            document.getElementById('btnLogin').innerText = '已登录 (点击重新登录)';
+            fetchState().catch(error => toast('获取状态失败: ' + error.message, false));
+            break;
+        case 'NotLoggedIn':
+            toast('登录失败', false);
+            loginModal.close();
+            break;
+        default:
+            toast('登录状态未知: ' + response, false);
+            loginModal.close();
+    }
+}
+
+/**
+ * 加载对话列表
+ */
+async function loadDialogs() {
+    const { data: dialogs } = await api(API + '/dialogs');
+    dialogList.innerHTML = dialogs.map(dialog => 
+        '<option value="' + dialog.id + '">' + dialog.displayTitle + '</option>'
+    ).join('');
+    toast('会话已加载');
+}
+
+/**
+ * 设置监控目标
+ */
+async function setTarget() {
+    if (!dialogList.value) {
+        toast('请选择会话', false);
+        return;
+    }
+    
+    await api(API + '/target', {
+        method: 'POST',
+        body: dialogList.value
+    });
+    
+    toast('已设置目标');
+}
+
+/**
+ * 启动监控
+ */
+async function startMonitor() {
+    const { data: response } = await api(API + '/start', {
+        method: 'POST'
+    });
+    
+    let isSuccess = false;
+    let message = '';
+    
+    switch (response) {
+        case 'Started':
+            isSuccess = true;
+            message = '启动成功';
+            break;
+        case 'MissingTarget':
+            message = '未设置目标群';
+            break;
+        case 'NoUserInfo':
+            message = '未获取到用户信息';
+            break;
+        case 'AlreadyRunning':
+            isSuccess = true;
+            message = '已在运行';
+            break;
+        case 'Error':
+            message = '未登录';
+            break;
+        default:
+            message = '未知状态: ' + response;
+    }
+    
+    toast(message, isSuccess);
+    state.mon = isSuccess;
+    applyState();
+}
+
+/**
+ * 停止监控
+ */
+async function stopMonitor() {
+    await api(API + '/stop', {
+        method: 'POST'
+    });
+    
+    toast('已停止');
+    state.mon = false;
+    applyState();
+}
+
+
+proxyTypeChanged();
+fetchState();
+
+'\x2029';

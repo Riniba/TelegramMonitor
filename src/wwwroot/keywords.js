@@ -1,29 +1,374 @@
-; '\x2028';const \u0041\u0050\u0049='/api/keyword';const \u0074\u0079\u0070\u0065\u004d\u0061\u0070={\u0046\u0075\u006c\u006c\u0057\u006f\u0072\u0064:'\u5168\u5b57',\u0043\u006f\u006e\u0074\u0061\u0069\u006e\u0073:'\u5305\u542b',\u0052\u0065\u0067\u0065\u0078:'\u6b63\u5219',\u0046\u0075\u007a\u007a\u0079:'\u6a21\u7cca',\u0055\u0073\u0065\u0072:'\u7528\u6237'};const \u0061\u0063\u0074\u0069\u006f\u006e\u004d\u0061\u0070={\u0045\u0078\u0063\u006c\u0075\u0064\u0065:'\u6392\u9664',\u004d\u006f\u006e\u0069\u0074\u006f\u0072:'\u76d1\u63a7'};const \u0073\u0074\u0079\u006c\u0065\u004d\u0061\u0070={\u0069\u0073\u0043\u0061\u0073\u0065\u0053\u0065\u006e\u0073\u0069\u0074\u0069\u0076\u0065:'\u5927\u5c0f\u5199',\u0069\u0073\u0042\u006f\u006c\u0064:'\u7c97\u4f53',\u0069\u0073\u0049\u0074\u0061\u006c\u0069\u0063:'\u659c\u4f53',\u0069\u0073\u0055\u006e\u0064\u0065\u0072\u006c\u0069\u006e\u0065:'\u4e0b\u5212\u7ebf',\u0069\u0073\u0053\u0074\u0072\u0069\u006b\u0065\u0054\u0068\u0072\u006f\u0075\u0067\u0068:'\u5220\u9664\u7ebf',\u0069\u0073\u0051\u0075\u006f\u0074\u0065:'\u5f15\u7528',\u0069\u0073\u004d\u006f\u006e\u006f\u0073\u0070\u0061\u0063\u0065:'\u7b49\u5bbd',\u0069\u0073\u0053\u0070\u006f\u0069\u006c\u0065\u0072:'\u5267\u900f'};const \u0074\u006f\u0061\u0073\u0074\u0042\u006f\u0078=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('toast');\u0074\u006f\u0061\u0073\u0074\u0042\u006f\u0078.\u0073\u0074\u0079\u006c\u0065.\u007a\u0049\u006e\u0064\u0065\u0078='9999';function \u0074\u006f\u0061\u0073\u0074(GI,DV=true){const o=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006c\u0065\u006d\u0065\u006e\u0074('div');o.\u0073\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065('role','alert');o.\u0063\u006c\u0061\u0073\u0073\u004e\u0061\u006d\u0065=`alert alert-${DV?'success':'error'} alert-horizontal shadow-lg`;o.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c=`<span>${GI}</span>`;\u0074\u006f\u0061\u0073\u0074\u0042\u006f\u0078.\u0061\u0070\u0070\u0065\u006e\u0064\u0043\u0068\u0069\u006c\u0064(o);\u0073\u0065\u0074\u0054\u0069\u006d\u0065\u006f\u0075\u0074(()=>o.\u0072\u0065\u006d\u006f\u0076\u0065(),4000);}async function \u0061\u0070\u0069(DE,IG){const M=await \u0066\u0065\u0074\u0063\u0068(DE,\u004f\u0062\u006a\u0065\u0063\u0074.\u0061\u0073\u0073\u0069\u0067\u006e({\u0068\u0065\u0061\u0064\u0065\u0072\u0073:{'Content-Type':'application/json'}},IG));const Dm=await M.\u0074\u0065\u0078\u0074();let IV={};try{IV=Dm?\u004a\u0053\u004f\u004e.\u0070\u0061\u0072\u0073\u0065(Dm):{};}catch{}if(!M.\u006f\u006b||IV.\u0073\u0075\u0063\u0063\u0065\u0065\u0064\u0065\u0064===false){const I=IV.\u0065\u0072\u0072\u006f\u0072\u0073&&(typeof IV.\u0065\u0072\u0072\u006f\u0072\u0073==='string'?IV.\u0065\u0072\u0072\u006f\u0072\u0073:\u004f\u0062\u006a\u0065\u0063\u0074.\u0076\u0061\u006c\u0075\u0065\u0073(IV.\u0065\u0072\u0072\u006f\u0072\u0073)[0][0])||IV.\u006d\u0065\u0073\u0073\u0061\u0067\u0065||Dm||'\u64cd\u4f5c\u5931\u8d25';\u0074\u006f\u0061\u0073\u0074(I,false);throw new \u0045\u0072\u0072\u006f\u0072(I);}return IV;}const \u0074\u0062\u006f\u0064\u0079=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('kwBody');function \u0073\u0074\u0079\u006c\u0065\u0053\u0074\u0072\u0069\u006e\u0067(IM){return \u004f\u0062\u006a\u0065\u0063\u0074.\u0065\u006e\u0074\u0072\u0069\u0065\u0073(\u0073\u0074\u0079\u006c\u0065\u004d\u0061\u0070).\u0066\u0069\u006c\u0074\u0065\u0072(([m])=>IM[m]).\u006d\u0061\u0070(([,t])=>t).\u006a\u006f\u0069\u006e(' ');}function \u0072\u0065\u006e\u0064\u0065\u0072\u0052\u006f\u0077(IM){const Dn=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006c\u0065\u006d\u0065\u006e\u0074('tr');Dn.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c=`
-    <td><input type="checkbox" class="row-check" value="${IM.\u0069\u0064}"></td>
-    <td>${IM.\u0069\u0064}</td>
-    <td>${IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074}</td>
-    <td>${\u0074\u0079\u0070\u0065\u004d\u0061\u0070[IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065]??IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065}</td>
-    <td>${\u0061\u0063\u0074\u0069\u006f\u006e\u004d\u0061\u0070[IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e]??IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e}</td>
-    <td>${\u0073\u0074\u0079\u006c\u0065\u0053\u0074\u0072\u0069\u006e\u0067(IM)}</td>
+// API路径和映射常量
+const API = '/api/keyword';
+
+// 关键词类型映射
+const typeMap = {
+    FullWord: '全字',
+    Contains: '包含', 
+    Regex: '正则',
+    Fuzzy: '模糊',
+    User: '用户'
+};
+
+// 关键词动作映射
+const actionMap = {
+    Exclude: '排除',
+    Monitor: '监控'
+};
+
+// 样式映射
+const styleMap = {
+    isCaseSensitive: '大小写',
+    isBold: '粗体',
+    isItalic: '斜体',
+    isUnderline: '下划线',
+    isStrikeThrough: '删除线',
+    isQuote: '引用',
+    isMonospace: '等宽',
+    isSpoiler: '剧透'
+};// Toast 通知功能
+const toastBox = document.getElementById('toast');
+toastBox.style.zIndex = '9999';
+
+/**
+ * 显示Toast通知
+ * @param {string} message - 通知消息
+ * @param {boolean} isSuccess - 是否为成功消息 (默认true)
+ */
+function toast(message, isSuccess = true) {
+    const toastElement = document.createElement('div');
+    toastElement.setAttribute('role', 'alert');
+    toastElement.className = `alert alert-${isSuccess ? 'success' : 'error'} alert-horizontal shadow-lg`;
+    toastElement.innerHTML = `<span>${message}</span>`;
+    
+    toastBox.appendChild(toastElement);
+    
+    // 4秒后自动移除
+    setTimeout(() => toastElement.remove(), 4000);
+}/**
+ * API请求函数
+ * @param {string} url - API端点URL
+ * @param {Object} options - 请求选项
+ * @returns {Promise<Object>} API响应数据
+ */
+async function api(url, options) {
+    const response = await fetch(url, Object.assign({
+        headers: { 'Content-Type': 'application/json' }
+    }, options));
+    
+    const responseText = await response.text();
+    let data = {};
+    
+    try {
+        data = responseText ? JSON.parse(responseText) : {};
+    } catch (e) {
+        // JSON解析失败时保持data为空对象
+    }
+    
+    // 检查响应是否成功
+    if (!response.ok || data.succeeded === false) {
+        const errorMessage = data.errors && 
+            (typeof data.errors === 'string' ? data.errors : Object.values(data.errors)[0][0]) ||
+            data.message ||
+            responseText ||
+            '操作失败';
+        
+        toast(errorMessage, false);
+        throw new Error(errorMessage);
+    }
+    
+    return data;
+}// DOM元素引用
+const tbody = document.getElementById('kwBody');
+
+/**
+ * 生成样式字符串
+ * @param {Object} keyword - 关键词对象
+ * @returns {string} 样式描述字符串
+ */
+function styleString(keyword) {
+    return Object.entries(styleMap)
+        .filter(([key]) => keyword[key])
+        .map(([, value]) => value)
+        .join(' ');
+}/**
+ * 渲染表格行
+ * @param {Object} keyword - 关键词对象
+ * @returns {HTMLTableRowElement} 表格行元素
+ */
+function renderRow(keyword) {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+    <td><input type="checkbox" class="row-check" value="${keyword.id}"></td>
+    <td>${keyword.id}</td>
+    <td>${keyword.keywordContent}</td>
+    <td>${typeMap[keyword.keywordType] ?? keyword.keywordType}</td>
+    <td>${actionMap[keyword.keywordAction] ?? keyword.keywordAction}</td>
+    <td>${styleString(keyword)}</td>
     <td>
-      <button class="btn" onclick='openEdit(${\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(IM)})'>\u7f16\u8f91</button>
-      <button class="btn btn-error ml-1" onclick="del(${IM.\u0069\u0064})">\u5220</button>
-    </td>`;return Dn;}async function \u0072\u0065\u0066\u0072\u0065\u0073\u0068(){const{\u0064\u0061\u0074\u0061:IU}=await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/list`);\u0074\u0062\u006f\u0064\u0079.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c='';IU.\u0066\u006f\u0072\u0045\u0061\u0063\u0068(en=>\u0074\u0062\u006f\u0064\u0079.\u0061\u0070\u0070\u0065\u006e\u0064\u0043\u0068\u0069\u006c\u0064(\u0072\u0065\u006e\u0064\u0065\u0072\u0052\u006f\u0077(en)));}async function \u0064\u0065\u006c(DI){await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/delete/${DI}`,{\u006d\u0065\u0074\u0068\u006f\u0064:'DELETE'});\u0074\u006f\u0061\u0073\u0074('\u5220\u9664\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}function \u0074\u006f\u0067\u0067\u006c\u0065\u0041\u006c\u006c(eT){\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('.row-check').\u0066\u006f\u0072\u0045\u0061\u0063\u0068(e=>e.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=eT.\u0063\u0068\u0065\u0063\u006b\u0065\u0064);}async function \u0064\u0065\u006c\u0065\u0074\u0065\u0053\u0065\u006c\u0065\u0063\u0074\u0065\u0064(){const ii=[...\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('.row-check')].\u0066\u0069\u006c\u0074\u0065\u0072(e=>e.\u0063\u0068\u0065\u0063\u006b\u0065\u0064).\u006d\u0061\u0070(e=>+e.\u0076\u0061\u006c\u0075\u0065);if(!ii.\u006c\u0065\u006e\u0067\u0074\u0068){\u0074\u006f\u0061\u0073\u0074('\u672a\u9009\u4e2d',false);return;}await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/batchdelete`,{\u006d\u0065\u0074\u0068\u006f\u0064:'DELETE',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(ii)});\u0074\u006f\u0061\u0073\u0074('\u6279\u91cf\u5220\u9664\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}async function \u0061\u0064\u0064\u0053\u0069\u006e\u0067\u006c\u0065(){const ol={\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074:\u0073\u0043\u006f\u006e\u0074\u0065\u006e\u0074.\u0076\u0061\u006c\u0075\u0065.\u0074\u0072\u0069\u006d(),\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065:+\u0073\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e:+\u0073\u0041\u0063\u0074\u0069\u006f\u006e.\u0076\u0061\u006c\u0075\u0065,\u0069\u0073\u0043\u0061\u0073\u0065\u0053\u0065\u006e\u0073\u0069\u0074\u0069\u0076\u0065:\u0073\u0043\u0061\u0073\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0042\u006f\u006c\u0064:\u0073\u0042\u006f\u006c\u0064.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0049\u0074\u0061\u006c\u0069\u0063:\u0073\u0049\u0074\u0061\u006c\u0069\u0063.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0055\u006e\u0064\u0065\u0072\u006c\u0069\u006e\u0065:\u0073\u0055\u006e\u0064\u0065\u0072.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0074\u0072\u0069\u006b\u0065\u0054\u0068\u0072\u006f\u0075\u0067\u0068:\u0073\u0053\u0074\u0072\u0069\u006b\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0051\u0075\u006f\u0074\u0065:\u0073\u0051\u0075\u006f\u0074\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u004d\u006f\u006e\u006f\u0073\u0070\u0061\u0063\u0065:\u0073\u004d\u006f\u006e\u006f.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0070\u006f\u0069\u006c\u0065\u0072:\u0073\u0053\u0070\u006f\u0069\u006c.\u0063\u0068\u0065\u0063\u006b\u0065\u0064};if(!ol.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074){\u0074\u006f\u0061\u0073\u0074('\u5185\u5bb9\u4e0d\u80fd\u4e3a\u7a7a',false);return;}await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/add`,{\u006d\u0065\u0074\u0068\u006f\u0064:'POST',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(ol)});\u0074\u006f\u0061\u0073\u0074('\u6dfb\u52a0\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}const \u0064\u0079\u006e\u0061\u006d\u0069\u0063\u0052\u006f\u0077\u0073=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('dynamicRows');function \u0072\u006f\u0077\u0054\u0070\u006c(DI){return`<div class="flex flex-wrap gap-2 items-center border p-2 rounded" id="row-${DI}">
-    <input class="input input-bordered w-40" placeholder="\u5173\u952e\u8bcd">
+      <button class="btn" onclick='openEdit(${JSON.stringify(keyword)})'>编辑</button>
+      <button class="btn btn-error ml-1" onclick="del(${keyword.id})">删</button>
+    </td>`;
+    return row;
+}/**
+ * 刷新关键词列表
+ */
+async function refresh() {
+    const { data: keywords } = await api(`${API}/list`);
+    tbody.innerHTML = '';
+    keywords.forEach(keyword => tbody.appendChild(renderRow(keyword)));
+}
+
+/**
+ * 删除关键词
+ * @param {number} id - 关键词ID
+ */
+async function del(id) {
+    await api(`${API}/delete/${id}`, { method: 'DELETE' });
+    toast('删除成功');
+    refresh();
+}/**
+ * 切换所有行的选中状态
+ * @param {HTMLInputElement} checkbox - 全选复选框
+ */
+function toggleAll(checkbox) {
+    document.querySelectorAll('.row-check').forEach(check => 
+        check.checked = checkbox.checked
+    );
+}
+
+/**
+ * 删除选中的关键词
+ */
+async function deleteSelected() {
+    const selectedIds = [...document.querySelectorAll('.row-check')]
+        .filter(check => check.checked)
+        .map(check => +check.value);
+    
+    if (!selectedIds.length) {
+        toast('未选中', false);
+        return;
+    }
+    
+    await api(`${API}/batchdelete`, {
+        method: 'DELETE',
+        body: JSON.stringify(selectedIds)
+    });
+    
+    toast('批量删除成功');
+    refresh();
+}/**
+ * 添加单个关键词
+ */
+async function addSingle() {
+    const keywordData = {
+        keywordContent: sContent.value.trim(),
+        keywordType: +sType.value,
+        keywordAction: +sAction.value,
+        isCaseSensitive: sCase.checked,
+        isBold: sBold.checked,
+        isItalic: sItalic.checked,
+        isUnderline: sUnder.checked,
+        isStrikeThrough: sStrike.checked,
+        isQuote: sQuote.checked,
+        isMonospace: sMono.checked,
+        isSpoiler: sSpoil.checked
+    };
+    
+    if (!keywordData.keywordContent) {
+        toast('内容不能为空', false);
+        return;
+    }
+    
+    await api(`${API}/add`, {
+        method: 'POST',
+        body: JSON.stringify(keywordData)
+    });
+    
+    toast('添加成功');
+    refresh();
+}// DOM元素引用
+const dynamicRows = document.getElementById('dynamicRows');
+
+/**
+ * 生成行模板
+ * @param {number} id - 行ID
+ * @returns {string} HTML模板字符串
+ */
+function rowTpl(id) {
+    return `<div class="flex flex-wrap gap-2 items-center border p-2 rounded" id="row-${id}">
+    <input class="input input-bordered w-40" placeholder="关键词">
     <select class="select select-bordered">
-      <option value="0">\u5168\u5b57</option><option value="1">\u5305\u542b</option>
-      <option value="2">\u6b63\u5219</option><option value="3">\u6a21\u7cca</option><option value="4">\u7528\u6237</option>
+      <option value="0">全字</option><option value="1">包含</option>
+      <option value="2">正则</option><option value="3">模糊</option><option value="4">用户</option>
     </select>
-    <select class="select select-bordered"><option value="1">\u76d1\u63a7</option><option value="0">\u6392\u9664</option></select>
-    ${\u004f\u0062\u006a\u0065\u0063\u0074.\u0065\u006e\u0074\u0072\u0069\u0065\u0073(\u0073\u0074\u0079\u006c\u0065\u004d\u0061\u0070).\u006d\u0061\u0070(([m,tn])=>`
-      <label class="label gap-1 text-xs"><span>${tn}</span>
-        <input type="checkbox" data-flag="${m}" class="checkbox">
-      </label>`).\u006a\u006f\u0069\u006e('')}
+    <select class="select select-bordered"><option value="1">监控</option><option value="0">排除</option></select>
+    ${Object.entries(styleMap).map(([key, value]) => `
+      <label class="label gap-1 text-xs"><span>${value}</span>
+        <input type="checkbox" data-flag="${key}" class="checkbox">
+      </label>`).join('')}
     <button class="btn btn-error" onclick="this.parentNode.remove()">x</button>
-  </div>`;}function \u0061\u0064\u0064\u0052\u006f\u0077(){\u0064\u0079\u006e\u0061\u006d\u0069\u0063\u0052\u006f\u0077\u0073.\u0069\u006e\u0073\u0065\u0072\u0074\u0041\u0064\u006a\u0061\u0063\u0065\u006e\u0074\u0048\u0054\u004d\u004c('beforeend',\u0072\u006f\u0077\u0054\u0070\u006c(\u0044\u0061\u0074\u0065.\u006e\u006f\u0077()));}async function \u0075\u0070\u006c\u006f\u0061\u0064\u0052\u006f\u0077\u0073(){const i=[...\u0064\u0079\u006e\u0061\u006d\u0069\u0063\u0052\u006f\u0077\u0073.\u0063\u0068\u0069\u006c\u0064\u0072\u0065\u006e].\u006d\u0061\u0070(en=>{const In=en.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072('input.input');if(!In||!In.\u0076\u0061\u006c\u0075\u0065.\u0074\u0072\u0069\u006d())return null;const[oU,tG]=en.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('select');const eV={\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074:In.\u0076\u0061\u006c\u0075\u0065.\u0074\u0072\u0069\u006d(),\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065:+oU.\u0076\u0061\u006c\u0075\u0065,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e:+tG.\u0076\u0061\u006c\u0075\u0065};en.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('input[data-flag]').\u0066\u006f\u0072\u0045\u0061\u0063\u0068(e=>eV[e.\u0064\u0061\u0074\u0061\u0073\u0065\u0074.\u0066\u006c\u0061\u0067]=e.\u0063\u0068\u0065\u0063\u006b\u0065\u0064);return eV;}).\u0066\u0069\u006c\u0074\u0065\u0072(\u0042\u006f\u006f\u006c\u0065\u0061\u006e);if(!i.\u006c\u0065\u006e\u0067\u0074\u0068){\u0074\u006f\u0061\u0073\u0074('\u65e0\u6709\u6548\u884c',false);return;}await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/batchadd`,{\u006d\u0065\u0074\u0068\u006f\u0064:'POST',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(i)});\u0074\u006f\u0061\u0073\u0074('\u6279\u91cf\u6dfb\u52a0\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}async function \u0075\u0070\u006c\u006f\u0061\u0064\u0054\u0065\u0078\u0074(){const G=\u0074\u0078\u0074\u004b\u0065\u0079\u0077\u006f\u0072\u0064\u0073.\u0076\u0061\u006c\u0075\u0065.\u0073\u0070\u006c\u0069\u0074('
-').\u006d\u0061\u0070(II=>II.\u0074\u0072\u0069\u006d()).\u0066\u0069\u006c\u0074\u0065\u0072(\u0042\u006f\u006f\u006c\u0065\u0061\u006e);if(!G.\u006c\u0065\u006e\u0067\u0074\u0068){\u0074\u006f\u0061\u0073\u0074('\u6587\u672c\u4e3a\u7a7a',false);return;}const oi={\u0069\u0073\u0043\u0061\u0073\u0065\u0053\u0065\u006e\u0073\u0069\u0074\u0069\u0076\u0065:\u0074\u0043\u0061\u0073\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0042\u006f\u006c\u0064:\u0074\u0042\u006f\u006c\u0064.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0049\u0074\u0061\u006c\u0069\u0063:\u0074\u0049\u0074\u0061\u006c\u0069\u0063.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0055\u006e\u0064\u0065\u0072\u006c\u0069\u006e\u0065:\u0074\u0055\u006e\u0064\u0065\u0072.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0074\u0072\u0069\u006b\u0065\u0054\u0068\u0072\u006f\u0075\u0067\u0068:\u0074\u0053\u0074\u0072\u0069\u006b\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0051\u0075\u006f\u0074\u0065:\u0074\u0051\u0075\u006f\u0074\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u004d\u006f\u006e\u006f\u0073\u0070\u0061\u0063\u0065:\u0074\u004d\u006f\u006e\u006f.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0070\u006f\u0069\u006c\u0065\u0072:\u0074\u0053\u0070\u006f\u0069\u006c.\u0063\u0068\u0065\u0063\u006b\u0065\u0064};const i=G.\u006d\u0061\u0070(e=>({\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074:e,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065:+\u0074\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e:+\u0074\u0041\u0063\u0074\u0069\u006f\u006e.\u0076\u0061\u006c\u0075\u0065,...oi}));await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/batchadd`,{\u006d\u0065\u0074\u0068\u006f\u0064:'POST',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(i)});\u0074\u006f\u0061\u0073\u0074('\u6279\u91cf\u6dfb\u52a0\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}function \u0066\u0069\u006c\u006c\u0045\u0064\u0069\u0074(IM){\u0065\u0049\u0064.\u0076\u0061\u006c\u0075\u0065=IM.\u0069\u0064;\u0065\u0043\u006f\u006e\u0074\u0065\u006e\u0074.\u0076\u0061\u006c\u0075\u0065=IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074;const E=\u004f\u0062\u006a\u0065\u0063\u0074.\u006b\u0065\u0079\u0073(\u0074\u0079\u0070\u0065\u004d\u0061\u0070);const n=\u004f\u0062\u006a\u0065\u0063\u0074.\u006b\u0065\u0079\u0073(\u0061\u0063\u0074\u0069\u006f\u006e\u004d\u0061\u0070);\u0065\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065=E.\u0069\u006e\u0064\u0065\u0078\u004f\u0066(IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065);\u0065\u0041\u0063\u0074\u0069\u006f\u006e.\u0076\u0061\u006c\u0075\u0065=n.\u0069\u006e\u0064\u0065\u0078\u004f\u0066(IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e);\u0065\u0043\u0061\u0073\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0043\u0061\u0073\u0065\u0053\u0065\u006e\u0073\u0069\u0074\u0069\u0076\u0065;\u0065\u0042\u006f\u006c\u0064.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0042\u006f\u006c\u0064;\u0065\u0049\u0074\u0061\u006c\u0069\u0063.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0049\u0074\u0061\u006c\u0069\u0063;\u0065\u0055\u006e\u0064\u0065\u0072.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0055\u006e\u0064\u0065\u0072\u006c\u0069\u006e\u0065;\u0065\u0053\u0074\u0072\u0069\u006b\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0053\u0074\u0072\u0069\u006b\u0065\u0054\u0068\u0072\u006f\u0075\u0067\u0068;\u0065\u0051\u0075\u006f\u0074\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0051\u0075\u006f\u0074\u0065;\u0065\u004d\u006f\u006e\u006f.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u004d\u006f\u006e\u006f\u0073\u0070\u0061\u0063\u0065;\u0065\u0053\u0070\u006f\u0069\u006c.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0053\u0070\u006f\u0069\u006c\u0065\u0072;}function \u006f\u0070\u0065\u006e\u0045\u0064\u0069\u0074(IM){\u0066\u0069\u006c\u006c\u0045\u0064\u0069\u0074(IM);\u0065\u0064\u0069\u0074\u004d\u006f\u0064\u0061\u006c.\u0073\u0068\u006f\u0077\u004d\u006f\u0064\u0061\u006c();}async function \u0073\u0061\u0076\u0065\u0045\u0064\u0069\u0074(){const ol={\u0069\u0064:+\u0065\u0049\u0064.\u0076\u0061\u006c\u0075\u0065,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074:\u0065\u0043\u006f\u006e\u0074\u0065\u006e\u0074.\u0076\u0061\u006c\u0075\u0065.\u0074\u0072\u0069\u006d(),\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065:+\u0065\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e:+\u0065\u0041\u0063\u0074\u0069\u006f\u006e.\u0076\u0061\u006c\u0075\u0065,\u0069\u0073\u0043\u0061\u0073\u0065\u0053\u0065\u006e\u0073\u0069\u0074\u0069\u0076\u0065:\u0065\u0043\u0061\u0073\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0042\u006f\u006c\u0064:\u0065\u0042\u006f\u006c\u0064.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0049\u0074\u0061\u006c\u0069\u0063:\u0065\u0049\u0074\u0061\u006c\u0069\u0063.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0055\u006e\u0064\u0065\u0072\u006c\u0069\u006e\u0065:\u0065\u0055\u006e\u0064\u0065\u0072.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0074\u0072\u0069\u006b\u0065\u0054\u0068\u0072\u006f\u0075\u0067\u0068:\u0065\u0053\u0074\u0072\u0069\u006b\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0051\u0075\u006f\u0074\u0065:\u0065\u0051\u0075\u006f\u0074\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u004d\u006f\u006e\u006f\u0073\u0070\u0061\u0063\u0065:\u0065\u004d\u006f\u006e\u006f.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0070\u006f\u0069\u006c\u0065\u0072:\u0065\u0053\u0070\u006f\u0069\u006c.\u0063\u0068\u0065\u0063\u006b\u0065\u0064};await \u0061\u0070\u0069(`${\u0041\u0050\u0049}/update`,{\u006d\u0065\u0074\u0068\u006f\u0064:'PUT',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(ol)});\u0074\u006f\u0061\u0073\u0074('\u4fee\u6539\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('[role=tab]').\u0066\u006f\u0072\u0045\u0061\u0063\u0068(Di=>{Di.\u006f\u006e\u0063\u006c\u0069\u0063\u006b=()=>{\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('[role=tab]').\u0066\u006f\u0072\u0045\u0061\u0063\u0068(tU=>tU.\u0063\u006c\u0061\u0073\u0073\u004c\u0069\u0073\u0074.\u0072\u0065\u006d\u006f\u0076\u0065('tab-active'));Di.\u0063\u006c\u0061\u0073\u0073\u004c\u0069\u0073\u0074.\u0061\u0064\u0064('tab-active');['list','single','batch','text'].\u0066\u006f\u0072\u0045\u0061\u0063\u0068(oT=>{\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('panel-'+oT).\u0063\u006c\u0061\u0073\u0073\u004c\u0069\u0073\u0074.\u0074\u006f\u0067\u0067\u006c\u0065('hidden',!Di.\u0069\u0064.\u0065\u006e\u0064\u0073\u0057\u0069\u0074\u0068(oT));});};});function \u0061\u0064\u0064\u0043\u006f\u0070\u0079\u0072\u0069\u0067\u0068\u0074(){const il=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006c\u0065\u006d\u0065\u006e\u0074('div');il.\u0073\u0074\u0079\u006c\u0065.\u0063\u0073\u0073\u0054\u0065\u0078\u0074='position:fixed;top:0;left:0;width:100%;background-color:#f0f0f0;padding:10px;text-align:center;z-index:1000;box-shadow:0 2px 4px rgba(0,0,0,0.1);';il.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c=`
-        <span style="margin-right:15px;">\u4f5c\u8005 <a href="https://t.me/" target="_blank" style="text-decoration:none;color:#0088cc;font-weight:bold;"></a></span>
-        <span style="margin-right:15px;"></span>
-        <span style="margin-right:15px;">\u4ea4\u6d41\u7fa4 <a href="https://t.me/RinibaGroup" target="_blank" style="text-decoration:none;color:#0088cc;font-weight:bold;">Telegram</a></span>
-        <span><a href="https://github.com/Riniba/TelegramMonitor/wiki/%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B" target="_blank" style="text-decoration:none;color:#0088cc;font-weight:bold;">\u5173\u952e\u8bcd\u914d\u7f6e\u8bf4\u660e</a></span>
-    `;\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0062\u006f\u0064\u0079.\u0069\u006e\u0073\u0065\u0072\u0074\u0042\u0065\u0066\u006f\u0072\u0065(il,\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0062\u006f\u0064\u0079.\u0066\u0069\u0072\u0073\u0074\u0043\u0068\u0069\u006c\u0064);\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0062\u006f\u0064\u0079.\u0073\u0074\u0079\u006c\u0065.\u0070\u0061\u0064\u0064\u0069\u006e\u0067\u0054\u006f\u0070=il.\u006f\u0066\u0066\u0073\u0065\u0074\u0048\u0065\u0069\u0067\u0068\u0074+10+'px';}\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0061\u0064\u0064\u0045\u0076\u0065\u006e\u0074\u004c\u0069\u0073\u0074\u0065\u006e\u0065\u0072('DOMContentLoaded',\u0061\u0064\u0064\u0043\u006f\u0070\u0079\u0072\u0069\u0067\u0068\u0074);\u0072\u0065\u0066\u0072\u0065\u0073\u0068();'\x2029';
+  </div>`;
+}
+
+/**
+ * 添加新行
+ */
+function addRow() {
+    dynamicRows.insertAdjacentHTML('beforeend', rowTpl(Date.now()));
+}/**
+ * 上传动态行的关键词
+ */
+async function uploadRows() {
+    const keywords = [...dynamicRows.children].map(row => {
+        const input = row.querySelector('input.input');
+        if (!input || !input.value.trim()) return null;
+        
+        const [typeSelect, actionSelect] = row.querySelectorAll('select');
+        const keywordData = {
+            keywordContent: input.value.trim(),
+            keywordType: +typeSelect.value,
+            keywordAction: +actionSelect.value
+        };
+        
+        // 添加样式选项
+        row.querySelectorAll('input[data-flag]').forEach(checkbox => {
+            keywordData[checkbox.dataset.flag] = checkbox.checked;
+        });
+        
+        return keywordData;
+    }).filter(Boolean);
+    
+    if (!keywords.length) {
+        toast('无有效行', false);
+        return;
+    }
+    
+    await api(`${API}/batchadd`, {
+        method: 'POST',
+        body: JSON.stringify(keywords)
+    });
+    
+    toast('批量添加成功');
+    refresh();
+}/**
+ * 上传文本关键词
+ */
+async function uploadText() {
+    const keywords = txtKeywords.value
+        .split('
+')
+        .map(line => line.trim())
+        .filter(Boolean);
+    
+    if (!keywords.length) {
+        toast('文本为空', false);
+        return;
+    }
+    
+    const styleOptions = {
+        isCaseSensitive: tCase.checked,
+        isBold: tBold.checked,
+        isItalic: tItalic.checked,
+        isUnderline: tUnder.checked,
+        isStrikeThrough: tStrike.checked,
+        isQuote: tQuote.checked,
+        isMonospace: tMono.checked,
+        isSpoiler: tSpoil.checked
+    };
+    
+    const keywordData = keywords.map(keyword => ({
+        keywordContent: keyword,
+        keywordType: +tType.value,
+        keywordAction: +tAction.value,
+        ...styleOptions
+    }));
+    
+    await api(`${API}/batchadd`, {
+        method: 'POST',
+        body: JSON.stringify(keywordData)
+    });
+    
+    toast('批量添加成功');
+    refresh();
+}/**
+ * 填充编辑表单
+ * @param {Object} keyword - 关键词对象
+ */
+function fillEdit(keyword) {
+    eId.value = keyword.id;
+    eContent.value = keyword.keywordContent;
+    
+    const typeKeys = Object.keys(typeMap);
+    const actionKeys = Object.keys(actionMap);
+    
+    eType.value = typeKeys.indexOf(keyword.keywordType);
+    eAction.value = actionKeys.indexOf(keyword.keywordAction);
+    
+    // 设置样式选项
+    eCase.checked = keyword.isCaseSensitive;
+    eBold.checked = keyword.isBold;
+    eItalic.checked = keyword.isItalic;
+    eUnder.checked = keyword.isUnderline;
+    eStrike.checked = keyword.isStrikeThrough;
+    eQuote.checked = keyword.isQuote;
+    eMono.checked = keyword.isMonospace;
+    eSpoil.checked = keyword.isSpoiler;
+}/**
+ * 打开编辑模态框
+ * @param {Object} keyword - 关键词对象
+ */
+function openEdit(keyword) {
+    fillEdit(keyword);
+    editModal.showModal();
+}
+
+/**
+ * 保存编辑
+ */
+async function saveEdit() {
+    const keywordData = {
+        id: +eId.value,
+        keywordContent: eContent.value.trim(),
+        keywordType: +eType.value,
+        keywordAction: +eAction.value,
+        isCaseSensitive: eCase.checked,
+        isBold: eBold.checked,
+        isItalic: eItalic.checked,
+        isUnderline: eUnder.checked,
+        isStrikeThrough: eStrike.checked,
+        isQuote: eQuote.checked,
+        isMonospace: eMono.checked,
+        isSpoiler: eSpoil.checked
+    };
+    
+    await api(`${API}/update`, {
+        method: 'PUT',
+        body: JSON.stringify(keywordData)
+    });
+    
+    toast('修改成功');
+    refresh();
+}// 标签页切换功能
+document.querySelectorAll('[role=tab]').forEach(tab => {
+    tab.onclick = () => {
+        // 移除所有标签的激活状态
+        document.querySelectorAll('[role=tab]').forEach(t => 
+            t.classList.remove('tab-active')
+        );
+        
+        // 激活当前标签
+        tab.classList.add('tab-active');
+        
+        // 切换面板显示
+        ['list', 'single', 'batch', 'text'].forEach(panelName => {
+            document.getElementById('panel-' + panelName)
+                .classList.toggle('hidden', !tab.id.endsWith(panelName));
+        });
+    };
+});
+
+
+
+// 初始化数据
+refresh();
