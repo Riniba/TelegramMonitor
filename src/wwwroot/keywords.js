@@ -1,1 +1,346 @@
-; ' ';const \u0041\u0050\u0049='\x2F\x61\x70\x69\x2F\x6B\x65\x79\x77\x6F\x72\x64';const \u0074\u0079\u0070\u0065\u004d\u0061\u0070={\u0046\u0075\u006c\u006c\u0057\u006f\u0072\u0064:'\u5168\u5b57',\u0043\u006f\u006e\u0074\u0061\u0069\u006e\u0073:'\u5305\u542b',\u0052\u0065\u0067\u0065\u0078:'\u6b63\u5219',\u0046\u0075\u007a\u007a\u0079:'\u6a21\u7cca',\u0055\u0073\u0065\u0072:'\u7528\u6237'};const \u0061\u0063\u0074\u0069\u006f\u006e\u004d\u0061\u0070={\u0045\u0078\u0063\u006c\u0075\u0064\u0065:'\u6392\u9664',\u004d\u006f\u006e\u0069\u0074\u006f\u0072:'\u76d1\u63a7'};const \u0073\u0074\u0079\u006c\u0065\u004d\u0061\u0070={\u0069\u0073\u0043\u0061\u0073\u0065\u0053\u0065\u006e\u0073\u0069\u0074\u0069\u0076\u0065:'\u5927\u5c0f\u5199',\u0069\u0073\u0042\u006f\u006c\u0064:'\u7c97\u4f53',\u0069\u0073\u0049\u0074\u0061\u006c\u0069\u0063:'\u659c\u4f53',\u0069\u0073\u0055\u006e\u0064\u0065\u0072\u006c\u0069\u006e\u0065:'\u4e0b\u5212\u7ebf',\u0069\u0073\u0053\u0074\u0072\u0069\u006b\u0065\u0054\u0068\u0072\u006f\u0075\u0067\u0068:'\u5220\u9664\u7ebf',\u0069\u0073\u0051\u0075\u006f\u0074\u0065:'\u5f15\u7528',\u0069\u0073\u004d\u006f\u006e\u006f\u0073\u0070\u0061\u0063\u0065:'\u7b49\u5bbd',\u0069\u0073\u0053\u0070\u006f\u0069\u006c\u0065\u0072:'\u5267\u900f'};const \u0074\u006f\u0061\u0073\u0074\u0042\u006f\u0078=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('\x74\x6F\x61\x73\x74');\u0074\u006f\u0061\u0073\u0074\u0042\u006f\u0078.\u0073\u0074\u0079\u006c\u0065.\u007a\u0049\u006e\u0064\u0065\u0078='\x39\x39\x39\x39';function \u0074\u006f\u0061\u0073\u0074(GI,DV=true){const o=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006c\u0065\u006d\u0065\u006e\u0074('\x64\x69\x76');o.\u0073\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065('\x72\x6F\x6C\x65','\x61\x6C\x65\x72\x74');o.\u0063\u006c\u0061\u0073\u0073\u004e\u0061\u006d\u0065=`\x61\x6C\x65\x72\x74\x20\x61\x6C\x65\x72\x74\x2D${DV?'\x73\x75\x63\x63\x65\x73\x73':'\x65\x72\x72\x6F\x72'}\x20\x61\x6C\x65\x72\x74\x2D\x68\x6F\x72\x69\x7A\x6F\x6E\x74\x61\x6C\x20\x73\x68\x61\x64\x6F\x77\x2D\x6C\x67`;o.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c=`\x3C\x73\x70\x61\x6E\x3E${GI}\x3C\x2F\x73\x70\x61\x6E\x3E`;\u0074\u006f\u0061\u0073\u0074\u0042\u006f\u0078.\u0061\u0070\u0070\u0065\u006e\u0064\u0043\u0068\u0069\u006c\u0064(o);\u0073\u0065\u0074\u0054\u0069\u006d\u0065\u006f\u0075\u0074(()=>o.\u0072\u0065\u006d\u006f\u0076\u0065(),4000);}async function \u0061\u0070\u0069(DE,IG){const M=await \u0066\u0065\u0074\u0063\u0068(DE,\u004f\u0062\u006a\u0065\u0063\u0074.\u0061\u0073\u0073\u0069\u0067\u006e({\u0068\u0065\u0061\u0064\u0065\u0072\u0073:{'\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x54\x79\x70\x65':'\x61\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x6A\x73\x6F\x6E'}},IG));const Dm=await M.\u0074\u0065\u0078\u0074();let IV={};try{IV=Dm?\u004a\u0053\u004f\u004e.\u0070\u0061\u0072\u0073\u0065(Dm):{};}catch{}if(!M.\u006f\u006b||IV.\u0073\u0075\u0063\u0063\u0065\u0065\u0064\u0065\u0064===false){const I=IV.\u0065\u0072\u0072\u006f\u0072\u0073&&(typeof IV.\u0065\u0072\u0072\u006f\u0072\u0073==='\x73\x74\x72\x69\x6E\x67'?IV.\u0065\u0072\u0072\u006f\u0072\u0073:\u004f\u0062\u006a\u0065\u0063\u0074.\u0076\u0061\u006c\u0075\u0065\u0073(IV.\u0065\u0072\u0072\u006f\u0072\u0073)[0][0])||IV.\u006d\u0065\u0073\u0073\u0061\u0067\u0065||Dm||'\u64cd\u4f5c\u5931\u8d25';\u0074\u006f\u0061\u0073\u0074(I,false);throw new \u0045\u0072\u0072\u006f\u0072(I);}return IV;}const \u0074\u0062\u006f\u0064\u0079=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('\x6B\x77\x42\x6F\x64\x79');function \u0073\u0074\u0079\u006c\u0065\u0053\u0074\u0072\u0069\u006e\u0067(IM){return \u004f\u0062\u006a\u0065\u0063\u0074.\u0065\u006e\u0074\u0072\u0069\u0065\u0073(\u0073\u0074\u0079\u006c\u0065\u004d\u0061\u0070).\u0066\u0069\u006c\u0074\u0065\u0072(([m])=>IM[m]).\u006d\u0061\u0070(([,t])=>t).\u006a\u006f\u0069\u006e('\x20');}function \u0072\u0065\u006e\u0064\u0065\u0072\u0052\u006f\u0077(IM){const Dn=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006c\u0065\u006d\u0065\u006e\u0074('\x74\x72');Dn.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c=`\x0A\x20\x20\x20\x20\x3C\x74\x64\x3E\x3C\x69\x6E\x70\x75\x74\x20\x74\x79\x70\x65\x3D\x22\x63\x68\x65\x63\x6B\x62\x6F\x78\x22\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x6F\x77\x2D\x63\x68\x65\x63\x6B\x22\x20\x76\x61\x6C\x75\x65\x3D\x22${IM.\u0069\u0064}\x22\x3E\x3C\x2F\x74\x64\x3E\x0A\x20\x20\x20\x20\x3C\x74\x64\x3E${IM.\u0069\u0064}\x3C\x2F\x74\x64\x3E\x0A\x20\x20\x20\x20\x3C\x74\x64\x3E${IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074}\x3C\x2F\x74\x64\x3E\x0A\x20\x20\x20\x20\x3C\x74\x64\x3E${\u0074\u0079\u0070\u0065\u004d\u0061\u0070[IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065]??IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065}\x3C\x2F\x74\x64\x3E\x0A\x20\x20\x20\x20\x3C\x74\x64\x3E${\u0061\u0063\u0074\u0069\u006f\u006e\u004d\u0061\u0070[IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e]??IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e}\x3C\x2F\x74\x64\x3E\x0A\x20\x20\x20\x20\x3C\x74\x64\x3E${\u0073\u0074\u0079\u006c\u0065\u0053\u0074\u0072\u0069\u006e\u0067(IM)}\x3C\x2F\x74\x64\x3E\x0A\x20\x20\x20\x20\x3C\x74\x64\x3E\x0A\x20\x20\x20\x20\x20\x20\x3C\x62\x75\x74\x74\x6F\x6E\x20\x63\x6C\x61\x73\x73\x3D\x22\x62\x74\x6E\x22\x20\x6F\x6E\x63\x6C\x69\x63\x6B\x3D\x27\x6F\x70\x65\x6E\x45\x64\x69\x74\x28${\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(IM)}\x29\x27\x3E\u7f16\u8f91\x3C\x2F\x62\x75\x74\x74\x6F\x6E\x3E\x0A\x20\x20\x20\x20\x20\x20\x3C\x62\x75\x74\x74\x6F\x6E\x20\x63\x6C\x61\x73\x73\x3D\x22\x62\x74\x6E\x20\x62\x74\x6E\x2D\x65\x72\x72\x6F\x72\x20\x6D\x6C\x2D\x31\x22\x20\x6F\x6E\x63\x6C\x69\x63\x6B\x3D\x22\x64\x65\x6C\x28${IM.\u0069\u0064}\x29\x22\x3E\u5220\x3C\x2F\x62\x75\x74\x74\x6F\x6E\x3E\x0A\x20\x20\x20\x20\x3C\x2F\x74\x64\x3E`;return Dn;}async function \u0072\u0065\u0066\u0072\u0065\u0073\u0068(){const{\u0064\u0061\u0074\u0061:IU}=await \u0061\u0070\u0069(`${\u0041\u0050\u0049}\x2F\x6C\x69\x73\x74`);\u0074\u0062\u006f\u0064\u0079.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c='';IU.\u0066\u006f\u0072\u0045\u0061\u0063\u0068(en=>\u0074\u0062\u006f\u0064\u0079.\u0061\u0070\u0070\u0065\u006e\u0064\u0043\u0068\u0069\u006c\u0064(\u0072\u0065\u006e\u0064\u0065\u0072\u0052\u006f\u0077(en)));}async function \u0064\u0065\u006c(DI){await \u0061\u0070\u0069(`${\u0041\u0050\u0049}\x2F\x64\x65\x6C\x65\x74\x65\x2F${DI}`,{\u006d\u0065\u0074\u0068\u006f\u0064:'\x44\x45\x4C\x45\x54\x45'});\u0074\u006f\u0061\u0073\u0074('\u5220\u9664\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}function \u0074\u006f\u0067\u0067\u006c\u0065\u0041\u006c\u006c(eT){\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('\x2E\x72\x6F\x77\x2D\x63\x68\x65\x63\x6B').\u0066\u006f\u0072\u0045\u0061\u0063\u0068(e=>e.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=eT.\u0063\u0068\u0065\u0063\u006b\u0065\u0064);}async function \u0064\u0065\u006c\u0065\u0074\u0065\u0053\u0065\u006c\u0065\u0063\u0074\u0065\u0064(){const ii=[...\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('\x2E\x72\x6F\x77\x2D\x63\x68\x65\x63\x6B')].\u0066\u0069\u006c\u0074\u0065\u0072(e=>e.\u0063\u0068\u0065\u0063\u006b\u0065\u0064).\u006d\u0061\u0070(e=>+e.\u0076\u0061\u006c\u0075\u0065);if(!ii.\u006c\u0065\u006e\u0067\u0074\u0068){\u0074\u006f\u0061\u0073\u0074('\u672a\u9009\u4e2d',false);return;}await \u0061\u0070\u0069(`${\u0041\u0050\u0049}\x2F\x62\x61\x74\x63\x68\x64\x65\x6C\x65\x74\x65`,{\u006d\u0065\u0074\u0068\u006f\u0064:'\x44\x45\x4C\x45\x54\x45',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(ii)});\u0074\u006f\u0061\u0073\u0074('\u6279\u91cf\u5220\u9664\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}async function \u0061\u0064\u0064\u0053\u0069\u006e\u0067\u006c\u0065(){const ol={\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074:\u0073\u0043\u006f\u006e\u0074\u0065\u006e\u0074.\u0076\u0061\u006c\u0075\u0065.\u0074\u0072\u0069\u006d(),\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065:+\u0073\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e:+\u0073\u0041\u0063\u0074\u0069\u006f\u006e.\u0076\u0061\u006c\u0075\u0065,\u0069\u0073\u0043\u0061\u0073\u0065\u0053\u0065\u006e\u0073\u0069\u0074\u0069\u0076\u0065:\u0073\u0043\u0061\u0073\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0042\u006f\u006c\u0064:\u0073\u0042\u006f\u006c\u0064.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0049\u0074\u0061\u006c\u0069\u0063:\u0073\u0049\u0074\u0061\u006c\u0069\u0063.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0055\u006e\u0064\u0065\u0072\u006c\u0069\u006e\u0065:\u0073\u0055\u006e\u0064\u0065\u0072.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0074\u0072\u0069\u006b\u0065\u0054\u0068\u0072\u006f\u0075\u0067\u0068:\u0073\u0053\u0074\u0072\u0069\u006b\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0051\u0075\u006f\u0074\u0065:\u0073\u0051\u0075\u006f\u0074\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u004d\u006f\u006e\u006f\u0073\u0070\u0061\u0063\u0065:\u0073\u004d\u006f\u006e\u006f.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0070\u006f\u0069\u006c\u0065\u0072:\u0073\u0053\u0070\u006f\u0069\u006c.\u0063\u0068\u0065\u0063\u006b\u0065\u0064};if(!ol.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074){\u0074\u006f\u0061\u0073\u0074('\u5185\u5bb9\u4e0d\u80fd\u4e3a\u7a7a',false);return;}await \u0061\u0070\u0069(`${\u0041\u0050\u0049}\x2F\x61\x64\x64`,{\u006d\u0065\u0074\u0068\u006f\u0064:'\x50\x4F\x53\x54',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(ol)});\u0074\u006f\u0061\u0073\u0074('\u6dfb\u52a0\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}const \u0064\u0079\u006e\u0061\u006d\u0069\u0063\u0052\u006f\u0077\u0073=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('\x64\x79\x6E\x61\x6D\x69\x63\x52\x6F\x77\x73');function \u0072\u006f\u0077\u0054\u0070\u006c(DI){return`\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x66\x6C\x65\x78\x20\x66\x6C\x65\x78\x2D\x77\x72\x61\x70\x20\x67\x61\x70\x2D\x32\x20\x69\x74\x65\x6D\x73\x2D\x63\x65\x6E\x74\x65\x72\x20\x62\x6F\x72\x64\x65\x72\x20\x70\x2D\x32\x20\x72\x6F\x75\x6E\x64\x65\x64\x22\x20\x69\x64\x3D\x22\x72\x6F\x77\x2D${DI}\x22\x3E\x0A\x20\x20\x20\x20\x3C\x69\x6E\x70\x75\x74\x20\x63\x6C\x61\x73\x73\x3D\x22\x69\x6E\x70\x75\x74\x20\x69\x6E\x70\x75\x74\x2D\x62\x6F\x72\x64\x65\x72\x65\x64\x20\x77\x2D\x34\x30\x22\x20\x70\x6C\x61\x63\x65\x68\x6F\x6C\x64\x65\x72\x3D\x22\u5173\u952e\u8bcd\x22\x3E\x0A\x20\x20\x20\x20\x3C\x73\x65\x6C\x65\x63\x74\x20\x63\x6C\x61\x73\x73\x3D\x22\x73\x65\x6C\x65\x63\x74\x20\x73\x65\x6C\x65\x63\x74\x2D\x62\x6F\x72\x64\x65\x72\x65\x64\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x3C\x6F\x70\x74\x69\x6F\x6E\x20\x76\x61\x6C\x75\x65\x3D\x22\x30\x22\x3E\u5168\u5b57\x3C\x2F\x6F\x70\x74\x69\x6F\x6E\x3E\x3C\x6F\x70\x74\x69\x6F\x6E\x20\x76\x61\x6C\x75\x65\x3D\x22\x31\x22\x3E\u5305\u542b\x3C\x2F\x6F\x70\x74\x69\x6F\x6E\x3E\x0A\x20\x20\x20\x20\x20\x20\x3C\x6F\x70\x74\x69\x6F\x6E\x20\x76\x61\x6C\x75\x65\x3D\x22\x32\x22\x3E\u6b63\u5219\x3C\x2F\x6F\x70\x74\x69\x6F\x6E\x3E\x3C\x6F\x70\x74\x69\x6F\x6E\x20\x76\x61\x6C\x75\x65\x3D\x22\x33\x22\x3E\u6a21\u7cca\x3C\x2F\x6F\x70\x74\x69\x6F\x6E\x3E\x3C\x6F\x70\x74\x69\x6F\x6E\x20\x76\x61\x6C\x75\x65\x3D\x22\x34\x22\x3E\u7528\u6237\x3C\x2F\x6F\x70\x74\x69\x6F\x6E\x3E\x0A\x20\x20\x20\x20\x3C\x2F\x73\x65\x6C\x65\x63\x74\x3E\x0A\x20\x20\x20\x20\x3C\x73\x65\x6C\x65\x63\x74\x20\x63\x6C\x61\x73\x73\x3D\x22\x73\x65\x6C\x65\x63\x74\x20\x73\x65\x6C\x65\x63\x74\x2D\x62\x6F\x72\x64\x65\x72\x65\x64\x22\x3E\x3C\x6F\x70\x74\x69\x6F\x6E\x20\x76\x61\x6C\x75\x65\x3D\x22\x31\x22\x3E\u76d1\u63a7\x3C\x2F\x6F\x70\x74\x69\x6F\x6E\x3E\x3C\x6F\x70\x74\x69\x6F\x6E\x20\x76\x61\x6C\x75\x65\x3D\x22\x30\x22\x3E\u6392\u9664\x3C\x2F\x6F\x70\x74\x69\x6F\x6E\x3E\x3C\x2F\x73\x65\x6C\x65\x63\x74\x3E\x0A\x20\x20\x20\x20${\u004f\u0062\u006a\u0065\u0063\u0074.\u0065\u006e\u0074\u0072\u0069\u0065\u0073(\u0073\u0074\u0079\u006c\u0065\u004d\u0061\u0070).\u006d\u0061\u0070(([m,tn])=>`\x0A\x20\x20\x20\x20\x20\x20\x3C\x6C\x61\x62\x65\x6C\x20\x63\x6C\x61\x73\x73\x3D\x22\x6C\x61\x62\x65\x6C\x20\x67\x61\x70\x2D\x31\x20\x74\x65\x78\x74\x2D\x78\x73\x22\x3E\x3C\x73\x70\x61\x6E\x3E${tn}\x3C\x2F\x73\x70\x61\x6E\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x69\x6E\x70\x75\x74\x20\x74\x79\x70\x65\x3D\x22\x63\x68\x65\x63\x6B\x62\x6F\x78\x22\x20\x64\x61\x74\x61\x2D\x66\x6C\x61\x67\x3D\x22${m}\x22\x20\x63\x6C\x61\x73\x73\x3D\x22\x63\x68\x65\x63\x6B\x62\x6F\x78\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x3C\x2F\x6C\x61\x62\x65\x6C\x3E`).\u006a\u006f\u0069\u006e('')}\x0A\x20\x20\x20\x20\x3C\x62\x75\x74\x74\x6F\x6E\x20\x63\x6C\x61\x73\x73\x3D\x22\x62\x74\x6E\x20\x62\x74\x6E\x2D\x65\x72\x72\x6F\x72\x22\x20\x6F\x6E\x63\x6C\x69\x63\x6B\x3D\x22\x74\x68\x69\x73\x2E\x70\x61\x72\x65\x6E\x74\x4E\x6F\x64\x65\x2E\x72\x65\x6D\x6F\x76\x65\x28\x29\x22\x3E\x78\x3C\x2F\x62\x75\x74\x74\x6F\x6E\x3E\x0A\x20\x20\x3C\x2F\x64\x69\x76\x3E`;}function \u0061\u0064\u0064\u0052\u006f\u0077(){\u0064\u0079\u006e\u0061\u006d\u0069\u0063\u0052\u006f\u0077\u0073.\u0069\u006e\u0073\u0065\u0072\u0074\u0041\u0064\u006a\u0061\u0063\u0065\u006e\u0074\u0048\u0054\u004d\u004c('\x62\x65\x66\x6F\x72\x65\x65\x6E\x64',\u0072\u006f\u0077\u0054\u0070\u006c(\u0044\u0061\u0074\u0065.\u006e\u006f\u0077()));}async function \u0075\u0070\u006c\u006f\u0061\u0064\u0052\u006f\u0077\u0073(){const i=[...\u0064\u0079\u006e\u0061\u006d\u0069\u0063\u0052\u006f\u0077\u0073.\u0063\u0068\u0069\u006c\u0064\u0072\u0065\u006e].\u006d\u0061\u0070(en=>{const In=en.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072('\x69\x6E\x70\x75\x74\x2E\x69\x6E\x70\x75\x74');if(!In||!In.\u0076\u0061\u006c\u0075\u0065.\u0074\u0072\u0069\u006d())return null;const[oU,tG]=en.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('\x73\x65\x6C\x65\x63\x74');const eV={\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074:In.\u0076\u0061\u006c\u0075\u0065.\u0074\u0072\u0069\u006d(),\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065:+oU.\u0076\u0061\u006c\u0075\u0065,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e:+tG.\u0076\u0061\u006c\u0075\u0065};en.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('\x69\x6E\x70\x75\x74\x5B\x64\x61\x74\x61\x2D\x66\x6C\x61\x67\x5D').\u0066\u006f\u0072\u0045\u0061\u0063\u0068(e=>eV[e.\u0064\u0061\u0074\u0061\u0073\u0065\u0074.\u0066\u006c\u0061\u0067]=e.\u0063\u0068\u0065\u0063\u006b\u0065\u0064);return eV;}).\u0066\u0069\u006c\u0074\u0065\u0072(\u0042\u006f\u006f\u006c\u0065\u0061\u006e);if(!i.\u006c\u0065\u006e\u0067\u0074\u0068){\u0074\u006f\u0061\u0073\u0074('\u65e0\u6709\u6548\u884c',false);return;}await \u0061\u0070\u0069(`${\u0041\u0050\u0049}\x2F\x62\x61\x74\x63\x68\x61\x64\x64`,{\u006d\u0065\u0074\u0068\u006f\u0064:'\x50\x4F\x53\x54',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(i)});\u0074\u006f\u0061\u0073\u0074('\u6279\u91cf\u6dfb\u52a0\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}async function \u0075\u0070\u006c\u006f\u0061\u0064\u0054\u0065\u0078\u0074(){const G=\u0074\u0078\u0074\u004b\u0065\u0079\u0077\u006f\u0072\u0064\u0073.\u0076\u0061\u006c\u0075\u0065.\u0073\u0070\u006c\u0069\u0074('\x0A').\u006d\u0061\u0070(II=>II.\u0074\u0072\u0069\u006d()).\u0066\u0069\u006c\u0074\u0065\u0072(\u0042\u006f\u006f\u006c\u0065\u0061\u006e);if(!G.\u006c\u0065\u006e\u0067\u0074\u0068){\u0074\u006f\u0061\u0073\u0074('\u6587\u672c\u4e3a\u7a7a',false);return;}const oi={\u0069\u0073\u0043\u0061\u0073\u0065\u0053\u0065\u006e\u0073\u0069\u0074\u0069\u0076\u0065:\u0074\u0043\u0061\u0073\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0042\u006f\u006c\u0064:\u0074\u0042\u006f\u006c\u0064.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0049\u0074\u0061\u006c\u0069\u0063:\u0074\u0049\u0074\u0061\u006c\u0069\u0063.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0055\u006e\u0064\u0065\u0072\u006c\u0069\u006e\u0065:\u0074\u0055\u006e\u0064\u0065\u0072.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0074\u0072\u0069\u006b\u0065\u0054\u0068\u0072\u006f\u0075\u0067\u0068:\u0074\u0053\u0074\u0072\u0069\u006b\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0051\u0075\u006f\u0074\u0065:\u0074\u0051\u0075\u006f\u0074\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u004d\u006f\u006e\u006f\u0073\u0070\u0061\u0063\u0065:\u0074\u004d\u006f\u006e\u006f.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0070\u006f\u0069\u006c\u0065\u0072:\u0074\u0053\u0070\u006f\u0069\u006c.\u0063\u0068\u0065\u0063\u006b\u0065\u0064};const i=G.\u006d\u0061\u0070(e=>({\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074:e,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065:+\u0074\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e:+\u0074\u0041\u0063\u0074\u0069\u006f\u006e.\u0076\u0061\u006c\u0075\u0065,...oi}));await \u0061\u0070\u0069(`${\u0041\u0050\u0049}\x2F\x62\x61\x74\x63\x68\x61\x64\x64`,{\u006d\u0065\u0074\u0068\u006f\u0064:'\x50\x4F\x53\x54',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(i)});\u0074\u006f\u0061\u0073\u0074('\u6279\u91cf\u6dfb\u52a0\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}function \u0066\u0069\u006c\u006c\u0045\u0064\u0069\u0074(IM){\u0065\u0049\u0064.\u0076\u0061\u006c\u0075\u0065=IM.\u0069\u0064;\u0065\u0043\u006f\u006e\u0074\u0065\u006e\u0074.\u0076\u0061\u006c\u0075\u0065=IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074;const E=\u004f\u0062\u006a\u0065\u0063\u0074.\u006b\u0065\u0079\u0073(\u0074\u0079\u0070\u0065\u004d\u0061\u0070);const n=\u004f\u0062\u006a\u0065\u0063\u0074.\u006b\u0065\u0079\u0073(\u0061\u0063\u0074\u0069\u006f\u006e\u004d\u0061\u0070);\u0065\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065=E.\u0069\u006e\u0064\u0065\u0078\u004f\u0066(IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065);\u0065\u0041\u0063\u0074\u0069\u006f\u006e.\u0076\u0061\u006c\u0075\u0065=n.\u0069\u006e\u0064\u0065\u0078\u004f\u0066(IM.\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e);\u0065\u0043\u0061\u0073\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0043\u0061\u0073\u0065\u0053\u0065\u006e\u0073\u0069\u0074\u0069\u0076\u0065;\u0065\u0042\u006f\u006c\u0064.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0042\u006f\u006c\u0064;\u0065\u0049\u0074\u0061\u006c\u0069\u0063.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0049\u0074\u0061\u006c\u0069\u0063;\u0065\u0055\u006e\u0064\u0065\u0072.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0055\u006e\u0064\u0065\u0072\u006c\u0069\u006e\u0065;\u0065\u0053\u0074\u0072\u0069\u006b\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0053\u0074\u0072\u0069\u006b\u0065\u0054\u0068\u0072\u006f\u0075\u0067\u0068;\u0065\u0051\u0075\u006f\u0074\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0051\u0075\u006f\u0074\u0065;\u0065\u004d\u006f\u006e\u006f.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u004d\u006f\u006e\u006f\u0073\u0070\u0061\u0063\u0065;\u0065\u0053\u0070\u006f\u0069\u006c.\u0063\u0068\u0065\u0063\u006b\u0065\u0064=IM.\u0069\u0073\u0053\u0070\u006f\u0069\u006c\u0065\u0072;}function \u006f\u0070\u0065\u006e\u0045\u0064\u0069\u0074(IM){\u0066\u0069\u006c\u006c\u0045\u0064\u0069\u0074(IM);\u0065\u0064\u0069\u0074\u004d\u006f\u0064\u0061\u006c.\u0073\u0068\u006f\u0077\u004d\u006f\u0064\u0061\u006c();}async function \u0073\u0061\u0076\u0065\u0045\u0064\u0069\u0074(){const ol={\u0069\u0064:+\u0065\u0049\u0064.\u0076\u0061\u006c\u0075\u0065,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0043\u006f\u006e\u0074\u0065\u006e\u0074:\u0065\u0043\u006f\u006e\u0074\u0065\u006e\u0074.\u0076\u0061\u006c\u0075\u0065.\u0074\u0072\u0069\u006d(),\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0054\u0079\u0070\u0065:+\u0065\u0054\u0079\u0070\u0065.\u0076\u0061\u006c\u0075\u0065,\u006b\u0065\u0079\u0077\u006f\u0072\u0064\u0041\u0063\u0074\u0069\u006f\u006e:+\u0065\u0041\u0063\u0074\u0069\u006f\u006e.\u0076\u0061\u006c\u0075\u0065,\u0069\u0073\u0043\u0061\u0073\u0065\u0053\u0065\u006e\u0073\u0069\u0074\u0069\u0076\u0065:\u0065\u0043\u0061\u0073\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0042\u006f\u006c\u0064:\u0065\u0042\u006f\u006c\u0064.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0049\u0074\u0061\u006c\u0069\u0063:\u0065\u0049\u0074\u0061\u006c\u0069\u0063.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0055\u006e\u0064\u0065\u0072\u006c\u0069\u006e\u0065:\u0065\u0055\u006e\u0064\u0065\u0072.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0074\u0072\u0069\u006b\u0065\u0054\u0068\u0072\u006f\u0075\u0067\u0068:\u0065\u0053\u0074\u0072\u0069\u006b\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0051\u0075\u006f\u0074\u0065:\u0065\u0051\u0075\u006f\u0074\u0065.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u004d\u006f\u006e\u006f\u0073\u0070\u0061\u0063\u0065:\u0065\u004d\u006f\u006e\u006f.\u0063\u0068\u0065\u0063\u006b\u0065\u0064,\u0069\u0073\u0053\u0070\u006f\u0069\u006c\u0065\u0072:\u0065\u0053\u0070\u006f\u0069\u006c.\u0063\u0068\u0065\u0063\u006b\u0065\u0064};await \u0061\u0070\u0069(`${\u0041\u0050\u0049}\x2F\x75\x70\x64\x61\x74\x65`,{\u006d\u0065\u0074\u0068\u006f\u0064:'\x50\x55\x54',\u0062\u006f\u0064\u0079:\u004a\u0053\u004f\u004e.\u0073\u0074\u0072\u0069\u006e\u0067\u0069\u0066\u0079(ol)});\u0074\u006f\u0061\u0073\u0074('\u4fee\u6539\u6210\u529f');\u0072\u0065\u0066\u0072\u0065\u0073\u0068();}\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('\x5B\x72\x6F\x6C\x65\x3D\x74\x61\x62\x5D').\u0066\u006f\u0072\u0045\u0061\u0063\u0068(Di=>{Di.\u006f\u006e\u0063\u006c\u0069\u0063\u006b=()=>{\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006c\u0065\u0063\u0074\u006f\u0072\u0041\u006c\u006c('\x5B\x72\x6F\x6C\x65\x3D\x74\x61\x62\x5D').\u0066\u006f\u0072\u0045\u0061\u0063\u0068(tU=>tU.\u0063\u006c\u0061\u0073\u0073\u004c\u0069\u0073\u0074.\u0072\u0065\u006d\u006f\u0076\u0065('\x74\x61\x62\x2D\x61\x63\x74\x69\x76\x65'));Di.\u0063\u006c\u0061\u0073\u0073\u004c\u0069\u0073\u0074.\u0061\u0064\u0064('\x74\x61\x62\x2D\x61\x63\x74\x69\x76\x65');['\x6C\x69\x73\x74','\x73\x69\x6E\x67\x6C\x65','\x62\x61\x74\x63\x68','\x74\x65\x78\x74'].\u0066\u006f\u0072\u0045\u0061\u0063\u0068(oT=>{\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0067\u0065\u0074\u0045\u006c\u0065\u006d\u0065\u006e\u0074\u0042\u0079\u0049\u0064('\x70\x61\x6E\x65\x6C\x2D'+oT).\u0063\u006c\u0061\u0073\u0073\u004c\u0069\u0073\u0074.\u0074\u006f\u0067\u0067\u006c\u0065('\x68\x69\x64\x64\x65\x6E',!Di.\u0069\u0064.\u0065\u006e\u0064\u0073\u0057\u0069\u0074\u0068(oT));});};});function \u0061\u0064\u0064\u0043\u006f\u0070\u0079\u0072\u0069\u0067\u0068\u0074(){const il=\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006c\u0065\u006d\u0065\u006e\u0074('\x64\x69\x76');il.\u0073\u0074\u0079\u006c\u0065.\u0063\u0073\u0073\u0054\u0065\u0078\u0074='\x70\x6F\x73\x69\x74\x69\x6F\x6E\x3A\x66\x69\x78\x65\x64\x3B\x74\x6F\x70\x3A\x30\x3B\x6C\x65\x66\x74\x3A\x30\x3B\x77\x69\x64\x74\x68\x3A\x31\x30\x30\x25\x3B\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64\x2D\x63\x6F\x6C\x6F\x72\x3A\x23\x66\x30\x66\x30\x66\x30\x3B\x70\x61\x64\x64\x69\x6E\x67\x3A\x31\x30\x70\x78\x3B\x74\x65\x78\x74\x2D\x61\x6C\x69\x67\x6E\x3A\x63\x65\x6E\x74\x65\x72\x3B\x7A\x2D\x69\x6E\x64\x65\x78\x3A\x31\x30\x30\x30\x3B\x62\x6F\x78\x2D\x73\x68\x61\x64\x6F\x77\x3A\x30\x20\x32\x70\x78\x20\x34\x70\x78\x20\x72\x67\x62\x61\x28\x30\x2C\x30\x2C\x30\x2C\x30\x2E\x31\x29\x3B';il.\u0069\u006e\u006e\u0065\u0072\u0048\u0054\u004d\u004c=`\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x73\x70\x61\x6E\x20\x73\x74\x79\x6C\x65\x3D\x22\x6D\x61\x72\x67\x69\x6E\x2D\x72\x69\x67\x68\x74\x3A\x31\x35\x70\x78\x3B\x22\x3E\u4f5c\u8005\x20\x3C\x61\x20\x68\x72\x65\x66\x3D\x22\x68\x74\x74\x70\x73\x3A\x2F\x2F\x74\x2E\x6D\x65\x2F\x72\x69\x6E\x69\x62\x61\x22\x20\x74\x61\x72\x67\x65\x74\x3D\x22\x5F\x62\x6C\x61\x6E\x6B\x22\x20\x73\x74\x79\x6C\x65\x3D\x22\x74\x65\x78\x74\x2D\x64\x65\x63\x6F\x72\x61\x74\x69\x6F\x6E\x3A\x6E\x6F\x6E\x65\x3B\x63\x6F\x6C\x6F\x72\x3A\x23\x30\x30\x38\x38\x63\x63\x3B\x66\x6F\x6E\x74\x2D\x77\x65\x69\x67\x68\x74\x3A\x62\x6F\x6C\x64\x3B\x22\x3E\x40\x72\x69\x6E\x69\x62\x61\x3C\x2F\x61\x3E\x3C\x2F\x73\x70\x61\x6E\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x73\x70\x61\x6E\x20\x73\x74\x79\x6C\x65\x3D\x22\x6D\x61\x72\x67\x69\x6E\x2D\x72\x69\x67\x68\x74\x3A\x31\x35\x70\x78\x3B\x22\x3E\u5f00\u6e90\u5730\u5740\x20\x3C\x61\x20\x68\x72\x65\x66\x3D\x22\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x69\x74\x68\x75\x62\x2E\x63\x6F\x6D\x2F\x52\x69\x6E\x69\x62\x61\x2F\x54\x65\x6C\x65\x67\x72\x61\x6D\x4D\x6F\x6E\x69\x74\x6F\x72\x22\x20\x74\x61\x72\x67\x65\x74\x3D\x22\x5F\x62\x6C\x61\x6E\x6B\x22\x20\x73\x74\x79\x6C\x65\x3D\x22\x74\x65\x78\x74\x2D\x64\x65\x63\x6F\x72\x61\x74\x69\x6F\x6E\x3A\x6E\x6F\x6E\x65\x3B\x63\x6F\x6C\x6F\x72\x3A\x23\x30\x30\x38\x38\x63\x63\x3B\x66\x6F\x6E\x74\x2D\x77\x65\x69\x67\x68\x74\x3A\x62\x6F\x6C\x64\x3B\x22\x3E\x47\x69\x74\x48\x75\x62\x3C\x2F\x61\x3E\x3C\x2F\x73\x70\x61\x6E\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x73\x70\x61\x6E\x20\x73\x74\x79\x6C\x65\x3D\x22\x6D\x61\x72\x67\x69\x6E\x2D\x72\x69\x67\x68\x74\x3A\x31\x35\x70\x78\x3B\x22\x3E\u4ea4\u6d41\u7fa4\x20\x3C\x61\x20\x68\x72\x65\x66\x3D\x22\x68\x74\x74\x70\x73\x3A\x2F\x2F\x74\x2E\x6D\x65\x2F\x52\x69\x6E\x69\x62\x61\x47\x72\x6F\x75\x70\x22\x20\x74\x61\x72\x67\x65\x74\x3D\x22\x5F\x62\x6C\x61\x6E\x6B\x22\x20\x73\x74\x79\x6C\x65\x3D\x22\x74\x65\x78\x74\x2D\x64\x65\x63\x6F\x72\x61\x74\x69\x6F\x6E\x3A\x6E\x6F\x6E\x65\x3B\x63\x6F\x6C\x6F\x72\x3A\x23\x30\x30\x38\x38\x63\x63\x3B\x66\x6F\x6E\x74\x2D\x77\x65\x69\x67\x68\x74\x3A\x62\x6F\x6C\x64\x3B\x22\x3E\x54\x65\x6C\x65\x67\x72\x61\x6D\x3C\x2F\x61\x3E\x3C\x2F\x73\x70\x61\x6E\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x73\x70\x61\x6E\x3E\x3C\x61\x20\x68\x72\x65\x66\x3D\x22\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x69\x74\x68\x75\x62\x2E\x63\x6F\x6D\x2F\x52\x69\x6E\x69\x62\x61\x2F\x54\x65\x6C\x65\x67\x72\x61\x6D\x4D\x6F\x6E\x69\x74\x6F\x72\x2F\x77\x69\x6B\x69\x2F\x25\x45\x35\x25\x38\x35\x25\x42\x33\x25\x45\x39\x25\x39\x34\x25\x41\x45\x25\x45\x38\x25\x41\x46\x25\x38\x44\x25\x45\x34\x25\x42\x44\x25\x42\x46\x25\x45\x37\x25\x39\x34\x25\x41\x38\x25\x45\x36\x25\x39\x35\x25\x39\x39\x25\x45\x37\x25\x41\x38\x25\x38\x42\x22\x20\x74\x61\x72\x67\x65\x74\x3D\x22\x5F\x62\x6C\x61\x6E\x6B\x22\x20\x73\x74\x79\x6C\x65\x3D\x22\x74\x65\x78\x74\x2D\x64\x65\x63\x6F\x72\x61\x74\x69\x6F\x6E\x3A\x6E\x6F\x6E\x65\x3B\x63\x6F\x6C\x6F\x72\x3A\x23\x30\x30\x38\x38\x63\x63\x3B\x66\x6F\x6E\x74\x2D\x77\x65\x69\x67\x68\x74\x3A\x62\x6F\x6C\x64\x3B\x22\x3E\u5173\u952e\u8bcd\u914d\u7f6e\u8bf4\u660e\x3C\x2F\x61\x3E\x3C\x2F\x73\x70\x61\x6E\x3E\x0A\x20\x20\x20\x20`;\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0062\u006f\u0064\u0079.\u0069\u006e\u0073\u0065\u0072\u0074\u0042\u0065\u0066\u006f\u0072\u0065(il,\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0062\u006f\u0064\u0079.\u0066\u0069\u0072\u0073\u0074\u0043\u0068\u0069\u006c\u0064);\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0062\u006f\u0064\u0079.\u0073\u0074\u0079\u006c\u0065.\u0070\u0061\u0064\u0064\u0069\u006e\u0067\u0054\u006f\u0070=il.\u006f\u0066\u0066\u0073\u0065\u0074\u0048\u0065\u0069\u0067\u0068\u0074+10+'\x70\x78';}\u0064\u006f\u0063\u0075\u006d\u0065\u006e\u0074.\u0061\u0064\u0064\u0045\u0076\u0065\u006e\u0074\u004c\u0069\u0073\u0074\u0065\u006e\u0065\u0072('\x44\x4F\x4D\x43\x6F\x6E\x74\x65\x6E\x74\x4C\x6F\x61\x64\x65\x64',\u0061\u0064\u0064\u0043\u006f\u0070\u0079\u0072\u0069\u0067\u0068\u0074);\u0072\u0065\u0066\u0072\u0065\u0073\u0068();' ';
+// Telegram Monitor - Keywords Management Script
+// Deobfuscated version
+
+const API = '/api/keyword';
+
+// Type and action mappings
+const typeMap = {
+    FullWord: '全字',
+    Contains: '包含',
+    Regex: '正则',
+    Fuzzy: '模糊',
+    User: '用户'
+};
+
+const actionMap = {
+    Exclude: '排除',
+    Monitor: '监控'
+};
+
+const styleMap = {
+    isCaseSensitive: '大小写',
+    isBold: '粗体',
+    isItalic: '斜体',
+    isUnderline: '下划线',
+    isStrikeThrough: '删除线',
+    isQuote: '引用',
+    isMonospace: '等宽',
+    isSpoiler: '剧透'
+};
+
+// Toast notification system
+const toastBox = document.getElementById('toast');
+toastBox.style.zIndex = '9999';
+
+function toast(message, isSuccess = true) {
+    const alertEl = document.createElement('div');
+    alertEl.setAttribute('role', 'alert');
+    alertEl.className = `alert alert-${isSuccess ? 'success' : 'error'} alert-horizontal shadow-lg`;
+    alertEl.innerHTML = `<span>${message}</span>`;
+    toastBox.appendChild(alertEl);
+    setTimeout(() => alertEl.remove(), 4000);
+}
+
+// API wrapper
+async function api(url, options) {
+    const response = await fetch(url, Object.assign({
+        headers: { 'Content-Type': 'application/json' }
+    }, options));
+
+    const text = await response.text();
+    let data = {};
+
+    try {
+        data = text ? JSON.parse(text) : {};
+    } catch {}
+
+    if (!response.ok || data.succeeded === false) {
+        const errorMsg = data.errors && (typeof data.errors === 'string' ?
+            data.errors : Object.values(data.errors)[0][0]) ||
+            data.message || text || '操作失败';
+        toast(errorMsg, false);
+        throw new Error(errorMsg);
+    }
+
+    return data;
+}
+
+// DOM elements
+const tbody = document.getElementById('kwBody');
+
+// Utility functions
+function styleString(keyword) {
+    return Object.entries(styleMap)
+        .filter(([key]) => keyword[key])
+        .map(([, value]) => value)
+        .join(' ');
+}
+
+function renderRow(keyword) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+        <td><input type="checkbox" class="row-check" value="${keyword.id}"></td>
+        <td>${keyword.id}</td>
+        <td>${keyword.keywordContent}</td>
+        <td>${typeMap[keyword.keywordType] ?? keyword.keywordType}</td>
+        <td>${actionMap[keyword.keywordAction] ?? keyword.keywordAction}</td>
+        <td>${styleString(keyword)}</td>
+        <td>
+            <button class="btn" onclick='openEdit(${JSON.stringify(keyword)})'>编辑</button>
+            <button class="btn btn-error ml-1" onclick="del(${keyword.id})">删</button>
+        </td>
+    `;
+    return tr;
+}
+
+// Keyword list operations
+async function refresh() {
+    const { data: keywords } = await api(`${API}/list`);
+    tbody.innerHTML = '';
+    keywords.forEach(keyword => tbody.appendChild(renderRow(keyword)));
+}
+
+async function del(id) {
+    await api(`${API}/delete/${id}`, { method: 'DELETE' });
+    toast('删除成功');
+    refresh();
+}
+
+function toggleAll(checkbox) {
+    document.querySelectorAll('.row-check').forEach(el => el.checked = checkbox.checked);
+}
+
+async function deleteSelected() {
+    const ids = [...document.querySelectorAll('.row-check')]
+        .filter(el => el.checked)
+        .map(el => +el.value);
+
+    if (!ids.length) {
+        toast('未选中', false);
+        return;
+    }
+
+    await api(`${API}/batchdelete`, {
+        method: 'DELETE',
+        body: JSON.stringify(ids)
+    });
+
+    toast('批量删除成功');
+    refresh();
+}
+
+// Single keyword add
+async function addSingle() {
+    const keyword = {
+        keywordContent: sContent.value.trim(),
+        keywordType: +sType.value,
+        keywordAction: +sAction.value,
+        isCaseSensitive: sCase.checked,
+        isBold: sBold.checked,
+        isItalic: sItalic.checked,
+        isUnderline: sUnder.checked,
+        isStrikeThrough: sStrike.checked,
+        isQuote: sQuote.checked,
+        isMonospace: sMono.checked,
+        isSpoiler: sSpoil.checked
+    };
+
+    if (!keyword.keywordContent) {
+        toast('内容不能为空', false);
+        return;
+    }
+
+    await api(`${API}/add`, {
+        method: 'POST',
+        body: JSON.stringify(keyword)
+    });
+
+    toast('添加成功');
+    refresh();
+}
+
+// Dynamic row batch add
+const dynamicRows = document.getElementById('dynamicRows');
+
+function rowTpl(id) {
+    return `<div class="flex flex-wrap gap-2 items-center border p-2 rounded" id="row-${id}">
+        <input class="input input-bordered w-40" placeholder="关键词">
+        <select class="select select-bordered">
+            <option value="0">全字</option>
+            <option value="1">包含</option>
+            <option value="2">正则</option>
+            <option value="3">模糊</option>
+            <option value="4">用户</option>
+        </select>
+        <select class="select select-bordered">
+            <option value="1">监控</option>
+            <option value="0">排除</option>
+        </select>
+        ${Object.entries(styleMap).map(([key, label]) => `
+            <label class="label gap-1 text-xs">
+                <span>${label}</span>
+                <input type="checkbox" data-flag="${key}" class="checkbox">
+            </label>
+        `).join('')}
+        <button class="btn btn-error" onclick="this.parentNode.remove()">x</button>
+    </div>`;
+}
+
+function addRow() {
+    dynamicRows.insertAdjacentHTML('beforeend', rowTpl(Date.now()));
+}
+
+async function uploadRows() {
+    const keywords = [...dynamicRows.children].map(row => {
+        const input = row.querySelector('input.input');
+        if (!input || !input.value.trim()) return null;
+
+        const [typeSelect, actionSelect] = row.querySelectorAll('select');
+        const keyword = {
+            keywordContent: input.value.trim(),
+            keywordType: +typeSelect.value,
+            keywordAction: +actionSelect.value
+        };
+
+        row.querySelectorAll('input[data-flag]').forEach(el =>
+            keyword[el.dataset.flag] = el.checked
+        );
+
+        return keyword;
+    }).filter(Boolean);
+
+    if (!keywords.length) {
+        toast('无有效行', false);
+        return;
+    }
+
+    await api(`${API}/batchadd`, {
+        method: 'POST',
+        body: JSON.stringify(keywords)
+    });
+
+    toast('批量添加成功');
+    refresh();
+}
+
+// Text batch add
+async function uploadText() {
+    const lines = txtKeywords.value.split('\n')
+        .map(line => line.trim())
+        .filter(Boolean);
+
+    if (!lines.length) {
+        toast('文本为空', false);
+        return;
+    }
+
+    const styleOptions = {
+        isCaseSensitive: tCase.checked,
+        isBold: tBold.checked,
+        isItalic: tItalic.checked,
+        isUnderline: tUnder.checked,
+        isStrikeThrough: tStrike.checked,
+        isQuote: tQuote.checked,
+        isMonospace: tMono.checked,
+        isSpoiler: tSpoil.checked
+    };
+
+    const keywords = lines.map(line => ({
+        keywordContent: line,
+        keywordType: +tType.value,
+        keywordAction: +tAction.value,
+        ...styleOptions
+    }));
+
+    await api(`${API}/batchadd`, {
+        method: 'POST',
+        body: JSON.stringify(keywords)
+    });
+
+    toast('批量添加成功');
+    refresh();
+}
+
+// Edit functionality
+function fillEdit(keyword) {
+    eId.value = keyword.id;
+    eContent.value = keyword.keywordContent;
+
+    const typeKeys = Object.keys(typeMap);
+    const actionKeys = Object.keys(actionMap);
+
+    eType.value = typeKeys.indexOf(keyword.keywordType);
+    eAction.value = actionKeys.indexOf(keyword.keywordAction);
+
+    eCase.checked = keyword.isCaseSensitive;
+    eBold.checked = keyword.isBold;
+    eItalic.checked = keyword.isItalic;
+    eUnder.checked = keyword.isUnderline;
+    eStrike.checked = keyword.isStrikeThrough;
+    eQuote.checked = keyword.isQuote;
+    eMono.checked = keyword.isMonospace;
+    eSpoil.checked = keyword.isSpoiler;
+}
+
+function openEdit(keyword) {
+    fillEdit(keyword);
+    editModal.showModal();
+}
+
+async function saveEdit() {
+    const keyword = {
+        id: +eId.value,
+        keywordContent: eContent.value.trim(),
+        keywordType: +eType.value,
+        keywordAction: +eAction.value,
+        isCaseSensitive: eCase.checked,
+        isBold: eBold.checked,
+        isItalic: eItalic.checked,
+        isUnderline: eUnder.checked,
+        isStrikeThrough: eStrike.checked,
+        isQuote: eQuote.checked,
+        isMonospace: eMono.checked,
+        isSpoiler: eSpoil.checked
+    };
+
+    await api(`${API}/update`, {
+        method: 'PUT',
+        body: JSON.stringify(keyword)
+    });
+
+    toast('修改成功');
+    refresh();
+}
+
+// Tab switching
+document.querySelectorAll('[role=tab]').forEach(tab => {
+    tab.onclick = () => {
+        document.querySelectorAll('[role=tab]').forEach(t =>
+            t.classList.remove('tab-active')
+        );
+        tab.classList.add('tab-active');
+
+        ['list', 'single', 'batch', 'text'].forEach(panelName => {
+            document.getElementById('panel-' + panelName)
+                .classList.toggle('hidden', !tab.id.endsWith(panelName));
+        });
+    };
+});
+
+// Copyright banner
+function addCopyright() {
+    const banner = document.createElement('div');
+    banner.style.cssText = 'position:fixed;top:0;left:0;width:100%;background-color:#f0f0f0;padding:10px;text-align:center;z-index:1000;box-shadow:0 2px 4px rgba(0,0,0,0.1);';
+    banner.innerHTML = `
+        <span style="margin-right:15px;">作者 <a href="https://t.me/riniba" target="_blank" style="text-decoration:none;color:#0088cc;font-weight:bold;">@riniba</a></span>
+        <span style="margin-right:15px;">开源地址 <a href="https://github.com/Riniba/TelegramMonitor" target="_blank" style="text-decoration:none;color:#0088cc;font-weight:bold;">GitHub</a></span>
+        <span style="margin-right:15px;">交流群 <a href="https://t.me/RinibaGroup" target="_blank" style="text-decoration:none;color:#0088cc;font-weight:bold;">Telegram</a></span>
+        <span><a href="https://github.com/Riniba/TelegramMonitor/wiki/%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B" target="_blank" style="text-decoration:none;color:#0088cc;font-weight:bold;">关键词配置说明</a></span>
+    `;
+    document.body.insertBefore(banner, document.body.firstChild);
+    document.body.style.paddingTop = banner.offsetHeight + 10 + 'px';
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', addCopyright);
+refresh();
