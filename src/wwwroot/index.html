@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TelegramMonitor 登录</title>
+  <style>
+    :root {
+      --bg-a: #eef6ff;
+      --bg-b: #f8f4eb;
+      --line: #d7e3f2;
+      --ink: #0f172a;
+      --ink-soft: #475569;
+      --brand: #0f766e;
+      --brand-hover: #0c5f59;
+      --danger: #b91c1c;
+      --radius: 16px;
+      --shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      font-family: "HarmonyOS Sans SC", "Microsoft YaHei UI", "PingFang SC", sans-serif;
+      background:
+        radial-gradient(1000px 700px at -10% -10%, #dbeafe 0%, transparent 55%),
+        radial-gradient(900px 700px at 110% 0%, #fef3c7 0%, transparent 52%),
+        linear-gradient(160deg, var(--bg-a), var(--bg-b));
+      padding: 18px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffffd9;
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      animation: rise .45s ease;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--ink-soft);
+      font-size: 13px;
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+
+    input {
+      width: 100%;
+      height: 42px;
+      border: 1px solid #c8d5e8;
+      border-radius: 10px;
+      padding: 0 12px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    input:focus {
+      border-color: #7dd3c7;
+      box-shadow: 0 0 0 3px #d1fae5;
+    }
+
+    button {
+      width: 100%;
+      height: 42px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--brand);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s ease;
+    }
+
+    button:hover { background: var(--brand-hover); }
+    button:disabled { opacity: .7; cursor: not-allowed; }
+
+    .msg {
+      min-height: 20px;
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--danger);
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>TelegramMonitor</h1>
+    <p>后台登录（Cookie 会话）</p>
+
+    <form id="loginForm">
+      <div class="field">
+        <label for="username">用户名</label>
+        <input id="username" autocomplete="username" required />
+      </div>
+
+      <div class="field">
+        <label for="password">密码</label>
+        <input id="password" type="password" autocomplete="current-password" required />
+      </div>
+
+      <button id="submitBtn" type="submit">登录</button>
+    </form>
+
+    <div id="msg" class="msg"></div>
+  </main>
+
+  <script src="/assets/common.js"></script>
+  <script>
+    const form = document.getElementById("loginForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const msg = document.getElementById("msg");
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+
+    async function checkLogin() {
+      try {
+        await tm.request("/api/auth/me", { method: "GET", redirectOn401: false });
+        location.href = "/dashboard.html";
+      } catch {
+      }
+    }
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      msg.textContent = "";
+      submitBtn.disabled = true;
+      submitBtn.textContent = "登录中...";
+
+      try {
+        await tm.request("/api/auth/login", {
+          method: "POST",
+          body: JSON.stringify({
+            username: username.value.trim(),
+            password: password.value
+          })
+        });
+        location.href = "/dashboard.html";
+      } catch (error) {
+        msg.textContent = error instanceof Error ? error.message : "登录失败";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "登录";
+      }
+    });
+
+    checkLogin();
+  </script>
+</body>
+</html>

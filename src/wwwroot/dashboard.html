@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>账号管理 - TelegramMonitor</title>
+  <link rel="stylesheet" href="/assets/panel.css?v=2" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">TelegramMonitor</div>
+      <nav class="nav">
+        <a class="nav-link" data-page="accounts" href="/dashboard.html">账号管理</a>
+        <a class="nav-link" data-page="messages" href="/messages.html">消息查询</a>
+        <a class="nav-link" data-page="keywords" href="/keywords.html">关键词设置</a>
+        <a class="nav-link" data-page="bot" href="/bot.html">Bot 通知</a>
+      </nav>
+      <div class="toolbar">
+        <span id="currentUser" class="muted small"></span>
+        <button id="btnLogout" class="btn danger small">退出登录</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>账号登录流程</h2>
+      <p>登录按步骤执行：发起登录 -> 提交验证码 -> 提交二步密码。</p>
+
+      <div class="inline-badges">
+        <span id="badgeState" class="badge">当前状态：未开始</span>
+        <span id="badgeAccount" class="badge">账号ID：-</span>
+      </div>
+
+      <div class="row three">
+        <input id="phone" placeholder="手机号，例如 +8613800000000" />
+        <input id="remark" placeholder="备注（可选）" />
+        <button id="btnStartLogin" class="btn">发起登录</button>
+      </div>
+
+      <div id="panelCode" class="row two hidden" style="margin-top:8px;">
+        <input id="code" placeholder="验证码" />
+        <button id="btnSubmitCode" class="btn secondary">提交验证码</button>
+      </div>
+
+      <div id="panelPassword" class="row two hidden" style="margin-top:8px;">
+        <input id="password" placeholder="二步密码" type="password" />
+        <button id="btnSubmitPassword" class="btn secondary">提交密码</button>
+      </div>
+
+      <div class="row two" style="margin-top:8px;">
+        <input id="flowHint" readonly value="当前流程账号：-" />
+        <button id="btnResetFlow" class="btn ghost">重置流程</button>
+      </div>
+
+      <div id="flowStatus" class="status"></div>
+    </section>
+
+    <section class="card" style="margin-top:12px;">
+      <div class="meta-row">
+        <h2 style="margin:0;">账号列表</h2>
+        <div class="toolbar">
+          <span id="accountsCount" class="muted small">0 条</span>
+          <button id="btnRefreshAccounts" class="btn ghost small">刷新账号</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>手机号</th>
+              <th>用户名</th>
+              <th>在线</th>
+              <th>监听</th>
+              <th>最后错误</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="accountsTbody">
+            <tr><td colspan="7">暂无数据</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/assets/common.js?v=2"></script>
+  <script>
+    const stateLabels = {
+      NotLoggedIn: "未登录",
+      WaitingForVerificationCode: "等待验证码",
+      WaitingForPassword: "等待二步密码",
+      WaitingForName: "等待注册信息",
+      LoggedIn: "已登录",
+      Other: "其他"
+    };
+
+    const phone = document.getElementById("phone");
+    const remark = document.getElementById("remark");
+    const code = document.getElementById("code");
+    const password = document.getElementById("password");
+    const panelCode = document.getElementById("panelCode");
+    const panelPassword = document.getElementById("panelPassword");
+    const flowStatus = document.getElementById("flowStatus");
+    const badgeState = document.getElementById("badgeState");
+    const badgeAccount = document.getElementById("badgeAccount");
+    const flowHint = document.getElementById("flowHint");
+    const accountsCount = document.getElementById("accountsCount");
+    const accountsTbody = document.getElementById("accountsTbody");
+
+    let flowAccountId = null;
+    let accountRows = [];
+
+    function normalizeState(value) {
+      if (typeof value === "string" && value) return value;
+      const map = {
+        0: "NotLoggedIn",
+        1: "WaitingForVerificationCode",
+        2: "WaitingForPassword",
+        3: "WaitingForName",
+        4: "LoggedIn",
+        5: "Other"
+      };
+      return map[value] || "Other";
+    }
+
+    function setFlowAccount(id) {
+      flowAccountId = id && Number(id) > 0 ? Number(id) : null;
+      badgeAccount.textContent = "账号ID：" + (flowAccountId ?? "-");
+      flowHint.value = "当前流程账号：" + (flowAccountId ?? "-");
+    }
+
+    function resetFlow(showMessage = true) {
+      setFlowAccount(null);
+      badgeState.textContent = "当前状态：未开始";
+      panelCode.classList.add("hidden");
+      panelPassword.classList.add("hidden");
+      code.value = "";
+      password.value = "";
+      if (showMessage) tm.setStatus(flowStatus, "已重置登录流程", true);
+    }
+
+    function bindFlowAccount(account) {
+      const id = tm.toInt(tm.read(account, "id"), 0);
+      setFlowAccount(id > 0 ? id : null);
+      phone.value = tm.asText(tm.read(account, "phone"), "");
+      remark.value = tm.asText(tm.read(account, "remark"), "");
+      panelCode.classList.add("hidden");
+      panelPassword.classList.add("hidden");
+      badgeState.textContent = "当前状态：未开始";
+      tm.setStatus(flowStatus, "已绑定账号到登录流程", true);
+    }
+
+    function applyLoginResult(result) {
+      const state = normalizeState(tm.read(result, "state"));
+      const accountId = tm.toInt(tm.read(result, "accountId"), 0);
+      const message = tm.asText(tm.read(result, "message"), "操作成功");
+
+      if (accountId > 0) setFlowAccount(accountId);
+
+      badgeState.textContent = "当前状态：" + (stateLabels[state] || state);
+      panelCode.classList.toggle("hidden", state !== "WaitingForVerificationCode");
+      panelPassword.classList.toggle("hidden", state !== "WaitingForPassword");
+      if (state === "LoggedIn") {
+        panelCode.classList.add("hidden");
+        panelPassword.classList.add("hidden");
+      }
+
+      tm.setStatus(flowStatus, message, true);
+    }
+
+    function getAccountById(id) {
+      return accountRows.find(item => tm.toInt(tm.read(item, "id"), 0) === Number(id));
+    }
+
+    function renderAccounts(rows) {
+      accountRows = Array.isArray(rows) ? rows : [];
+      accountsCount.textContent = accountRows.length + " 条";
+
+      if (accountRows.length === 0) {
+        accountsTbody.innerHTML = "<tr><td colspan='7'>暂无数据</td></tr>";
+        return;
+      }
+
+      accountsTbody.innerHTML = accountRows.map(row => {
+        const id = tm.toInt(tm.read(row, "id"), 0);
+        const connected = !!tm.read(row, "connected");
+        const monitoring = !!tm.read(row, "monitoring");
+        const monitorButton = monitoring
+          ? `<button class="btn small secondary" data-action="monitor-stop" data-id="${id}">停止监听</button>`
+          : `<button class="btn small" data-action="monitor-start" data-id="${id}">启动监听</button>`;
+
+        return `
+          <tr>
+            <td>${tm.esc(id)}</td>
+            <td>${tm.esc(tm.asText(tm.read(row, "phone")))}</td>
+            <td>${tm.esc(tm.asText(tm.read(row, "displayName"), tm.read(row, "username") || "-"))}</td>
+            <td>${tm.esc(tm.yesNo(connected))}</td>
+            <td>${tm.esc(tm.yesNo(monitoring))}</td>
+            <td>${tm.esc(tm.asText(tm.read(row, "lastError")))}</td>
+            <td>
+              <div class="cell-actions">
+                <button class="btn small ghost" data-action="bind-flow" data-id="${id}">绑定流程</button>
+                <button class="btn small ghost" data-action="reset-flow" data-id="${id}">重置流程</button>
+                <button class="btn small secondary" data-action="relogin" data-id="${id}">${connected ? "重新登录" : "离线重登"}</button>
+                <button class="btn small ghost" data-action="reconnect" data-id="${id}">重连</button>
+                ${monitorButton}
+                <button class="btn small danger" data-action="delete" data-id="${id}">删除</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    async function loadAccounts() {
+      const data = await tm.request("/api/accounts", { method: "GET" });
+      renderAccounts(data);
+      return data;
+    }
+
+    async function startLogin(phoneNumber, mark) {
+      const result = await tm.request("/api/accounts/login/start", {
+        method: "POST",
+        body: JSON.stringify({
+          phoneNumber,
+          remark: mark || null
+        })
+      });
+      applyLoginResult(result);
+      await loadAccounts();
+    }
+
+    document.getElementById("btnStartLogin").addEventListener("click", async () => {
+      const phoneNumber = phone.value.trim();
+      if (!phoneNumber) {
+        tm.setStatus(flowStatus, "请先填写手机号", false);
+        return;
+      }
+      try {
+        await startLogin(phoneNumber, remark.value.trim());
+      } catch (error) {
+        tm.setStatus(flowStatus, error instanceof Error ? error.message : "发起登录失败", false);
+      }
+    });
+
+    document.getElementById("btnSubmitCode").addEventListener("click", async () => {
+      if (!flowAccountId) {
+        tm.setStatus(flowStatus, "请先绑定流程账号并发起登录", false);
+        return;
+      }
+      const value = code.value.trim();
+      if (!value) {
+        tm.setStatus(flowStatus, "验证码不能为空", false);
+        return;
+      }
+      try {
+        const result = await tm.request("/api/accounts/login/code", {
+          method: "POST",
+          body: JSON.stringify({
+            accountId: flowAccountId,
+            code: value
+          })
+        });
+        applyLoginResult(result);
+        await loadAccounts();
+      } catch (error) {
+        tm.setStatus(flowStatus, error instanceof Error ? error.message : "提交验证码失败", false);
+      }
+    });
+
+    document.getElementById("btnSubmitPassword").addEventListener("click", async () => {
+      if (!flowAccountId) {
+        tm.setStatus(flowStatus, "请先绑定流程账号并发起登录", false);
+        return;
+      }
+      if (!password.value) {
+        tm.setStatus(flowStatus, "二步密码不能为空", false);
+        return;
+      }
+      try {
+        const result = await tm.request("/api/accounts/login/password", {
+          method: "POST",
+          body: JSON.stringify({
+            accountId: flowAccountId,
+            password: password.value
+          })
+        });
+        applyLoginResult(result);
+        await loadAccounts();
+      } catch (error) {
+        tm.setStatus(flowStatus, error instanceof Error ? error.message : "提交密码失败", false);
+      }
+    });
+
+    document.getElementById("btnResetFlow").addEventListener("click", () => {
+      resetFlow(true);
+    });
+
+    document.getElementById("btnRefreshAccounts").addEventListener("click", async () => {
+      try {
+        await loadAccounts();
+      } catch (error) {
+        tm.setStatus(flowStatus, error instanceof Error ? error.message : "刷新账号失败", false);
+      }
+    });
+
+    accountsTbody.addEventListener("click", async event => {
+      const button = event.target.closest("button[data-action]");
+      if (!button) return;
+
+      const action = button.dataset.action;
+      const id = Number(button.dataset.id || 0);
+      const account = getAccountById(id);
+      if (!account) return;
+
+      try {
+        if (action === "bind-flow") {
+          bindFlowAccount(account);
+          return;
+        }
+
+        if (action === "reset-flow") {
+          bindFlowAccount(account);
+          badgeState.textContent = "当前状态：未开始";
+          panelCode.classList.add("hidden");
+          panelPassword.classList.add("hidden");
+          code.value = "";
+          password.value = "";
+          tm.setStatus(flowStatus, "该账号流程已重置", true);
+          return;
+        }
+
+        if (action === "relogin") {
+          await startLogin(tm.asText(tm.read(account, "phone"), ""), tm.asText(tm.read(account, "remark"), ""));
+          return;
+        }
+
+        if (action === "reconnect") {
+          const result = await tm.request(`/api/accounts/${id}/reconnect`, { method: "POST" });
+          tm.setStatus(flowStatus, tm.asText(tm.read(result, "message"), "重连完成"), true);
+          await loadAccounts();
+          return;
+        }
+
+        if (action === "monitor-start") {
+          const result = await tm.request(`/api/accounts/${id}/monitor/start`, { method: "POST" });
+          tm.setStatus(flowStatus, tm.asText(tm.read(result, "message"), "已启动监听"), true);
+          await loadAccounts();
+          return;
+        }
+
+        if (action === "monitor-stop") {
+          const result = await tm.request(`/api/accounts/${id}/monitor/stop`, { method: "POST" });
+          tm.setStatus(flowStatus, tm.asText(tm.read(result, "message"), "已停止监听"), true);
+          await loadAccounts();
+          return;
+        }
+
+        if (action === "delete") {
+          if (!confirm(`确认删除账号 ${id} 吗？`)) return;
+          await tm.request(`/api/accounts/${id}`, { method: "DELETE" });
+          if (flowAccountId === id) resetFlow(false);
+          tm.setStatus(flowStatus, `已删除账号 ${id}`, true);
+          await loadAccounts();
+        }
+      } catch (error) {
+        tm.setStatus(flowStatus, error instanceof Error ? error.message : "账号操作失败", false);
+      }
+    });
+
+    (async function bootstrap() {
+      const profile = await tm.ensureAuth();
+      if (!profile) return;
+
+      tm.fillCurrentUser(profile);
+      tm.bindLogoutButton();
+      tm.setCurrentNav("accounts");
+      resetFlow(false);
+
+      try {
+        await loadAccounts();
+      } catch (error) {
+        tm.setStatus(flowStatus, error instanceof Error ? error.message : "加载账号失败", false);
+      }
+    })();
+  </script>
+</body>
+</html>

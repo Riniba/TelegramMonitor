@@ -1,7 +1,10 @@
-﻿namespace TelegramMonitor;
+using Furion.ConfigurableOptions;
 
-public class DbConnectionOptions
+namespace TelegramMonitor;
+
+[OptionsSettings("DbConnection")]
+public class DbConnectionOptions : IConfigurableOptions
 {
-    public string ConnectionString { get; set; }
-    public string DbType { get; set; }
+    public string ConnectionString { get; set; } = string.Empty;
+    public string DbType { get; set; } = string.Empty;
 }

@@ -7,8 +7,7 @@ public class Startup : AppStartup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddLoggingSetup();
-
-        services.AddConsoleFormatter();
+        services.AddAdminAuth();
 
         services.AddCorsAccessor();
 
@@ -32,15 +31,17 @@ public class Startup : AppStartup
         }
 
         app.UseHttpsRedirection();
-        app.UseStaticFiles();
         app.UseDefaultFiles(new DefaultFilesOptions
         {
             DefaultFileNames = new List<string> { "index.html" }
         });
+        app.UseStaticFiles();
 
         app.UseRouting();
 
         app.UseCorsAccessor();
+        app.UseAuthentication();
+        app.UseAuthorization();
 
         app.UseInject("api");
 

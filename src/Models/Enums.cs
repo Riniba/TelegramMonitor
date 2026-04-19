@@ -32,21 +32,3 @@ public enum ProxyType
     [Description("MTProxy")]
     MTProxy = 2
 }
-
-public enum MonitorStartResult
-{
-    [Description("启动成功")]
-    Started = 0,
-
-    [Description("未设置目标群")]
-    MissingTarget = 1,
-
-    [Description("未获取到用户信息")]
-    NoUserInfo = 2,
-
-    [Description("已在运行")]
-    AlreadyRunning = 3,
-
-    [Description("未登录")]
-    Error = 4
-}

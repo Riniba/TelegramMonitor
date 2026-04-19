@@ -1,81 +1,85 @@
-﻿namespace TelegramMonitor
+namespace TelegramMonitor;
+
+[SugarTable("KeywordConfig", "关键词规则表")]
+public class KeywordConfig
 {
-    [SugarTable("KeywordConfig")]
-    public class KeywordConfig
-    {
-        [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
-        [Description("关键词配置ID")]
-        public int Id { get; set; }
+    [SugarColumn(IsPrimaryKey = true, IsIdentity = true, ColumnDescription = "主键ID")]
+    [Description("关键词规则 ID")]
+    public int Id { get; set; }
 
-        [SugarColumn(ColumnName = "KeywordContent")]
-        [Description("关键词内容")]
-        public string KeywordContent { get; set; } = string.Empty;
+    [SugarColumn(IsNullable = true, ColumnDescription = "关联账号 ID（为空表示全局规则）")]
+    [Description("关联账号 ID（为空表示全局规则）")]
+    public int? AccountId { get; set; }
 
-        [SugarColumn(ColumnName = "KeywordType")]
-        [Description("关键词匹配类型")]
-        public KeywordType KeywordType { get; set; } = KeywordType.Contains;
+    [SugarColumn(IsNullable = true, Length = 128, ColumnDescription = "规则名称")]
+    [Description("规则名称")]
+    public string? RuleName { get; set; }
 
-        [SugarColumn(ColumnName = "KeywordAction")]
-        [Description("关键词执行动作")]
-        public KeywordAction KeywordAction { get; set; } = KeywordAction.Monitor;
+    [SugarColumn(Length = 1024, ColumnDescription = "文本匹配正则")]
+    [Description("文本匹配正则")]
+    public string KeywordPattern { get; set; } = string.Empty;
 
-        [SugarColumn(ColumnName = "IsCaseSensitive")]
-        [Description("是否区分大小写")]
-        public bool IsCaseSensitive { get; set; } = false;
+    [SugarColumn(ColumnDescription = "文本匹配方式")]
+    [Description("文本匹配方式")]
+    public KeywordMatchMode MatchMode { get; set; } = KeywordMatchMode.Contains;
 
-        [SugarColumn(ColumnName = "IsBold")]
-        [Description("是否粗体")]
-        public bool IsBold { get; set; } = false;
+    [SugarColumn(ColumnDescription = "是否匹配用户")]
+    [Description("是否匹配用户")]
+    public bool IsMatchUser { get; set; }
 
-        [SugarColumn(ColumnName = "IsItalic")]
-        [Description("是否斜体")]
-        public bool IsItalic { get; set; } = false;
+    [SugarColumn(IsNullable = true, Length = 1024, ColumnDescription = "用户匹配正则")]
+    [Description("用户匹配正则")]
+    public string? UserPattern { get; set; }
 
-        [SugarColumn(ColumnName = "IsUnderline")]
-        [Description("是否下划线")]
-        public bool IsUnderline { get; set; } = false;
+    [SugarColumn(ColumnName = "KeywordAction", ColumnDescription = "命中动作")]
+    [Description("命中动作")]
+    public KeywordAction KeywordAction { get; set; } = KeywordAction.Monitor;
 
-        [SugarColumn(ColumnName = "IsStrikeThrough")]
-        [Description("是否删除线")]
-        public bool IsStrikeThrough { get; set; } = false;
+    [SugarColumn(ColumnName = "IsCaseSensitive", ColumnDescription = "是否区分大小写")]
+    [Description("是否区分大小写")]
+    public bool IsCaseSensitive { get; set; }
 
-        [SugarColumn(ColumnName = "IsQuote")]
-        [Description("是否引用样式")]
-        public bool IsQuote { get; set; } = false;
+    [SugarColumn(ColumnDescription = "是否启用")]
+    [Description("是否启用")]
+    public bool IsEnabled { get; set; } = true;
 
-        [SugarColumn(ColumnName = "IsMonospace")]
-        [Description("是否等宽字体")]
-        public bool IsMonospace { get; set; } = false;
+    [SugarColumn(ColumnDescription = "优先级")]
+    [Description("优先级")]
+    public int Priority { get; set; }
 
-        [SugarColumn(ColumnName = "IsSpoiler")]
-        [Description("是否剧透内容")]
-        public bool IsSpoiler { get; set; } = false;
-    }
+    [SugarColumn(IsNullable = true, Length = 256, ColumnDescription = "备注")]
+    [Description("备注")]
+    public string? Remark { get; set; }
 
-    public enum KeywordType
-    {
-        [Description("全字匹配")]
-        FullWord = 0,
+    [SugarColumn(ColumnDescription = "创建时间（UTC+8）")]
+    [Description("创建时间（UTC+8）")]
+    public DateTime CreatedAt { get; set; } = ChinaTime.Now;
 
-        [Description("包含指定文本")]
-        Contains = 1,
+    [SugarColumn(ColumnDescription = "更新时间（UTC+8）")]
+    [Description("更新时间（UTC+8）")]
+    public DateTime UpdatedAt { get; set; } = ChinaTime.Now;
+}
 
-        [Description("使用正则表达式匹配")]
-        Regex = 2,
+public enum KeywordMatchMode
+{
+    [Description("全部匹配")]
+    Exact = 0,
 
-        [Description("模糊匹配多个关键词(以?分隔)")]
-        Fuzzy = 3,
+    [Description("包含匹配")]
+    Contains = 1,
 
-        [Description("匹配特定用户")]
-        User = 4
-    }
+    [Description("正则匹配")]
+    Regex = 2,
 
-    public enum KeywordAction
-    {
-        [Description("排除")]
-        Exclude = 0,
+    [Description("模糊匹配多个关键词(以?分隔)")]
+    Fuzzy = 3
+}
 
-        [Description("监控")]
-        Monitor = 1
-    }
+public enum KeywordAction
+{
+    [Description("排除")]
+    Exclude = 0,
+
+    [Description("监控")]
+    Monitor = 1
 }

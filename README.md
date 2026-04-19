@@ -1,58 +1,168 @@
-### AD -- 机场推广
+# TelegramMonitor
 
-**机场 - 老百姓自己的机场**：[https://老百姓自己的机场.com](https://老百姓自己的机场.com)  
-**机场 - 人民机场**：[https://renminjichang.com](https://renminjichang.com)  
-**百姓机场为百姓，人民机场为人民** 
+TelegramMonitor is a web-based Telegram monitoring tool built on `WTelegramClient` and `Telegram.Bot`.
 
+It provides a browser admin panel for:
 
-## 账号与频道准备
-- 准备一个 Telegram 账号
-- 该账号会监听当前账号下面所有的消息，包括群组/频道/私聊消息。
-- 用户需要在后台选择一个可以发布消息的频道和群组，当接收到的消息中出现匹配关键字时，软件会将该消息内容转发至已经选择的目标群(频道)。
+- Telegram account login and monitoring
+- Keyword rule management
+- Archived message search
+- Bot notification delivery
+- Multi-account, long-running operation
 
-> **重要提示：**  
-> 会监控所有的群组/频道/私聊消息的消息。请保持软件运行，以持续监听。
+## Features
 
-## 推荐部署环境
-- **强烈推荐使用 Linux 服务器进行长期挂机**：
-  - 更稳定的网络连接和系统运行环境
-  - 更低的资源占用
-  - 推荐使用 Ubuntu 20.04+ 或 Debian 11+ 系统
+- Web admin with cookie-based login
+- Telegram account login flow with code and 2FA support
+- Account-level monitoring start, stop, reconnect, and auto-recovery
+- Keyword rules with `Exact`, `Contains`, `Regex`, and `Fuzzy` match modes
+- Optional sender filtering by Telegram user ID or username
+- `Monitor` and `Exclude` actions with priority support
+- Archived message browsing and paging
+- Telegram Bot notification targets with validation across all configured bots
+- Default SQLite storage, with other SqlSugar-supported databases available
 
-## 其他说明
-- 本软件免费无毒，可在虚拟机中运行进行长期挂机。
-- Telegram 联系作者：https://t.me/Riniba
-- Telegram 交流群：https://t.me/RinibaGroup
-- Telegram 发布频道：https://t.me/RinibaChannel
+## Screenshots
 
-  
+### Login
 
+![Login](./images/telegram1.png)
 
-# Telegram关键词监控 使用说明
+### Keyword Rules
 
-## 系统与环境要求
-- 最新发布版下载：https://github.com/Riniba/TelegramMonitor/releases/latest
-- 发布包提供常见的系统版本已经包含运行时。  
-- 如需其他可自行编译
-- 可以通过Web界面配置账号、监控状态以及代理设置
-- Wiki教程 https://github.com/Riniba/TelegramMonitor/wiki
+![Keyword Rules](./images/keyword.png)
 
-### 演示网站
-- 关键词管理演示：https://telegrammonitor.riniba-demo.com/keywords.html
-- Telegram管理演示：https://telegrammonitor.riniba-demo.com/telegram.html
+### Monitoring
 
-### 效果图展示
+![Monitoring](./images/telegram2.png)
 
-#### 关键词管理界面
-![关键词管理界面](./images/keyword.png)
+### Runtime
 
-#### Telegram 配置界面
-![Telegram配置](./images/telegram1.png)
+![Runtime](./images/telegram3.png)
 
-#### Telegram 监控状态
-![监控状态](./images/telegram2.png)
+## Quick Start
 
-#### Telegram 运行效果
-![运行效果](./images/telegram3.png)
----
+### 1. Configure the app
 
+For source-based development, edit `src/appsettings.json` or create `src/appsettings.Development.json`.
+
+For release packages, edit the `appsettings.json` next to the executable, or use environment variables.
+
+Minimum required configuration:
+
+```json
+{
+  "Urls": "http://*:5005",
+  "Telegram": {
+    "DefaultApiId": 123456,
+    "DefaultApiHash": "your_api_hash",
+    "SessionsPath": "session"
+  },
+  "Auth": {
+    "AdminUsername": "admin",
+    "AdminPassword": "change-me"
+  },
+  "DbConnection": {
+    "DbType": "Sqlite",
+    "ConnectionString": "DataSource=telegrammonitor.db"
+  },
+  "Bot": {
+    "Enabled": false,
+    "Tokens": []
+  }
+}
+```
+
+Important notes:
+
+- `Telegram.DefaultApiId` and `Telegram.DefaultApiHash` are required before starting Telegram account login.
+- `Auth.AdminPassword` should always be changed before deployment.
+- Do not commit real secrets, tokens, or production passwords to GitHub.
+
+### 2. Run from source
+
+```bash
+dotnet build src/TelegramMonitor.csproj
+dotnet run --project src/TelegramMonitor.csproj
+```
+
+Default URL:
+
+```text
+http://localhost:5005/
+```
+
+### 3. First-use flow
+
+1. Open `/` and sign in with the configured admin account.
+2. Go to `账号管理` (`/dashboard.html`).
+3. Start Telegram login with phone number, then submit code and 2FA password if required.
+4. Enable monitoring for the account.
+5. Go to `关键词设置` (`/keywords.html`) and add rules.
+6. Optionally configure Bot notifications in `Bot 通知` (`/bot.html`).
+
+## Main Pages
+
+- `/` - Admin login page
+- `/dashboard.html` - Telegram accounts and monitoring
+- `/keywords.html` - Keyword rules
+- `/messages.html` - Archived messages
+- `/bot.html` - Bot notification targets and bot status
+
+## Bot Notification Notes
+
+- Bot targets support both `Chat ID` and `@username`.
+- A target is accepted only when all configured bots pass validation for that chat.
+- For private chats, every configured bot must already have a valid conversation with the target user.
+
+## Docker
+
+Example container run:
+
+```bash
+docker run -d \
+  --name telegram-monitor \
+  --restart unless-stopped \
+  -p 5005:5005 \
+  -v ./tm-data:/data \
+  -e Telegram__DefaultApiId=123456 \
+  -e Telegram__DefaultApiHash=your_api_hash \
+  -e Auth__AdminPassword=change-me \
+  ghcr.io/riniba/telegrammonitor:latest
+```
+
+Container notes:
+
+- Persistent runtime data is stored under `/data`.
+- The image entrypoint links database files, sessions, and logs into `/data`.
+- If Bot notifications are enabled, bot-side SQLite files are also persisted through `/data`.
+
+## Environment Variables
+
+Common overrides:
+
+- `Urls`
+- `Telegram__DefaultApiId`
+- `Telegram__DefaultApiHash`
+- `Telegram__SessionsPath`
+- `Auth__AdminUsername`
+- `Auth__AdminPassword`
+- `DbConnection__DbType`
+- `DbConnection__ConnectionString`
+- `Bot__Enabled`
+- `Bot__Tokens__0`
+- `Bot__Tokens__1`
+
+## Releases
+
+- Latest release: https://github.com/Riniba/TelegramMonitor/releases/latest
+
+## Documentation
+
+- GitHub Wiki: https://github.com/Riniba/TelegramMonitor/wiki
+- Wiki source prepared in this repository: [wiki/Home.md](./wiki/Home.md)
+- Previous wiki content was used as the migration reference for the new pages
+
+## License
+
+This project is licensed under the [LICENSE](./LICENSE).

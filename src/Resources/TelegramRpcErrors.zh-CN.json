@@ -1,0 +1,5035 @@
+[
+    {
+        "officialKey":  "2FA_CONFIRM_WAIT_%d",
+        "wtelegramKey":  "2FA_CONFIRM_WAIT_X",
+        "statusCode":  420,
+        "descriptionEn":  "Since this account is active and protected by a 2FA password, we will delete it in 1 week for security purposes. You can cancel this process at any time, you\u0027ll be able to reset your account in %d seconds.",
+        "messageZh":  "为了保护账号安全，请在 %d 秒后再确认二步验证"
+    },
+    {
+        "officialKey":  "ABOUT_TOO_LONG",
+        "wtelegramKey":  "ABOUT_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "About string too long.",
+        "messageZh":  "简介过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "ACCESS_TOKEN_EXPIRED",
+        "wtelegramKey":  "ACCESS_TOKEN_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "Access token expired.",
+        "messageZh":  "访问令牌已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "ACCESS_TOKEN_INVALID",
+        "wtelegramKey":  "ACCESS_TOKEN_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Access token invalid.",
+        "messageZh":  "访问令牌无效，请检查后重试"
+    },
+    {
+        "officialKey":  "AD_EXPIRED",
+        "wtelegramKey":  "AD_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The ad has expired (too old or not found).",
+        "messageZh":  "广告已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "ADDRESS_INVALID",
+        "wtelegramKey":  "ADDRESS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified geopoint address is invalid.",
+        "messageZh":  "地址无效，请检查后重试"
+    },
+    {
+        "officialKey":  "ADMIN_ID_INVALID",
+        "wtelegramKey":  "ADMIN_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified admin ID is invalid.",
+        "messageZh":  "管理员ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "ADMIN_RANK_EMOJI_NOT_ALLOWED",
+        "wtelegramKey":  "ADMIN_RANK_EMOJI_NOT_ALLOWED",
+        "statusCode":  400,
+        "descriptionEn":  "An admin rank cannot contain emojis.",
+        "messageZh":  "当前不允许管理员头衔表情"
+    },
+    {
+        "officialKey":  "ADMIN_RANK_INVALID",
+        "wtelegramKey":  "ADMIN_RANK_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified admin rank is invalid.",
+        "messageZh":  "管理员头衔无效，请检查后重试"
+    },
+    {
+        "officialKey":  "ADMIN_RIGHTS_EMPTY",
+        "wtelegramKey":  "ADMIN_RIGHTS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The chatAdminRights constructor passed in keyboardButtonRequestPeer.peer_type.user_admin_rights has no rights set (i.e. flags is 0).",
+        "messageZh":  "请填写管理员权限"
+    },
+    {
+        "officialKey":  "ADMINS_TOO_MUCH",
+        "wtelegramKey":  "ADMINS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "There are too many admins.",
+        "messageZh":  "ADMINS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "ALBUM_PHOTOS_TOO_MANY",
+        "wtelegramKey":  "ALBUM_PHOTOS_TOO_MANY",
+        "statusCode":  400,
+        "descriptionEn":  "You have uploaded too many profile photos, delete some before retrying.",
+        "messageZh":  "相册PHOTOS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "ALLOW_PAYMENT_REQUIRED",
+        "wtelegramKey":  "ALLOW_PAYMENT_REQUIRED",
+        "statusCode":  406,
+        "descriptionEn":  "This peer only accepts [paid messages \u0026raquo;](https://core.telegram.org/api/paid-messages): this error is only emitted for older layers without paid messages support, so the client must be updated in order to use paid messages.  .",
+        "messageZh":  "当前操作需要允许支付"
+    },
+    {
+        "officialKey":  "ALLOW_PAYMENT_REQUIRED_%d",
+        "wtelegramKey":  "ALLOW_PAYMENT_REQUIRED_X",
+        "statusCode":  403,
+        "descriptionEn":  "This peer charges %d [Telegram Stars](https://core.telegram.org/api/stars) per message, but the `allow_paid_stars` was not set or its value is smaller than %d.",
+        "messageZh":  "该会话每条消息需支付 %d 个 Telegram Stars，请提高 allow_paid_stars 后重试"
+    },
+    {
+        "officialKey":  "ANONYMOUS_REACTIONS_DISABLED",
+        "wtelegramKey":  "ANONYMOUS_REACTIONS_DISABLED",
+        "statusCode":  403,
+        "descriptionEn":  "Sorry, anonymous administrators cannot leave reactions or participate in polls.",
+        "messageZh":  "匿名回应已被禁用"
+    },
+    {
+        "officialKey":  "API_GIFT_RESTRICTED_UPDATE_APP",
+        "wtelegramKey":  "API_GIFT_RESTRICTED_UPDATE_APP",
+        "statusCode":  406,
+        "descriptionEn":  "Please update the app to access the gift API.",
+        "messageZh":  "当前客户端版本过低，请升级后再使用礼物相关功能"
+    },
+    {
+        "officialKey":  "API_ID_INVALID",
+        "wtelegramKey":  "API_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "API ID invalid.",
+        "messageZh":  "ApiId 无效，请检查配置"
+    },
+    {
+        "officialKey":  "API_ID_PUBLISHED_FLOOD",
+        "wtelegramKey":  "API_ID_PUBLISHED_FLOOD",
+        "statusCode":  400,
+        "descriptionEn":  "This API id was published somewhere, you can\u0027t use it now.",
+        "messageZh":  "APIIDPUBLISHED请求过于频繁，请稍后再试"
+    },
+    {
+        "officialKey":  "ARTICLE_TITLE_EMPTY",
+        "wtelegramKey":  "ARTICLE_TITLE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The title of the article is empty.",
+        "messageZh":  "请填写ARTICLETITLE"
+    },
+    {
+        "officialKey":  "AUDIO_CONTENT_URL_EMPTY",
+        "wtelegramKey":  "AUDIO_CONTENT_URL_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The remote URL specified in the content field is empty.",
+        "messageZh":  "请填写音频内容链接"
+    },
+    {
+        "officialKey":  "AUDIO_TITLE_EMPTY",
+        "wtelegramKey":  "AUDIO_TITLE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "An empty audio title was provided.",
+        "messageZh":  "请填写音频TITLE"
+    },
+    {
+        "officialKey":  "AUTH_BYTES_INVALID",
+        "wtelegramKey":  "AUTH_BYTES_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided authorization is invalid.",
+        "messageZh":  "认证数据无效，请重新登录"
+    },
+    {
+        "officialKey":  "AUTH_KEY_DUPLICATED",
+        "wtelegramKey":  "AUTH_KEY_DUPLICATED",
+        "statusCode":  406,
+        "descriptionEn":  "Concurrent usage of the current session from multiple connections was detected, the current session was invalidated by the server for security reasons!",
+        "messageZh":  "登录会话重复，请重新登录"
+    },
+    {
+        "officialKey":  "AUTH_KEY_INVALID",
+        "wtelegramKey":  "AUTH_KEY_INVALID",
+        "statusCode":  401,
+        "descriptionEn":  "The specified auth key is invalid.",
+        "messageZh":  "登录会话无效，请重新登录"
+    },
+    {
+        "officialKey":  "AUTH_KEY_PERM_EMPTY",
+        "wtelegramKey":  "AUTH_KEY_PERM_EMPTY",
+        "statusCode":  401,
+        "descriptionEn":  "The method is unavailable for temporary authorization keys, not bound to a permanent authorization key.",
+        "messageZh":  "永久认证密钥缺失，请重新登录"
+    },
+    {
+        "officialKey":  "AUTH_KEY_UNREGISTERED",
+        "wtelegramKey":  "AUTH_KEY_UNREGISTERED",
+        "statusCode":  401,
+        "descriptionEn":  "The specified authorization key is not registered in the system (for example, a PFS temporary key has expired).",
+        "messageZh":  "登录会话已失效，请重新登录"
+    },
+    {
+        "officialKey":  "AUTH_KEY_UNSYNCHRONIZED",
+        "wtelegramKey":  "AUTH_KEY_UNSYNCHRONIZED",
+        "statusCode":  500,
+        "descriptionEn":  "Internal error, please repeat the method call.",
+        "messageZh":  "认证密钥尚未同步，请稍后重试"
+    },
+    {
+        "officialKey":  "AUTH_RESTART",
+        "wtelegramKey":  "AUTH_RESTART",
+        "statusCode":  500,
+        "descriptionEn":  "Restart the authorization process.",
+        "messageZh":  "登录流程已重置，请重新开始"
+    },
+    {
+        "officialKey":  "AUTH_RESTART_%d",
+        "wtelegramKey":  "AUTH_RESTART_X",
+        "statusCode":  500,
+        "descriptionEn":  "Internal error (debug info %d), please repeat the method call.",
+        "messageZh":  "登录流程已重置，请重新开始"
+    },
+    {
+        "officialKey":  "AUTH_TOKEN_ALREADY_ACCEPTED",
+        "wtelegramKey":  "AUTH_TOKEN_ALREADY_ACCEPTED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified auth token was already accepted.",
+        "messageZh":  "认证令牌ACCEPTED已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "AUTH_TOKEN_EXCEPTION",
+        "wtelegramKey":  "AUTH_TOKEN_EXCEPTION",
+        "statusCode":  400,
+        "descriptionEn":  "An error occurred while importing the auth token.",
+        "messageZh":  "认证令牌异常，请稍后重试"
+    },
+    {
+        "officialKey":  "AUTH_TOKEN_EXPIRED",
+        "wtelegramKey":  "AUTH_TOKEN_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The authorization token has expired.",
+        "messageZh":  "认证令牌已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "AUTH_TOKEN_INVALID",
+        "wtelegramKey":  "AUTH_TOKEN_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified auth token is invalid.",
+        "messageZh":  "认证令牌无效，请检查后重试"
+    },
+    {
+        "officialKey":  "AUTH_TOKEN_INVALIDX",
+        "wtelegramKey":  "AUTH_TOKEN_INVALIDX",
+        "statusCode":  400,
+        "descriptionEn":  "The specified auth token is invalid.",
+        "messageZh":  "认证令牌无效，请重新获取后重试"
+    },
+    {
+        "officialKey":  "AUTOARCHIVE_NOT_AVAILABLE",
+        "wtelegramKey":  "AUTOARCHIVE_NOT_AVAILABLE",
+        "statusCode":  400,
+        "descriptionEn":  "The autoarchive setting is not available at this time: please check the value of the [autoarchive_setting_available field in client config \u0026raquo;](https://core.telegram.org/api/config#client-configuration) before calling this method.",
+        "messageZh":  "自动归档当前不可用，请稍后再试"
+    },
+    {
+        "officialKey":  "BALANCE_TOO_LOW",
+        "wtelegramKey":  "BALANCE_TOO_LOW",
+        "statusCode":  400,
+        "descriptionEn":  "The transaction cannot be completed because the current [Telegram Stars balance](https://core.telegram.org/api/stars) is too low.",
+        "messageZh":  "余额过低，请调整后重试"
+    },
+    {
+        "officialKey":  "BANK_CARD_NUMBER_INVALID",
+        "wtelegramKey":  "BANK_CARD_NUMBER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified card number is invalid.",
+        "messageZh":  "银行卡CARDNUMBER无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BANNED_RIGHTS_INVALID",
+        "wtelegramKey":  "BANNED_RIGHTS_INVALID",
+        "statusCode":  406,
+        "descriptionEn":  "You provided some invalid flags in the banned rights.",
+        "messageZh":  "BANNED权限无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BIRTHDAY_INVALID",
+        "wtelegramKey":  "BIRTHDAY_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "An invalid age was specified, must be between 0 and 150 years.",
+        "messageZh":  "BIRTHDAY无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BOOST_NOT_MODIFIED",
+        "wtelegramKey":  "BOOST_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "You\u0027re already [boosting](https://core.telegram.org/api/boost) the specified channel.",
+        "messageZh":  "BOOST未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "BOOST_PEER_INVALID",
+        "wtelegramKey":  "BOOST_PEER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `boost_peer` is invalid.",
+        "messageZh":  "BOOST会话对象无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BOOSTS_EMPTY",
+        "wtelegramKey":  "BOOSTS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "No boost slots were specified.",
+        "messageZh":  "请填写BOOSTS"
+    },
+    {
+        "officialKey":  "BOOSTS_REQUIRED",
+        "wtelegramKey":  "BOOSTS_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified channel must first be [boosted by its users](https://core.telegram.org/api/boost) in order to perform this action.",
+        "messageZh":  "当前操作需要BOOSTS"
+    },
+    {
+        "officialKey":  "BOT_ACCESS_FORBIDDEN",
+        "wtelegramKey":  "BOT_ACCESS_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "The specified method *can* be used over a [business connection](https://core.telegram.org/api/bots/connected-business-bots) for some operations, but the specified query attempted an operation that is not allowed over a business connection.",
+        "messageZh":  "当前账号无权执行与机器人访问相关的操作"
+    },
+    {
+        "officialKey":  "BOT_ALREADY_DISABLED",
+        "wtelegramKey":  "BOT_ALREADY_DISABLED",
+        "statusCode":  400,
+        "descriptionEn":  "The connected business bot was already disabled for the specified peer.",
+        "messageZh":  "机器人ALREADY已被禁用"
+    },
+    {
+        "officialKey":  "BOT_APP_BOT_INVALID",
+        "wtelegramKey":  "BOT_APP_BOT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The bot_id passed in the inputBotAppShortName constructor is invalid.",
+        "messageZh":  "机器人应用机器人无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BOT_APP_INVALID",
+        "wtelegramKey":  "BOT_APP_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified bot app is invalid.",
+        "messageZh":  "机器人应用无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BOT_APP_SHORTNAME_INVALID",
+        "wtelegramKey":  "BOT_APP_SHORTNAME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified bot app short name is invalid.",
+        "messageZh":  "机器人应用SHORTNAME无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BOT_BUSINESS_MISSING",
+        "wtelegramKey":  "BOT_BUSINESS_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "The specified bot is not a business bot (the [user](https://core.telegram.org/constructor/user).`bot_business` flag is not set).",
+        "messageZh":  "缺少机器人BUSINESS，请补充后重试"
+    },
+    {
+        "officialKey":  "BOT_CHANNELS_NA",
+        "wtelegramKey":  "BOT_CHANNELS_NA",
+        "statusCode":  400,
+        "descriptionEn":  "Bots can\u0027t edit admin privileges.",
+        "messageZh":  "机器人频道当前不可用，请稍后再试"
+    },
+    {
+        "officialKey":  "BOT_COMMAND_DESCRIPTION_INVALID",
+        "wtelegramKey":  "BOT_COMMAND_DESCRIPTION_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified command description is invalid.",
+        "messageZh":  "机器人COMMANDDESCRIPTION无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BOT_COMMAND_INVALID",
+        "wtelegramKey":  "BOT_COMMAND_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified command is invalid.",
+        "messageZh":  "机器人COMMAND无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BOT_DOMAIN_INVALID",
+        "wtelegramKey":  "BOT_DOMAIN_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Bot domain invalid.",
+        "messageZh":  "机器人DOMAIN无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BOT_FALLBACK_UNSUPPORTED",
+        "wtelegramKey":  "BOT_FALLBACK_UNSUPPORTED",
+        "statusCode":  400,
+        "descriptionEn":  "The fallback flag can\u0027t be set for bots.",
+        "messageZh":  "当前不支持机器人FALLBACK"
+    },
+    {
+        "officialKey":  "BOT_GAMES_DISABLED",
+        "wtelegramKey":  "BOT_GAMES_DISABLED",
+        "statusCode":  400,
+        "descriptionEn":  "Games can\u0027t be sent to channels.",
+        "messageZh":  "机器人GAMES已被禁用"
+    },
+    {
+        "officialKey":  "BOT_GROUPS_BLOCKED",
+        "wtelegramKey":  "BOT_GROUPS_BLOCKED",
+        "statusCode":  400,
+        "descriptionEn":  "This bot can\u0027t be added to groups.",
+        "messageZh":  "机器人GROUPS已被限制"
+    },
+    {
+        "officialKey":  "BOT_INLINE_DISABLED",
+        "wtelegramKey":  "BOT_INLINE_DISABLED",
+        "statusCode":  400,
+        "descriptionEn":  "This bot can\u0027t be used in inline mode.",
+        "messageZh":  "机器人内联已被禁用"
+    },
+    {
+        "officialKey":  "BOT_INVALID",
+        "wtelegramKey":  "BOT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "This is not a valid bot.",
+        "messageZh":  "机器人无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BOT_INVOICE_INVALID",
+        "wtelegramKey":  "BOT_INVOICE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified invoice is invalid.",
+        "messageZh":  "机器人INVOICE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BOT_METHOD_INVALID",
+        "wtelegramKey":  "BOT_METHOD_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified method cannot be used by bots.",
+        "messageZh":  "机器人账号不支持当前操作"
+    },
+    {
+        "officialKey":  "BOT_NOT_CONNECTED_YET",
+        "wtelegramKey":  "BOT_NOT_CONNECTED_YET",
+        "statusCode":  400,
+        "descriptionEn":  "No [business bot](https://core.telegram.org/api/business#connected-bots) is connected to the currently logged in user.",
+        "messageZh":  "机器人尚未连接，请稍后再试"
+    },
+    {
+        "officialKey":  "BOT_ONESIDE_NOT_AVAIL",
+        "wtelegramKey":  "BOT_ONESIDE_NOT_AVAIL",
+        "statusCode":  400,
+        "descriptionEn":  "Bots can\u0027t pin messages in PM just for themselves.",
+        "messageZh":  "机器人不能仅为自己在私聊中置顶消息"
+    },
+    {
+        "officialKey":  "BOT_PAYMENTS_DISABLED",
+        "wtelegramKey":  "BOT_PAYMENTS_DISABLED",
+        "statusCode":  400,
+        "descriptionEn":  "Please enable bot payments in botfather before calling this method.",
+        "messageZh":  "机器人PAYMENTS已被禁用"
+    },
+    {
+        "officialKey":  "BOT_RESPONSE_TIMEOUT",
+        "wtelegramKey":  "BOT_RESPONSE_TIMEOUT",
+        "statusCode":  400,
+        "descriptionEn":  "A timeout occurred while fetching data from the bot.",
+        "messageZh":  "机器人响应超时，请稍后再试"
+    },
+    {
+        "officialKey":  "BOT_SCORE_NOT_MODIFIED",
+        "wtelegramKey":  "BOT_SCORE_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "The score wasn\u0027t modified.",
+        "messageZh":  "机器人SCORE未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "BOT_VERIFIER_FORBIDDEN",
+        "wtelegramKey":  "BOT_VERIFIER_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "This bot cannot assign [verification icons](https://core.telegram.org/api/bots/verification).",
+        "messageZh":  "当前账号无权执行与机器人VERIFIER相关的操作"
+    },
+    {
+        "officialKey":  "BOT_WEBVIEW_DISABLED",
+        "wtelegramKey":  "BOT_WEBVIEW_DISABLED",
+        "statusCode":  400,
+        "descriptionEn":  "A webview cannot be opened in the specified conditions: emitted for example if `from_bot_menu` or `url` are set and `peer` is not the chat with the bot.",
+        "messageZh":  "机器人WEBVIEW已被禁用"
+    },
+    {
+        "officialKey":  "BOTS_TOO_MUCH",
+        "wtelegramKey":  "BOTS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "There are too many bots in this chat/channel.",
+        "messageZh":  "BOTS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "BROADCAST_FORBIDDEN",
+        "wtelegramKey":  "BROADCAST_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "Channel poll voters and reactions cannot be fetched to prevent deanonymization.",
+        "messageZh":  "当前账号无权执行与广播相关的操作"
+    },
+    {
+        "officialKey":  "BROADCAST_ID_INVALID",
+        "wtelegramKey":  "BROADCAST_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Broadcast ID invalid.",
+        "messageZh":  "广播ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BROADCAST_PUBLIC_VOTERS_FORBIDDEN",
+        "wtelegramKey":  "BROADCAST_PUBLIC_VOTERS_FORBIDDEN",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t forward polls with public voters.",
+        "messageZh":  "当前账号无权执行与广播PUBLICVOTERS相关的操作"
+    },
+    {
+        "officialKey":  "BROADCAST_REQUIRED",
+        "wtelegramKey":  "BROADCAST_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "This method can only be called on a channel, please use stats.getMegagroupStats for supergroups.",
+        "messageZh":  "当前操作需要广播"
+    },
+    {
+        "officialKey":  "BUSINESS_ADDRESS_ACTIVE",
+        "wtelegramKey":  "BUSINESS_ADDRESS_ACTIVE",
+        "statusCode":  406,
+        "descriptionEn":  "The user is currently advertising a [Business Location](https://core.telegram.org/api/business#location), the location may only be changed (or removed) using [account.updateBusinessLocation \u0026raquo;](https://core.telegram.org/method/account.updateBusinessLocation).  .",
+        "messageZh":  "BUSINESS地址已生效"
+    },
+    {
+        "officialKey":  "BUSINESS_CONNECTION_INVALID",
+        "wtelegramKey":  "BUSINESS_CONNECTION_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The `connection_id` passed to the wrapping [invokeWithBusinessConnection](https://core.telegram.org/api/business) call is invalid.",
+        "messageZh":  "BUSINESSCONNECTION无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUSINESS_CONNECTION_NOT_ALLOWED",
+        "wtelegramKey":  "BUSINESS_CONNECTION_NOT_ALLOWED",
+        "statusCode":  400,
+        "descriptionEn":  "This method was invoked over a business connection using [invokeWithBusinessConnection](https://core.telegram.org/api/business#connected-bots), but either (1) we\u0027re a user, and users cannot invoke methods over a business connection; (2) we\u0027re a bot, but business mode was disabled in @botfather or (3); we\u0027re a bot, but this method cannot be invoked over a business connection.",
+        "messageZh":  "当前不允许BUSINESSCONNECTION"
+    },
+    {
+        "officialKey":  "BUSINESS_PEER_INVALID",
+        "wtelegramKey":  "BUSINESS_PEER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Messages can\u0027t be set to the specified peer through the current [business connection](https://core.telegram.org/api/business#connected-bots).",
+        "messageZh":  "BUSINESS会话对象无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUSINESS_PEER_USAGE_MISSING",
+        "wtelegramKey":  "BUSINESS_PEER_USAGE_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "You cannot send a message to a user through a [business connection](https://core.telegram.org/api/business#connected-bots) if the user hasn\u0027t recently contacted us.",
+        "messageZh":  "缺少BUSINESS会话对象USAGE，请补充后重试"
+    },
+    {
+        "officialKey":  "BUSINESS_RECIPIENTS_EMPTY",
+        "wtelegramKey":  "BUSINESS_RECIPIENTS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "You didn\u0027t set any flag in inputBusinessBotRecipients, thus the bot cannot work with *any* peer.",
+        "messageZh":  "请填写BUSINESSRECIPIENTS"
+    },
+    {
+        "officialKey":  "BUSINESS_WORK_HOURS_EMPTY",
+        "wtelegramKey":  "BUSINESS_WORK_HOURS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "No work hours were specified.",
+        "messageZh":  "请填写BUSINESSWORKHOURS"
+    },
+    {
+        "officialKey":  "BUSINESS_WORK_HOURS_PERIOD_INVALID",
+        "wtelegramKey":  "BUSINESS_WORK_HOURS_PERIOD_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified work hours are invalid, see [here \u0026raquo;](https://core.telegram.org/api/business#opening-hours) for the exact requirements.",
+        "messageZh":  "BUSINESSWORKHOURSPERIOD无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUTTON_COPY_TEXT_INVALID",
+        "wtelegramKey":  "BUTTON_COPY_TEXT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified [keyboardButtonCopy](https://core.telegram.org/constructor/keyboardButtonCopy).`copy_text` is invalid.",
+        "messageZh":  "按钮COPY文本无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUTTON_DATA_INVALID",
+        "wtelegramKey":  "BUTTON_DATA_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The data of one or more of the buttons you provided is invalid.",
+        "messageZh":  "按钮DATA无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUTTON_ID_INVALID",
+        "wtelegramKey":  "BUTTON_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified button ID is invalid.",
+        "messageZh":  "按钮ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUTTON_INVALID",
+        "wtelegramKey":  "BUTTON_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified button is invalid.",
+        "messageZh":  "按钮无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUTTON_POS_INVALID",
+        "wtelegramKey":  "BUTTON_POS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The position of one of the keyboard buttons is invalid (i.e. a Game or Pay button not in the first position, and so on...).",
+        "messageZh":  "按钮POS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUTTON_TEXT_INVALID",
+        "wtelegramKey":  "BUTTON_TEXT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified button text is invalid.",
+        "messageZh":  "按钮文本无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUTTON_TYPE_INVALID",
+        "wtelegramKey":  "BUTTON_TYPE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The type of one or more of the buttons you provided is invalid.",
+        "messageZh":  "按钮TYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUTTON_URL_INVALID",
+        "wtelegramKey":  "BUTTON_URL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Button URL invalid.",
+        "messageZh":  "按钮链接无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUTTON_USER_INVALID",
+        "wtelegramKey":  "BUTTON_USER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The `user_id` passed to inputKeyboardButtonUserProfile is invalid!",
+        "messageZh":  "按钮用户无效，请检查后重试"
+    },
+    {
+        "officialKey":  "BUTTON_USER_PRIVACY_RESTRICTED",
+        "wtelegramKey":  "BUTTON_USER_PRIVACY_RESTRICTED",
+        "statusCode":  400,
+        "descriptionEn":  "The privacy setting of the user specified in a [inputKeyboardButtonUserProfile](https://core.telegram.org/constructor/inputKeyboardButtonUserProfile) button do not allow creating such a button.",
+        "messageZh":  "按钮用户隐私已被限制"
+    },
+    {
+        "officialKey":  "CALL_ALREADY_ACCEPTED",
+        "wtelegramKey":  "CALL_ALREADY_ACCEPTED",
+        "statusCode":  400,
+        "descriptionEn":  "The call was already accepted.",
+        "messageZh":  "通话ACCEPTED已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "CALL_ALREADY_DECLINED",
+        "wtelegramKey":  "CALL_ALREADY_DECLINED",
+        "statusCode":  400,
+        "descriptionEn":  "The call was already declined.",
+        "messageZh":  "通话拒绝已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "CALL_OCCUPY_FAILED",
+        "wtelegramKey":  "CALL_OCCUPY_FAILED",
+        "statusCode":  500,
+        "descriptionEn":  "The call failed because the user is already making another call.",
+        "messageZh":  "通话OCCUPY失败，请稍后重试"
+    },
+    {
+        "officialKey":  "CALL_PEER_INVALID",
+        "wtelegramKey":  "CALL_PEER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided call peer object is invalid.",
+        "messageZh":  "通话会话对象无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CALL_PROTOCOL_COMPAT_LAYER_INVALID",
+        "wtelegramKey":  "CALL_PROTOCOL_COMPAT_LAYER_INVALID",
+        "statusCode":  406,
+        "descriptionEn":  "The other side of the call does not support any of the VoIP protocols supported by the local client, as specified by the `protocol.layer` and `protocol.library_versions` fields.",
+        "messageZh":  "通话PROTOCOLCOMPATLAYER无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CALL_PROTOCOL_FLAGS_INVALID",
+        "wtelegramKey":  "CALL_PROTOCOL_FLAGS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Call protocol flags invalid.",
+        "messageZh":  "通话PROTOCOLFLAGS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CALL_PROTOCOL_LAYER_INVALID",
+        "wtelegramKey":  "CALL_PROTOCOL_LAYER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified protocol layer version range is invalid.",
+        "messageZh":  "通话PROTOCOLLAYER无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CDN_METHOD_INVALID",
+        "wtelegramKey":  "CDN_METHOD_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t call this method in a CDN DC.",
+        "messageZh":  "CDN方法无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CDN_UPLOAD_TIMEOUT",
+        "wtelegramKey":  "CDN_UPLOAD_TIMEOUT",
+        "statusCode":  500,
+        "descriptionEn":  "A server-side timeout occurred while reuploading the file to the CDN DC.",
+        "messageZh":  "文件重新上传到 CDN 时超时，请稍后重试"
+    },
+    {
+        "officialKey":  "CHANNEL_FORUM_MISSING",
+        "wtelegramKey":  "CHANNEL_FORUM_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "This supergroup is not a forum.",
+        "messageZh":  "缺少频道论坛，请补充后重试"
+    },
+    {
+        "officialKey":  "CHANNEL_ID_INVALID",
+        "wtelegramKey":  "CHANNEL_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified supergroup ID is invalid.",
+        "messageZh":  "频道ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CHANNEL_INVALID",
+        "wtelegramKey":  "CHANNEL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided channel is invalid.",
+        "messageZh":  "频道无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CHANNEL_MONOFORUM_UNSUPPORTED",
+        "wtelegramKey":  "CHANNEL_MONOFORUM_UNSUPPORTED",
+        "statusCode":  400,
+        "descriptionEn":  "[Monoforums](https://core.telegram.org/api/channel#monoforums) do not support this feature.",
+        "messageZh":  "当前不支持频道MONOFORUM"
+    },
+    {
+        "officialKey":  "CHANNEL_PARICIPANT_MISSING",
+        "wtelegramKey":  "CHANNEL_PARICIPANT_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "The current user is not in the channel.",
+        "messageZh":  "缺少频道PARICIPANT，请补充后重试"
+    },
+    {
+        "officialKey":  "CHANNEL_PRIVATE",
+        "wtelegramKey":  "CHANNEL_PRIVATE",
+        "statusCode":  406,
+        "descriptionEn":  "You haven\u0027t joined this channel/supergroup.",
+        "messageZh":  "该频道或群组为私有，当前账号无权访问"
+    },
+    {
+        "officialKey":  "CHANNEL_PUBLIC_GROUP_NA",
+        "wtelegramKey":  "CHANNEL_PUBLIC_GROUP_NA",
+        "statusCode":  403,
+        "descriptionEn":  "channel/supergroup not available.",
+        "messageZh":  "频道PUBLIC群组当前不可用，请稍后再试"
+    },
+    {
+        "officialKey":  "CHANNEL_TOO_BIG",
+        "wtelegramKey":  "CHANNEL_TOO_BIG",
+        "statusCode":  400,
+        "descriptionEn":  "This channel has too many participants (\u003e1000) to be deleted.",
+        "messageZh":  "频道过大，请调整后重试"
+    },
+    {
+        "officialKey":  "CHANNEL_TOO_LARGE",
+        "wtelegramKey":  "CHANNEL_TOO_LARGE",
+        "statusCode":  406,
+        "descriptionEn":  "Channel is too large to be deleted; this error is issued when trying to delete channels with more than 1000 members (subject to change).",
+        "messageZh":  "频道过大，请调整后重试"
+    },
+    {
+        "officialKey":  "CHANNELS_ADMIN_LOCATED_TOO_MUCH",
+        "wtelegramKey":  "CHANNELS_ADMIN_LOCATED_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "The user has reached the limit of public geogroups.",
+        "messageZh":  "频道管理员LOCATED过多，请减少后重试"
+    },
+    {
+        "officialKey":  "CHANNELS_ADMIN_PUBLIC_TOO_MUCH",
+        "wtelegramKey":  "CHANNELS_ADMIN_PUBLIC_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "You\u0027re admin of too many public channels, make some channels private to change the username of this channel.",
+        "messageZh":  "频道管理员PUBLIC过多，请减少后重试"
+    },
+    {
+        "officialKey":  "CHANNELS_TOO_MUCH",
+        "wtelegramKey":  "CHANNELS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "You have joined too many channels/supergroups.",
+        "messageZh":  "频道过多，请减少后重试"
+    },
+    {
+        "officialKey":  "CHARGE_ALREADY_REFUNDED",
+        "wtelegramKey":  "CHARGE_ALREADY_REFUNDED",
+        "statusCode":  400,
+        "descriptionEn":  "The transaction was already refunded.",
+        "messageZh":  "CHARGEREFUNDED已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "CHARGE_ID_EMPTY",
+        "wtelegramKey":  "CHARGE_ID_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified charge_id is empty.",
+        "messageZh":  "请填写CHARGEID"
+    },
+    {
+        "officialKey":  "CHARGE_ID_INVALID",
+        "wtelegramKey":  "CHARGE_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified charge_id is invalid.",
+        "messageZh":  "CHARGEID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CHAT_ABOUT_NOT_MODIFIED",
+        "wtelegramKey":  "CHAT_ABOUT_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "About text has not changed.",
+        "messageZh":  "会话简介未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "CHAT_ABOUT_TOO_LONG",
+        "wtelegramKey":  "CHAT_ABOUT_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "Chat about too long.",
+        "messageZh":  "会话简介过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "CHAT_ACTION_FORBIDDEN",
+        "wtelegramKey":  "CHAT_ACTION_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You cannot execute this action.",
+        "messageZh":  "当前账号无权执行与会话操作相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_ADMIN_INVITE_REQUIRED",
+        "wtelegramKey":  "CHAT_ADMIN_INVITE_REQUIRED",
+        "statusCode":  403,
+        "descriptionEn":  "You do not have the rights to do this.",
+        "messageZh":  "当前操作需要会话管理员邀请"
+    },
+    {
+        "officialKey":  "CHAT_ADMIN_REQUIRED",
+        "wtelegramKey":  "CHAT_ADMIN_REQUIRED",
+        "statusCode":  403,
+        "descriptionEn":  "You must be an admin in this chat to do this.",
+        "messageZh":  "当前操作需要管理员权限"
+    },
+    {
+        "officialKey":  "CHAT_DISCUSSION_UNALLOWED",
+        "wtelegramKey":  "CHAT_DISCUSSION_UNALLOWED",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t enable forum topics in a discussion group linked to a channel.",
+        "messageZh":  "已关联频道的讨论组不能启用论坛话题"
+    },
+    {
+        "officialKey":  "CHAT_FORBIDDEN",
+        "wtelegramKey":  "CHAT_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "This chat is not available to the current user.",
+        "messageZh":  "当前账号无权执行与会话相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_FORWARDS_RESTRICTED",
+        "wtelegramKey":  "CHAT_FORWARDS_RESTRICTED",
+        "statusCode":  406,
+        "descriptionEn":  "You can\u0027t forward messages from a protected chat.",
+        "messageZh":  "会话FORWARDS已被限制"
+    },
+    {
+        "officialKey":  "CHAT_GUEST_SEND_FORBIDDEN",
+        "wtelegramKey":  "CHAT_GUEST_SEND_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You join the discussion group before commenting, see [here \u0026raquo;](https://core.telegram.org/api/discussion#requiring-users-to-join-the-group) for more info.",
+        "messageZh":  "当前账号无权执行与会话GUEST发送相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_ID_EMPTY",
+        "wtelegramKey":  "CHAT_ID_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The provided chat ID is empty.",
+        "messageZh":  "请填写会话ID"
+    },
+    {
+        "officialKey":  "CHAT_ID_GENERATE_FAILED",
+        "wtelegramKey":  "CHAT_ID_GENERATE_FAILED",
+        "statusCode":  500,
+        "descriptionEn":  "Failure while generating the chat ID.",
+        "messageZh":  "会话IDGENERATE失败，请稍后重试"
+    },
+    {
+        "officialKey":  "CHAT_ID_INVALID",
+        "wtelegramKey":  "CHAT_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided chat id is invalid.",
+        "messageZh":  "会话ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CHAT_INVALID",
+        "wtelegramKey":  "CHAT_INVALID",
+        "statusCode":  500,
+        "descriptionEn":  "Invalid chat.",
+        "messageZh":  "会话无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CHAT_INVITE_PERMANENT",
+        "wtelegramKey":  "CHAT_INVITE_PERMANENT",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t set an expiration date on permanent invite links.",
+        "messageZh":  "会话邀请已为永久状态，当前操作不适用"
+    },
+    {
+        "officialKey":  "CHAT_LINK_EXISTS",
+        "wtelegramKey":  "CHAT_LINK_EXISTS",
+        "statusCode":  400,
+        "descriptionEn":  "The chat is public, you can\u0027t hide the history to new users.",
+        "messageZh":  "当前会话已公开，不能再对新成员隐藏历史消息"
+    },
+    {
+        "officialKey":  "CHAT_MEMBER_ADD_FAILED",
+        "wtelegramKey":  "CHAT_MEMBER_ADD_FAILED",
+        "statusCode":  400,
+        "descriptionEn":  "Could not add participants.",
+        "messageZh":  "会话成员ADD失败，请稍后重试"
+    },
+    {
+        "officialKey":  "CHAT_NOT_MODIFIED",
+        "wtelegramKey":  "CHAT_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "No changes were made to chat information because the new information you passed is identical to the current information.",
+        "messageZh":  "会话未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "CHAT_PUBLIC_REQUIRED",
+        "wtelegramKey":  "CHAT_PUBLIC_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "You can only enable join requests in public groups.",
+        "messageZh":  "当前操作需要会话PUBLIC"
+    },
+    {
+        "officialKey":  "CHAT_RESTRICTED",
+        "wtelegramKey":  "CHAT_RESTRICTED",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t send messages in this chat, you were restricted.",
+        "messageZh":  "会话已被限制"
+    },
+    {
+        "officialKey":  "CHAT_REVOKE_DATE_UNSUPPORTED",
+        "wtelegramKey":  "CHAT_REVOKE_DATE_UNSUPPORTED",
+        "statusCode":  400,
+        "descriptionEn":  "`min_date` and `max_date` are not available for using with non-user peers.",
+        "messageZh":  "当前不支持会话REVOKE时间"
+    },
+    {
+        "officialKey":  "CHAT_SEND_AUDIOS_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_AUDIOS_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send audio messages in this chat.",
+        "messageZh":  "当前账号无权执行与会话发送AUDIOS相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_DOCS_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_DOCS_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send documents in this chat.",
+        "messageZh":  "当前账号无权执行与会话发送DOCS相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_GAME_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_GAME_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send a game to this chat.",
+        "messageZh":  "当前账号无权执行与会话发送GAME相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_GIFS_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_GIFS_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send gifs in this chat.",
+        "messageZh":  "当前账号无权执行与会话发送GIFS相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_INLINE_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_INLINE_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send inline messages in this group.",
+        "messageZh":  "当前账号无权执行与会话发送内联相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_MEDIA_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_MEDIA_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send media in this chat.",
+        "messageZh":  "当前账号无权执行与会话发送媒体相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_PHOTOS_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_PHOTOS_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send photos in this chat.",
+        "messageZh":  "当前账号无权执行与会话发送PHOTOS相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_PLAIN_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_PLAIN_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send non-media (text) messages in this chat.",
+        "messageZh":  "当前账号无权执行与会话发送PLAIN相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_POLL_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_POLL_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send polls in this chat.",
+        "messageZh":  "当前账号无权执行与会话发送投票相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_ROUNDVIDEOS_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_ROUNDVIDEOS_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send round videos to this chat.",
+        "messageZh":  "当前账号无权执行与会话发送ROUNDVIDEOS相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_STICKERS_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_STICKERS_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send stickers in this chat.",
+        "messageZh":  "当前账号无权执行与会话发送STICKERS相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_VIDEOS_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_VIDEOS_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send videos in this chat.",
+        "messageZh":  "当前账号无权执行与会话发送VIDEOS相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_VOICES_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_VOICES_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send voice recordings in this chat.",
+        "messageZh":  "当前账号无权执行与会话发送VOICES相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_SEND_WEBPAGE_FORBIDDEN",
+        "wtelegramKey":  "CHAT_SEND_WEBPAGE_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send webpage previews to this chat.",
+        "messageZh":  "当前账号无权执行与会话发送网页相关的操作"
+    },
+    {
+        "officialKey":  "CHAT_TITLE_EMPTY",
+        "wtelegramKey":  "CHAT_TITLE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "No chat title provided.",
+        "messageZh":  "请填写会话TITLE"
+    },
+    {
+        "officialKey":  "CHAT_TOO_BIG",
+        "wtelegramKey":  "CHAT_TOO_BIG",
+        "statusCode":  400,
+        "descriptionEn":  "This method is not available for groups with more than `chat_read_mark_size_threshold` members, [see client configuration \u0026raquo;](https://core.telegram.org/api/config#client-configuration).",
+        "messageZh":  "会话过大，请调整后重试"
+    },
+    {
+        "officialKey":  "CHAT_TYPE_INVALID",
+        "wtelegramKey":  "CHAT_TYPE_INVALID",
+        "statusCode":  403,
+        "descriptionEn":  "The specified user type is invalid.",
+        "messageZh":  "会话TYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CHAT_WRITE_FORBIDDEN",
+        "wtelegramKey":  "CHAT_WRITE_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t write in this chat.",
+        "messageZh":  "当前账号没有发送消息权限"
+    },
+    {
+        "officialKey":  "CHATLINK_SLUG_EMPTY",
+        "wtelegramKey":  "CHATLINK_SLUG_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified slug is empty.",
+        "messageZh":  "请填写CHATLINKSLUG"
+    },
+    {
+        "officialKey":  "CHATLINK_SLUG_EXPIRED",
+        "wtelegramKey":  "CHATLINK_SLUG_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified [business chat link](https://core.telegram.org/api/business#business-chat-links) has expired.",
+        "messageZh":  "CHATLINKSLUG已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "CHATLINKS_TOO_MUCH",
+        "wtelegramKey":  "CHATLINKS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "Too many [business chat links](https://core.telegram.org/api/business#business-chat-links) were created, please delete some older links.",
+        "messageZh":  "CHATLINKS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "CHATLIST_EXCLUDE_INVALID",
+        "wtelegramKey":  "CHATLIST_EXCLUDE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `exclude_peers` are invalid.",
+        "messageZh":  "CHATLISTEXCLUDE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CHATLISTS_TOO_MUCH",
+        "wtelegramKey":  "CHATLISTS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "You have created too many folder links, hitting the `chatlist_invites_limit_default`/`chatlist_invites_limit_premium` [limits \u0026raquo;](https://core.telegram.org/api/config#chatlist-invites-limit-default).",
+        "messageZh":  "CHATLISTS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "CODE_EMPTY",
+        "wtelegramKey":  "CODE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The provided code is empty.",
+        "messageZh":  "请填写验证码"
+    },
+    {
+        "officialKey":  "CODE_HASH_INVALID",
+        "wtelegramKey":  "CODE_HASH_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Code hash invalid.",
+        "messageZh":  "验证码哈希无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CODE_INVALID",
+        "wtelegramKey":  "CODE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Code invalid.",
+        "messageZh":  "验证码无效，请检查后重试"
+    },
+    {
+        "officialKey":  "COLLECTIBLE_INVALID",
+        "wtelegramKey":  "COLLECTIBLE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified collectible is invalid.",
+        "messageZh":  "COLLECTIBLE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "COLLECTIBLE_NOT_FOUND",
+        "wtelegramKey":  "COLLECTIBLE_NOT_FOUND",
+        "statusCode":  400,
+        "descriptionEn":  "The specified collectible could not be found.",
+        "messageZh":  "未找到COLLECTIBLE"
+    },
+    {
+        "officialKey":  "COLOR_INVALID",
+        "wtelegramKey":  "COLOR_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified color palette ID was invalid.",
+        "messageZh":  "COLOR无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CONNECTION_API_ID_INVALID",
+        "wtelegramKey":  "CONNECTION_API_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided API id is invalid.",
+        "messageZh":  "CONNECTIONAPIID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CONNECTION_APP_VERSION_EMPTY",
+        "wtelegramKey":  "CONNECTION_APP_VERSION_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "App version is empty.",
+        "messageZh":  "请填写CONNECTION应用VERSION"
+    },
+    {
+        "officialKey":  "CONNECTION_DEVICE_MODEL_EMPTY",
+        "wtelegramKey":  "CONNECTION_DEVICE_MODEL_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified device model is empty.",
+        "messageZh":  "请填写CONNECTION设备MODEL"
+    },
+    {
+        "officialKey":  "CONNECTION_ID_INVALID",
+        "wtelegramKey":  "CONNECTION_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified connection ID is invalid.",
+        "messageZh":  "CONNECTIONID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CONNECTION_LANG_PACK_INVALID",
+        "wtelegramKey":  "CONNECTION_LANG_PACK_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified language pack is empty.",
+        "messageZh":  "CONNECTION语言PACK无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CONNECTION_LAYER_INVALID",
+        "wtelegramKey":  "CONNECTION_LAYER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Layer invalid.",
+        "messageZh":  "CONNECTIONLAYER无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CONNECTION_NOT_INITED",
+        "wtelegramKey":  "CONNECTION_NOT_INITED",
+        "statusCode":  400,
+        "descriptionEn":  "Please initialize the connection using initConnection before making queries.",
+        "messageZh":  "CONNECTION尚未初始化，请稍后再试"
+    },
+    {
+        "officialKey":  "CONNECTION_SYSTEM_EMPTY",
+        "wtelegramKey":  "CONNECTION_SYSTEM_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified system version is empty.",
+        "messageZh":  "请填写CONNECTIONSYSTEM"
+    },
+    {
+        "officialKey":  "CONNECTION_SYSTEM_LANG_CODE_EMPTY",
+        "wtelegramKey":  "CONNECTION_SYSTEM_LANG_CODE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified system language code is empty.",
+        "messageZh":  "请填写CONNECTIONSYSTEM语言验证码"
+    },
+    {
+        "officialKey":  "CONTACT_ADD_MISSING",
+        "wtelegramKey":  "CONTACT_ADD_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "Contact to add is missing.",
+        "messageZh":  "缺少联系人ADD，请补充后重试"
+    },
+    {
+        "officialKey":  "CONTACT_ID_INVALID",
+        "wtelegramKey":  "CONTACT_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided contact ID is invalid.",
+        "messageZh":  "联系人ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CONTACT_MISSING",
+        "wtelegramKey":  "CONTACT_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "The specified user is not a contact.",
+        "messageZh":  "缺少联系人，请补充后重试"
+    },
+    {
+        "officialKey":  "CONTACT_NAME_EMPTY",
+        "wtelegramKey":  "CONTACT_NAME_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "Contact name empty.",
+        "messageZh":  "请填写联系人名称"
+    },
+    {
+        "officialKey":  "CONTACT_REQ_MISSING",
+        "wtelegramKey":  "CONTACT_REQ_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "Missing contact request.",
+        "messageZh":  "缺少联系人REQ，请补充后重试"
+    },
+    {
+        "officialKey":  "CREATE_CALL_FAILED",
+        "wtelegramKey":  "CREATE_CALL_FAILED",
+        "statusCode":  400,
+        "descriptionEn":  "An error occurred while creating the call.",
+        "messageZh":  "CREATE通话失败，请稍后重试"
+    },
+    {
+        "officialKey":  "CURRENCY_TOTAL_AMOUNT_INVALID",
+        "wtelegramKey":  "CURRENCY_TOTAL_AMOUNT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The total amount of all prices is invalid.",
+        "messageZh":  "CURRENCYTOTALAMOUNT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "CUSTOM_REACTIONS_TOO_MANY",
+        "wtelegramKey":  "CUSTOM_REACTIONS_TOO_MANY",
+        "statusCode":  400,
+        "descriptionEn":  "Too many custom reactions were specified.",
+        "messageZh":  "CUSTOM回应过多，请减少后重试"
+    },
+    {
+        "officialKey":  "DATA_HASH_SIZE_INVALID",
+        "wtelegramKey":  "DATA_HASH_SIZE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The size of the specified secureValueErrorData.data_hash is invalid.",
+        "messageZh":  "DATA哈希大小无效，请检查后重试"
+    },
+    {
+        "officialKey":  "DATA_INVALID",
+        "wtelegramKey":  "DATA_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Encrypted data invalid.",
+        "messageZh":  "DATA无效，请检查后重试"
+    },
+    {
+        "officialKey":  "DATA_JSON_INVALID",
+        "wtelegramKey":  "DATA_JSON_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided JSON data is invalid.",
+        "messageZh":  "DATAJSON无效，请检查后重试"
+    },
+    {
+        "officialKey":  "DATA_TOO_LONG",
+        "wtelegramKey":  "DATA_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "Data too long.",
+        "messageZh":  "DATA过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "DATE_EMPTY",
+        "wtelegramKey":  "DATE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "Date empty.",
+        "messageZh":  "请填写时间"
+    },
+    {
+        "officialKey":  "DC_ID_INVALID",
+        "wtelegramKey":  "DC_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided DC ID is invalid.",
+        "messageZh":  "数据中心ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "DH_G_A_INVALID",
+        "wtelegramKey":  "DH_G_A_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "g_a invalid.",
+        "messageZh":  "DHGA无效，请检查后重试"
+    },
+    {
+        "officialKey":  "DOCUMENT_INVALID",
+        "wtelegramKey":  "DOCUMENT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified document is invalid.",
+        "messageZh":  "文档无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EDIT_BOT_INVITE_FORBIDDEN",
+        "wtelegramKey":  "EDIT_BOT_INVITE_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "Normal users can\u0027t edit invites that were created by bots.",
+        "messageZh":  "当前账号无权执行与EDIT机器人邀请相关的操作"
+    },
+    {
+        "officialKey":  "EFFECT_ID_INVALID",
+        "wtelegramKey":  "EFFECT_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified effect ID is invalid.",
+        "messageZh":  "EFFECTID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EMAIL_HASH_EXPIRED",
+        "wtelegramKey":  "EMAIL_HASH_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "Email hash expired.",
+        "messageZh":  "邮箱哈希已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "EMAIL_INVALID",
+        "wtelegramKey":  "EMAIL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified email is invalid.",
+        "messageZh":  "邮箱格式无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EMAIL_NOT_ALLOWED",
+        "wtelegramKey":  "EMAIL_NOT_ALLOWED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified email cannot be used to complete the operation.",
+        "messageZh":  "当前不允许邮箱"
+    },
+    {
+        "officialKey":  "EMAIL_NOT_SETUP",
+        "wtelegramKey":  "EMAIL_NOT_SETUP",
+        "statusCode":  400,
+        "descriptionEn":  "In order to change the login email with emailVerifyPurposeLoginChange, an existing login email must already be set using emailVerifyPurposeLoginSetup.",
+        "messageZh":  "邮箱尚未设置，请先完成配置"
+    },
+    {
+        "officialKey":  "EMAIL_UNCONFIRMED",
+        "wtelegramKey":  "EMAIL_UNCONFIRMED",
+        "statusCode":  400,
+        "descriptionEn":  "Email unconfirmed.",
+        "messageZh":  "邮箱尚未确认，请先完成邮箱验证"
+    },
+    {
+        "officialKey":  "EMAIL_UNCONFIRMED_%d",
+        "wtelegramKey":  "EMAIL_UNCONFIRMED_X",
+        "statusCode":  400,
+        "descriptionEn":  "The provided email isn\u0027t confirmed, %d is the length of the verification code that was just sent to the email: use [account.verifyEmail](https://core.telegram.org/method/account.verifyEmail) to enter the received verification code and enable the recovery email.",
+        "messageZh":  "邮箱尚未完成确认，请按提示完成验证后再试"
+    },
+    {
+        "officialKey":  "EMAIL_VERIFY_EXPIRED",
+        "wtelegramKey":  "EMAIL_VERIFY_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The verification email has expired.",
+        "messageZh":  "邮箱验证码已过期，请重新获取"
+    },
+    {
+        "officialKey":  "EMOJI_INVALID",
+        "wtelegramKey":  "EMOJI_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified theme emoji is valid.",
+        "messageZh":  "表情无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EMOJI_MARKUP_INVALID",
+        "wtelegramKey":  "EMOJI_MARKUP_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `video_emoji_markup` was invalid.",
+        "messageZh":  "表情MARKUP无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EMOJI_NOT_MODIFIED",
+        "wtelegramKey":  "EMOJI_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "The theme wasn\u0027t changed.",
+        "messageZh":  "表情未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "EMOTICON_EMPTY",
+        "wtelegramKey":  "EMOTICON_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The emoji is empty.",
+        "messageZh":  "请填写EMOTICON"
+    },
+    {
+        "officialKey":  "EMOTICON_INVALID",
+        "wtelegramKey":  "EMOTICON_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified emoji is invalid.",
+        "messageZh":  "EMOTICON无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EMOTICON_STICKERPACK_MISSING",
+        "wtelegramKey":  "EMOTICON_STICKERPACK_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "inputStickerSetDice.emoji cannot be empty.",
+        "messageZh":  "缺少EMOTICONSTICKERPACK，请补充后重试"
+    },
+    {
+        "officialKey":  "ENCRYPTED_MESSAGE_INVALID",
+        "wtelegramKey":  "ENCRYPTED_MESSAGE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Encrypted message invalid.",
+        "messageZh":  "ENCRYPTED消息无效，请检查后重试"
+    },
+    {
+        "officialKey":  "ENCRYPTION_ALREADY_ACCEPTED",
+        "wtelegramKey":  "ENCRYPTION_ALREADY_ACCEPTED",
+        "statusCode":  400,
+        "descriptionEn":  "Secret chat already accepted.",
+        "messageZh":  "ENCRYPTIONACCEPTED已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "ENCRYPTION_ALREADY_DECLINED",
+        "wtelegramKey":  "ENCRYPTION_ALREADY_DECLINED",
+        "statusCode":  400,
+        "descriptionEn":  "The secret chat was already declined.",
+        "messageZh":  "ENCRYPTION拒绝已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "ENCRYPTION_DECLINED",
+        "wtelegramKey":  "ENCRYPTION_DECLINED",
+        "statusCode":  400,
+        "descriptionEn":  "The secret chat was declined.",
+        "messageZh":  "对方已拒绝此次秘密聊天"
+    },
+    {
+        "officialKey":  "ENCRYPTION_ID_INVALID",
+        "wtelegramKey":  "ENCRYPTION_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided secret chat ID is invalid.",
+        "messageZh":  "ENCRYPTIONID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "ENTITIES_TOO_LONG",
+        "wtelegramKey":  "ENTITIES_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "You provided too many styled message entities.",
+        "messageZh":  "ENTITIES过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "ENTITY_BOUNDS_INVALID",
+        "wtelegramKey":  "ENTITY_BOUNDS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "A specified [entity offset or length](https://core.telegram.org/api/entities#entity-length) is invalid, see [here \u0026raquo;](https://core.telegram.org/api/entities#entity-length) for info on how to properly compute the entity offset/length.",
+        "messageZh":  "实体BOUNDS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "ENTITY_MENTION_USER_INVALID",
+        "wtelegramKey":  "ENTITY_MENTION_USER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "You mentioned an invalid user.",
+        "messageZh":  "实体MENTION用户无效，请检查后重试"
+    },
+    {
+        "officialKey":  "ERROR_TEXT_EMPTY",
+        "wtelegramKey":  "ERROR_TEXT_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The provided error message is empty.",
+        "messageZh":  "请填写错误文本"
+    },
+    {
+        "officialKey":  "EXPIRE_DATE_INVALID",
+        "wtelegramKey":  "EXPIRE_DATE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified expiration date is invalid.",
+        "messageZh":  "EXPIRE时间无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EXPIRES_AT_INVALID",
+        "wtelegramKey":  "EXPIRES_AT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `expires_at` timestamp is invalid.",
+        "messageZh":  "EXPIRESAT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EXPORT_CARD_INVALID",
+        "wtelegramKey":  "EXPORT_CARD_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Provided card is invalid.",
+        "messageZh":  "导出CARD无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EXTENDED_MEDIA_AMOUNT_INVALID",
+        "wtelegramKey":  "EXTENDED_MEDIA_AMOUNT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `stars_amount` of the passed [inputMediaPaidMedia](https://core.telegram.org/constructor/inputMediaPaidMedia) is invalid.",
+        "messageZh":  "EXTENDED媒体AMOUNT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EXTENDED_MEDIA_INVALID",
+        "wtelegramKey":  "EXTENDED_MEDIA_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified paid media is invalid.",
+        "messageZh":  "EXTENDED媒体无效，请检查后重试"
+    },
+    {
+        "officialKey":  "EXTERNAL_URL_INVALID",
+        "wtelegramKey":  "EXTERNAL_URL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "External URL invalid.",
+        "messageZh":  "EXTERNAL链接无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FILE_CONTENT_TYPE_INVALID",
+        "wtelegramKey":  "FILE_CONTENT_TYPE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "File content-type is invalid.",
+        "messageZh":  "文件内容TYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FILE_EMTPY",
+        "wtelegramKey":  "FILE_EMTPY",
+        "statusCode":  400,
+        "descriptionEn":  "An empty file was provided.",
+        "messageZh":  "上传的文件不能为空"
+    },
+    {
+        "officialKey":  "FILE_ID_INVALID",
+        "wtelegramKey":  "FILE_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided file id is invalid.",
+        "messageZh":  "文件ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FILE_MIGRATE_%d",
+        "wtelegramKey":  "FILE_MIGRATE_X",
+        "statusCode":  400,
+        "descriptionEn":  "The file currently being accessed is stored in DC %d, please re-send the query to that DC.",
+        "messageZh":  "文件所在数据中心不同，请切换到 %d 号数据中心后重试"
+    },
+    {
+        "officialKey":  "FILE_PART_%d_MISSING",
+        "wtelegramKey":  "FILE_PART_X_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "Part %d of the file is missing from storage. Try repeating the method call to resave the part.",
+        "messageZh":  "缺少文件分片%d，请补充后重试"
+    },
+    {
+        "officialKey":  "FILE_PART_EMPTY",
+        "wtelegramKey":  "FILE_PART_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The provided file part is empty.",
+        "messageZh":  "请填写文件分片"
+    },
+    {
+        "officialKey":  "FILE_PART_INVALID",
+        "wtelegramKey":  "FILE_PART_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The file part number is invalid.",
+        "messageZh":  "文件分片无效，请重新上传"
+    },
+    {
+        "officialKey":  "FILE_PART_LENGTH_INVALID",
+        "wtelegramKey":  "FILE_PART_LENGTH_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The length of a file part is invalid.",
+        "messageZh":  "文件分片LENGTH无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FILE_PART_SIZE_CHANGED",
+        "wtelegramKey":  "FILE_PART_SIZE_CHANGED",
+        "statusCode":  400,
+        "descriptionEn":  "Provided file part size has changed.",
+        "messageZh":  "文件分片大小已变更，请重新获取后重试"
+    },
+    {
+        "officialKey":  "FILE_PART_SIZE_INVALID",
+        "wtelegramKey":  "FILE_PART_SIZE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided file part size is invalid.",
+        "messageZh":  "文件分片大小无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FILE_PART_TOO_BIG",
+        "wtelegramKey":  "FILE_PART_TOO_BIG",
+        "statusCode":  400,
+        "descriptionEn":  "The uploaded file part is too big.",
+        "messageZh":  "文件分片过大，请调整后重试"
+    },
+    {
+        "officialKey":  "FILE_PART_TOO_SMALL",
+        "wtelegramKey":  "FILE_PART_TOO_SMALL",
+        "statusCode":  400,
+        "descriptionEn":  "The size of the uploaded file part is too small, please see the documentation for the allowed sizes.",
+        "messageZh":  "文件分片过小，请调整后重试"
+    },
+    {
+        "officialKey":  "FILE_PARTS_INVALID",
+        "wtelegramKey":  "FILE_PARTS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The number of file parts is invalid.",
+        "messageZh":  "文件分片参数无效，请重新上传"
+    },
+    {
+        "officialKey":  "FILE_REFERENCE_%d_EXPIRED",
+        "wtelegramKey":  "FILE_REFERENCE_X_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The file reference of the media file at index %d in the passed media array expired, it [must be refreshed as specified in the documentation](https://core.telegram.org/api/file-references). .",
+        "messageZh":  "文件REFERENCE%d已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "FILE_REFERENCE_%d_INVALID",
+        "wtelegramKey":  "FILE_REFERENCE_X_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The [file reference](https://core.telegram.org/api/file-references) of the media file at index %d in the passed media array is invalid.",
+        "messageZh":  "文件REFERENCE%d无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FILE_REFERENCE_EMPTY",
+        "wtelegramKey":  "FILE_REFERENCE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "An empty [file reference](https://core.telegram.org/api/file-references) was specified.",
+        "messageZh":  "文件引用为空，请重新获取后再试"
+    },
+    {
+        "officialKey":  "FILE_REFERENCE_EXPIRED",
+        "wtelegramKey":  "FILE_REFERENCE_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "File reference expired, it must be refetched as described in [the documentation](https://core.telegram.org/api/file-references).",
+        "messageZh":  "文件引用已过期，请重新获取后再试"
+    },
+    {
+        "officialKey":  "FILE_REFERENCE_INVALID",
+        "wtelegramKey":  "FILE_REFERENCE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified [file reference](https://core.telegram.org/api/file-references) is invalid.",
+        "messageZh":  "文件引用无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FILE_TITLE_EMPTY",
+        "wtelegramKey":  "FILE_TITLE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "An empty file title was specified.",
+        "messageZh":  "请填写文件TITLE"
+    },
+    {
+        "officialKey":  "FILE_TOKEN_INVALID",
+        "wtelegramKey":  "FILE_TOKEN_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The master DC did not accept the `file_token` (e.g., the token has expired). Continue downloading the file from the master DC using upload.getFile.",
+        "messageZh":  "文件令牌无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FILEREF_UPGRADE_NEEDED",
+        "wtelegramKey":  "FILEREF_UPGRADE_NEEDED",
+        "statusCode":  406,
+        "descriptionEn":  "The client has to be updated in order to support [file references](https://core.telegram.org/api/file-references).",
+        "messageZh":  "当前操作需要FILEREFUPGRADE"
+    },
+    {
+        "officialKey":  "FILTER_ID_INVALID",
+        "wtelegramKey":  "FILTER_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified filter ID is invalid.",
+        "messageZh":  "筛选器ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FILTER_INCLUDE_EMPTY",
+        "wtelegramKey":  "FILTER_INCLUDE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The include_peers vector of the filter is empty.",
+        "messageZh":  "请填写筛选器INCLUDE"
+    },
+    {
+        "officialKey":  "FILTER_NOT_SUPPORTED",
+        "wtelegramKey":  "FILTER_NOT_SUPPORTED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified filter cannot be used in this context.",
+        "messageZh":  "当前不支持筛选器"
+    },
+    {
+        "officialKey":  "FILTER_TITLE_EMPTY",
+        "wtelegramKey":  "FILTER_TITLE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The title field of the filter is empty.",
+        "messageZh":  "请填写筛选器TITLE"
+    },
+    {
+        "officialKey":  "FIRSTNAME_INVALID",
+        "wtelegramKey":  "FIRSTNAME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The first name is invalid.",
+        "messageZh":  "名字无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FLOOD_PREMIUM_WAIT_%d",
+        "wtelegramKey":  "FLOOD_PREMIUM_WAIT_X",
+        "statusCode":  420,
+        "descriptionEn":  "Please wait %d seconds before repeating the action, or purchase a [Telegram Premium subscription](https://core.telegram.org/api/premium) to remove this rate limit.",
+        "messageZh":  "操作过于频繁，请在 %d 秒后重试"
+    },
+    {
+        "officialKey":  "FLOOD_WAIT_%d",
+        "wtelegramKey":  "FLOOD_WAIT_X",
+        "statusCode":  420,
+        "descriptionEn":  "Please wait %d seconds before repeating the action.",
+        "messageZh":  "操作过于频繁，请在 %d 秒后重试"
+    },
+    {
+        "officialKey":  "FOLDER_ID_EMPTY",
+        "wtelegramKey":  "FOLDER_ID_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "An empty folder ID was specified.",
+        "messageZh":  "请填写文件夹ID"
+    },
+    {
+        "officialKey":  "FOLDER_ID_INVALID",
+        "wtelegramKey":  "FOLDER_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid folder ID.",
+        "messageZh":  "文件夹ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FORM_EXPIRED",
+        "wtelegramKey":  "FORM_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The form was generated more than 10 minutes ago and has expired, please re-generate it using [payments.getPaymentForm](https://core.telegram.org/method/payments.getPaymentForm) and pass the new `form_id`.",
+        "messageZh":  "表单已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "FORM_ID_EMPTY",
+        "wtelegramKey":  "FORM_ID_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified form ID is empty.",
+        "messageZh":  "请填写表单ID"
+    },
+    {
+        "officialKey":  "FORM_SUBMIT_DUPLICATE",
+        "wtelegramKey":  "FORM_SUBMIT_DUPLICATE",
+        "statusCode":  400,
+        "descriptionEn":  "The same payment form was already submitted.  .",
+        "messageZh":  "表单SUBMIT重复，请检查后重试"
+    },
+    {
+        "officialKey":  "FORM_UNSUPPORTED",
+        "wtelegramKey":  "FORM_UNSUPPORTED",
+        "statusCode":  400,
+        "descriptionEn":  "Please update your client.",
+        "messageZh":  "当前不支持表单"
+    },
+    {
+        "officialKey":  "FORUM_ENABLED",
+        "wtelegramKey":  "FORUM_ENABLED",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t execute the specified action because the group is a [forum](https://core.telegram.org/api/forum), disable forum functionality to continue.",
+        "messageZh":  "论坛已启用"
+    },
+    {
+        "officialKey":  "FRESH_CHANGE_ADMINS_FORBIDDEN",
+        "wtelegramKey":  "FRESH_CHANGE_ADMINS_FORBIDDEN",
+        "statusCode":  406,
+        "descriptionEn":  "You were just elected admin, you can\u0027t add or modify other admins yet.",
+        "messageZh":  "当前账号无权执行与FRESHCHANGEADMINS相关的操作"
+    },
+    {
+        "officialKey":  "FRESH_CHANGE_PHONE_FORBIDDEN",
+        "wtelegramKey":  "FRESH_CHANGE_PHONE_FORBIDDEN",
+        "statusCode":  406,
+        "descriptionEn":  "You can\u0027t change phone number right after logging in, please wait at least 24 hours.",
+        "messageZh":  "当前账号无权执行与FRESHCHANGE手机号相关的操作"
+    },
+    {
+        "officialKey":  "FRESH_RESET_AUTHORISATION_FORBIDDEN",
+        "wtelegramKey":  "FRESH_RESET_AUTHORISATION_FORBIDDEN",
+        "statusCode":  406,
+        "descriptionEn":  "You can\u0027t logout other sessions if less than 24 hours have passed since you logged on the current session.",
+        "messageZh":  "当前账号无权执行与FRESHRESETAUTHORISATION相关的操作"
+    },
+    {
+        "officialKey":  "FROM_MESSAGE_BOT_DISABLED",
+        "wtelegramKey":  "FROM_MESSAGE_BOT_DISABLED",
+        "statusCode":  400,
+        "descriptionEn":  "Bots can\u0027t use fromMessage min constructors.",
+        "messageZh":  "FROM消息机器人已被禁用"
+    },
+    {
+        "officialKey":  "FROM_PEER_INVALID",
+        "wtelegramKey":  "FROM_PEER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified from_id is invalid.",
+        "messageZh":  "FROM会话对象无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FROZEN_METHOD_INVALID",
+        "wtelegramKey":  "FROZEN_METHOD_INVALID",
+        "statusCode":  420,
+        "descriptionEn":  "The current account is [frozen](https://core.telegram.org/api/auth#frozen-accounts), and thus cannot execute the specified action.",
+        "messageZh":  "FROZEN方法无效，请检查后重试"
+    },
+    {
+        "officialKey":  "FROZEN_PARTICIPANT_MISSING",
+        "wtelegramKey":  "FROZEN_PARTICIPANT_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "The current account is [frozen](https://core.telegram.org/api/auth#frozen-accounts), and cannot access the specified peer.",
+        "messageZh":  "缺少FROZEN参与者，请补充后重试"
+    },
+    {
+        "officialKey":  "GAME_BOT_INVALID",
+        "wtelegramKey":  "GAME_BOT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Bots can\u0027t send another bot\u0027s game.",
+        "messageZh":  "GAME机器人无效，请检查后重试"
+    },
+    {
+        "officialKey":  "GENERAL_MODIFY_ICON_FORBIDDEN",
+        "wtelegramKey":  "GENERAL_MODIFY_ICON_FORBIDDEN",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t modify the icon of the \"General\" topic.",
+        "messageZh":  "当前账号无权执行与GENERALMODIFYICON相关的操作"
+    },
+    {
+        "officialKey":  "GEO_POINT_INVALID",
+        "wtelegramKey":  "GEO_POINT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid geoposition provided.",
+        "messageZh":  "地理位置POINT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "GIF_CONTENT_TYPE_INVALID",
+        "wtelegramKey":  "GIF_CONTENT_TYPE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "GIF content-type invalid.",
+        "messageZh":  "GIF内容TYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "GIF_ID_INVALID",
+        "wtelegramKey":  "GIF_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided GIF ID is invalid.",
+        "messageZh":  "GIFID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "GIFT_MONTHS_INVALID",
+        "wtelegramKey":  "GIFT_MONTHS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The value passed in invoice.inputInvoicePremiumGiftStars.months is invalid.",
+        "messageZh":  "礼物MONTHS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "GIFT_SLUG_EXPIRED",
+        "wtelegramKey":  "GIFT_SLUG_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified gift slug has expired.",
+        "messageZh":  "礼物SLUG已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "GIFT_SLUG_INVALID",
+        "wtelegramKey":  "GIFT_SLUG_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified slug is invalid.",
+        "messageZh":  "礼物SLUG无效，请检查后重试"
+    },
+    {
+        "officialKey":  "GIFT_STARS_INVALID",
+        "wtelegramKey":  "GIFT_STARS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified amount of stars is invalid.",
+        "messageZh":  "礼物星币无效，请检查后重试"
+    },
+    {
+        "officialKey":  "GRAPH_EXPIRED_RELOAD",
+        "wtelegramKey":  "GRAPH_EXPIRED_RELOAD",
+        "statusCode":  400,
+        "descriptionEn":  "This graph has expired, please obtain a new graph token.",
+        "messageZh":  "图表令牌已过期，请重新加载统计数据"
+    },
+    {
+        "officialKey":  "GRAPH_INVALID_RELOAD",
+        "wtelegramKey":  "GRAPH_INVALID_RELOAD",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid graph token provided, please reload the stats and provide the updated token.",
+        "messageZh":  "图表令牌无效，请重新加载统计数据后重试"
+    },
+    {
+        "officialKey":  "GRAPH_OUTDATED_RELOAD",
+        "wtelegramKey":  "GRAPH_OUTDATED_RELOAD",
+        "statusCode":  400,
+        "descriptionEn":  "The graph is outdated, please get a new async token using stats.getBroadcastStats.",
+        "messageZh":  "图表令牌已过旧，请重新获取后重试"
+    },
+    {
+        "officialKey":  "GROUPCALL_ALREADY_DISCARDED",
+        "wtelegramKey":  "GROUPCALL_ALREADY_DISCARDED",
+        "statusCode":  400,
+        "descriptionEn":  "The group call was already discarded.",
+        "messageZh":  "GROUPCALLDISCARDED已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "GROUPCALL_ALREADY_STARTED",
+        "wtelegramKey":  "GROUPCALL_ALREADY_STARTED",
+        "statusCode":  403,
+        "descriptionEn":  "The groupcall has already started, you can join directly using [phone.joinGroupCall](https://core.telegram.org/method/phone.joinGroupCall).",
+        "messageZh":  "GROUPCALLSTARTED已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "GROUPCALL_FORBIDDEN",
+        "wtelegramKey":  "GROUPCALL_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "The group call has already ended.",
+        "messageZh":  "当前账号无权执行与GROUPCALL相关的操作"
+    },
+    {
+        "officialKey":  "GROUPCALL_INVALID",
+        "wtelegramKey":  "GROUPCALL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified group call is invalid.",
+        "messageZh":  "GROUPCALL无效，请检查后重试"
+    },
+    {
+        "officialKey":  "GROUPCALL_JOIN_MISSING",
+        "wtelegramKey":  "GROUPCALL_JOIN_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "You haven\u0027t joined this group call.",
+        "messageZh":  "缺少GROUPCALL加入，请补充后重试"
+    },
+    {
+        "officialKey":  "GROUPCALL_NOT_MODIFIED",
+        "wtelegramKey":  "GROUPCALL_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "Group call settings weren\u0027t modified.",
+        "messageZh":  "GROUPCALL未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "GROUPCALL_SSRC_DUPLICATE_MUCH",
+        "wtelegramKey":  "GROUPCALL_SSRC_DUPLICATE_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "The app needs to retry joining the group call with a new SSRC value.",
+        "messageZh":  "群通话加入冲突，请重试以重新分配 SSRC"
+    },
+    {
+        "officialKey":  "GROUPED_MEDIA_INVALID",
+        "wtelegramKey":  "GROUPED_MEDIA_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid grouped media.",
+        "messageZh":  "GROUPED媒体无效，请检查后重试"
+    },
+    {
+        "officialKey":  "HASH_INVALID",
+        "wtelegramKey":  "HASH_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided hash is invalid.",
+        "messageZh":  "哈希无效，请检查后重试"
+    },
+    {
+        "officialKey":  "HASH_SIZE_INVALID",
+        "wtelegramKey":  "HASH_SIZE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The size of the specified secureValueError.hash is invalid.",
+        "messageZh":  "哈希大小无效，请检查后重试"
+    },
+    {
+        "officialKey":  "HASHTAG_INVALID",
+        "wtelegramKey":  "HASHTAG_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified hashtag is invalid.",
+        "messageZh":  "HASHTAG无效，请检查后重试"
+    },
+    {
+        "officialKey":  "HIDE_REQUESTER_MISSING",
+        "wtelegramKey":  "HIDE_REQUESTER_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "The join request was missing or was already handled.",
+        "messageZh":  "缺少HIDEREQUESTER，请补充后重试"
+    },
+    {
+        "officialKey":  "ID_EXPIRED",
+        "wtelegramKey":  "ID_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The passed prepared inline message ID has expired.",
+        "messageZh":  "ID已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "ID_INVALID",
+        "wtelegramKey":  "ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The passed ID is invalid.",
+        "messageZh":  "ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "IMAGE_PROCESS_FAILED",
+        "wtelegramKey":  "IMAGE_PROCESS_FAILED",
+        "statusCode":  400,
+        "descriptionEn":  "Failure while processing image.",
+        "messageZh":  "图片PROCESS失败，请稍后重试"
+    },
+    {
+        "officialKey":  "IMPORT_FILE_INVALID",
+        "wtelegramKey":  "IMPORT_FILE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified chat export file is invalid.",
+        "messageZh":  "导入文件无效，请检查后重试"
+    },
+    {
+        "officialKey":  "IMPORT_FORMAT_DATE_INVALID",
+        "wtelegramKey":  "IMPORT_FORMAT_DATE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The date specified in the import file is invalid.",
+        "messageZh":  "导入格式时间无效，请检查后重试"
+    },
+    {
+        "officialKey":  "IMPORT_FORMAT_UNRECOGNIZED",
+        "wtelegramKey":  "IMPORT_FORMAT_UNRECOGNIZED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified chat export file was exported from an unsupported chat app.",
+        "messageZh":  "导入格式无法识别，请检查后重试"
+    },
+    {
+        "officialKey":  "IMPORT_ID_INVALID",
+        "wtelegramKey":  "IMPORT_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified import ID is invalid.",
+        "messageZh":  "导入ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "IMPORT_TOKEN_INVALID",
+        "wtelegramKey":  "IMPORT_TOKEN_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified token is invalid.",
+        "messageZh":  "导入令牌无效，请检查后重试"
+    },
+    {
+        "officialKey":  "INLINE_BOT_REQUIRED",
+        "wtelegramKey":  "INLINE_BOT_REQUIRED",
+        "statusCode":  403,
+        "descriptionEn":  "Only the inline bot can edit message.",
+        "messageZh":  "当前操作需要内联机器人"
+    },
+    {
+        "officialKey":  "INLINE_RESULT_EXPIRED",
+        "wtelegramKey":  "INLINE_RESULT_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The inline query expired.",
+        "messageZh":  "内联结果已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "INPUT_CHATLIST_INVALID",
+        "wtelegramKey":  "INPUT_CHATLIST_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified folder is invalid.",
+        "messageZh":  "输入CHATLIST无效，请检查后重试"
+    },
+    {
+        "officialKey":  "INPUT_CONSTRUCTOR_INVALID",
+        "wtelegramKey":  "INPUT_CONSTRUCTOR_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified TL constructor is invalid.",
+        "messageZh":  "输入CONSTRUCTOR无效，请检查后重试"
+    },
+    {
+        "officialKey":  "INPUT_FETCH_ERROR",
+        "wtelegramKey":  "INPUT_FETCH_ERROR",
+        "statusCode":  400,
+        "descriptionEn":  "An error occurred while parsing the provided TL constructor.",
+        "messageZh":  "请求数据解析失败，请检查输入参数"
+    },
+    {
+        "officialKey":  "INPUT_FETCH_FAIL",
+        "wtelegramKey":  "INPUT_FETCH_FAIL",
+        "statusCode":  400,
+        "descriptionEn":  "An error occurred while parsing the provided TL constructor.",
+        "messageZh":  "请求数据解析失败，请检查输入参数"
+    },
+    {
+        "officialKey":  "INPUT_FILE_INVALID",
+        "wtelegramKey":  "INPUT_FILE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified [InputFile](https://core.telegram.org/type/InputFile) is invalid.",
+        "messageZh":  "输入文件无效，请检查后重试"
+    },
+    {
+        "officialKey":  "INPUT_FILTER_INVALID",
+        "wtelegramKey":  "INPUT_FILTER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified filter is invalid.",
+        "messageZh":  "输入筛选器无效，请检查后重试"
+    },
+    {
+        "officialKey":  "INPUT_LAYER_INVALID",
+        "wtelegramKey":  "INPUT_LAYER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified layer is invalid.",
+        "messageZh":  "输入LAYER无效，请检查后重试"
+    },
+    {
+        "officialKey":  "INPUT_METHOD_INVALID",
+        "wtelegramKey":  "INPUT_METHOD_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified method is invalid.",
+        "messageZh":  "输入方法无效，请检查后重试"
+    },
+    {
+        "officialKey":  "INPUT_PEERS_EMPTY",
+        "wtelegramKey":  "INPUT_PEERS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified peer array is empty.",
+        "messageZh":  "请填写输入PEERS"
+    },
+    {
+        "officialKey":  "INPUT_PURPOSE_INVALID",
+        "wtelegramKey":  "INPUT_PURPOSE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified payment purpose is invalid.",
+        "messageZh":  "输入PURPOSE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "INPUT_REQUEST_TOO_LONG",
+        "wtelegramKey":  "INPUT_REQUEST_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "The request payload is too long.",
+        "messageZh":  "输入REQUEST过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "INPUT_TEXT_EMPTY",
+        "wtelegramKey":  "INPUT_TEXT_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified text is empty.",
+        "messageZh":  "请填写输入文本"
+    },
+    {
+        "officialKey":  "INPUT_TEXT_TOO_LONG",
+        "wtelegramKey":  "INPUT_TEXT_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "The specified text is too long.",
+        "messageZh":  "输入文本过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "INPUT_USER_DEACTIVATED",
+        "wtelegramKey":  "INPUT_USER_DEACTIVATED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified user was deleted.",
+        "messageZh":  "目标用户已注销或被删除"
+    },
+    {
+        "officialKey":  "INVITE_FORBIDDEN_WITH_JOINAS",
+        "wtelegramKey":  "INVITE_FORBIDDEN_WITH_JOINAS",
+        "statusCode":  400,
+        "descriptionEn":  "If the user has anonymously joined a group call as a channel, they can\u0027t invite other users to the group call because that would cause deanonymization, because the invite would be sent using the original user ID, not the anonymized channel ID.",
+        "messageZh":  "当前以频道身份匿名加入通话时，不能继续邀请其他用户"
+    },
+    {
+        "officialKey":  "INVITE_HASH_EMPTY",
+        "wtelegramKey":  "INVITE_HASH_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The invite hash is empty.",
+        "messageZh":  "请填写邀请链接"
+    },
+    {
+        "officialKey":  "INVITE_HASH_EXPIRED",
+        "wtelegramKey":  "INVITE_HASH_EXPIRED",
+        "statusCode":  406,
+        "descriptionEn":  "The invite link has expired.",
+        "messageZh":  "邀请链接已过期"
+    },
+    {
+        "officialKey":  "INVITE_HASH_INVALID",
+        "wtelegramKey":  "INVITE_HASH_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The invite hash is invalid.",
+        "messageZh":  "邀请链接无效"
+    },
+    {
+        "officialKey":  "INVITE_REQUEST_SENT",
+        "wtelegramKey":  "INVITE_REQUEST_SENT",
+        "statusCode":  400,
+        "descriptionEn":  "You have successfully requested to join this chat or channel.",
+        "messageZh":  "邀请REQUEST已发送，请勿重复操作"
+    },
+    {
+        "officialKey":  "INVITE_REVOKED_MISSING",
+        "wtelegramKey":  "INVITE_REVOKED_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "The specified invite link was already revoked or is invalid.",
+        "messageZh":  "缺少邀请撤销，请补充后重试"
+    },
+    {
+        "officialKey":  "INVITE_SLUG_EMPTY",
+        "wtelegramKey":  "INVITE_SLUG_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified invite slug is empty.",
+        "messageZh":  "请填写邀请SLUG"
+    },
+    {
+        "officialKey":  "INVITE_SLUG_EXPIRED",
+        "wtelegramKey":  "INVITE_SLUG_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified chat folder link has expired.",
+        "messageZh":  "邀请SLUG已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "INVITE_SLUG_INVALID",
+        "wtelegramKey":  "INVITE_SLUG_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified invitation slug is invalid.",
+        "messageZh":  "邀请SLUG无效，请检查后重试"
+    },
+    {
+        "officialKey":  "INVITES_TOO_MUCH",
+        "wtelegramKey":  "INVITES_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "The maximum number of per-folder invites specified by the `chatlist_invites_limit_default`/`chatlist_invites_limit_premium` [client configuration parameters \u0026raquo;](https://core.telegram.org/api/config#chatlist-invites-limit-default) was reached.",
+        "messageZh":  "INVITES过多，请减少后重试"
+    },
+    {
+        "officialKey":  "INVOICE_INVALID",
+        "wtelegramKey":  "INVOICE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified invoice is invalid.",
+        "messageZh":  "INVOICE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "INVOICE_PAYLOAD_INVALID",
+        "wtelegramKey":  "INVOICE_PAYLOAD_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified invoice payload is invalid.",
+        "messageZh":  "INVOICEPAYLOAD无效，请检查后重试"
+    },
+    {
+        "officialKey":  "JOIN_AS_PEER_INVALID",
+        "wtelegramKey":  "JOIN_AS_PEER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified peer cannot be used to join a group call.",
+        "messageZh":  "加入AS会话对象无效，请检查后重试"
+    },
+    {
+        "officialKey":  "LANG_CODE_INVALID",
+        "wtelegramKey":  "LANG_CODE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified language code is invalid.",
+        "messageZh":  "语言代码无效，请检查后重试"
+    },
+    {
+        "officialKey":  "LANG_CODE_NOT_SUPPORTED",
+        "wtelegramKey":  "LANG_CODE_NOT_SUPPORTED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified language code is not supported.",
+        "messageZh":  "当前不支持语言代码"
+    },
+    {
+        "officialKey":  "LANG_PACK_INVALID",
+        "wtelegramKey":  "LANG_PACK_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided language pack is invalid.",
+        "messageZh":  "语言PACK无效，请检查后重试"
+    },
+    {
+        "officialKey":  "LANGUAGE_INVALID",
+        "wtelegramKey":  "LANGUAGE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified lang_code is invalid.",
+        "messageZh":  "LANGUAGE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "LASTNAME_INVALID",
+        "wtelegramKey":  "LASTNAME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The last name is invalid.",
+        "messageZh":  "姓氏无效，请检查后重试"
+    },
+    {
+        "officialKey":  "LIMIT_INVALID",
+        "wtelegramKey":  "LIMIT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided limit is invalid.",
+        "messageZh":  "限制无效，请检查后重试"
+    },
+    {
+        "officialKey":  "LINK_NOT_MODIFIED",
+        "wtelegramKey":  "LINK_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "Discussion link not modified.",
+        "messageZh":  "链接未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "LOCATION_INVALID",
+        "wtelegramKey":  "LOCATION_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided location is invalid.",
+        "messageZh":  "位置无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MAX_DATE_INVALID",
+        "wtelegramKey":  "MAX_DATE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified maximum date is invalid.",
+        "messageZh":  "MAX时间无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MAX_ID_INVALID",
+        "wtelegramKey":  "MAX_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided max ID is invalid.",
+        "messageZh":  "MAXID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MAX_QTS_INVALID",
+        "wtelegramKey":  "MAX_QTS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified max_qts is invalid.",
+        "messageZh":  "MAXQTS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MD5_CHECKSUM_INVALID",
+        "wtelegramKey":  "MD5_CHECKSUM_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The MD5 checksums do not match.",
+        "messageZh":  "MD5CHECKSUM无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MEDIA_ALREADY_PAID",
+        "wtelegramKey":  "MEDIA_ALREADY_PAID",
+        "statusCode":  400,
+        "descriptionEn":  "You already paid for the specified media.",
+        "messageZh":  "媒体PAID已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "MEDIA_CAPTION_TOO_LONG",
+        "wtelegramKey":  "MEDIA_CAPTION_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "The caption is too long.",
+        "messageZh":  "媒体说明文字过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "MEDIA_EMPTY",
+        "wtelegramKey":  "MEDIA_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The provided media object is invalid.",
+        "messageZh":  "请填写媒体"
+    },
+    {
+        "officialKey":  "MEDIA_FILE_INVALID",
+        "wtelegramKey":  "MEDIA_FILE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified media file is invalid.",
+        "messageZh":  "媒体文件无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MEDIA_GROUPED_INVALID",
+        "wtelegramKey":  "MEDIA_GROUPED_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "You tried to send media of different types in an album.",
+        "messageZh":  "媒体GROUPED无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MEDIA_INVALID",
+        "wtelegramKey":  "MEDIA_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Media invalid.",
+        "messageZh":  "媒体无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MEDIA_NEW_INVALID",
+        "wtelegramKey":  "MEDIA_NEW_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The new media is invalid.",
+        "messageZh":  "媒体NEW无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MEDIA_PREV_INVALID",
+        "wtelegramKey":  "MEDIA_PREV_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Previous media invalid.",
+        "messageZh":  "媒体PREV无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MEDIA_TTL_INVALID",
+        "wtelegramKey":  "MEDIA_TTL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified media TTL is invalid.",
+        "messageZh":  "媒体TTL无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MEDIA_TYPE_INVALID",
+        "wtelegramKey":  "MEDIA_TYPE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified media type cannot be used in stories.",
+        "messageZh":  "媒体TYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MEDIA_VIDEO_STORY_MISSING",
+        "wtelegramKey":  "MEDIA_VIDEO_STORY_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "A non-story video cannot be repubblished as a story (emitted when trying to resend a non-story video as a story using inputDocument).",
+        "messageZh":  "缺少媒体视频动态，请补充后重试"
+    },
+    {
+        "officialKey":  "MEGAGROUP_GEO_REQUIRED",
+        "wtelegramKey":  "MEGAGROUP_GEO_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "This method can only be invoked on a geogroup.",
+        "messageZh":  "当前操作需要MEGAGROUP地理位置"
+    },
+    {
+        "officialKey":  "MEGAGROUP_ID_INVALID",
+        "wtelegramKey":  "MEGAGROUP_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid supergroup ID.",
+        "messageZh":  "MEGAGROUPID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MEGAGROUP_PREHISTORY_HIDDEN",
+        "wtelegramKey":  "MEGAGROUP_PREHISTORY_HIDDEN",
+        "statusCode":  400,
+        "descriptionEn":  "Group with hidden history for new members can\u0027t be set as discussion groups.",
+        "messageZh":  "已隐藏新成员历史消息的群组不能设置为讨论组"
+    },
+    {
+        "officialKey":  "MEGAGROUP_REQUIRED",
+        "wtelegramKey":  "MEGAGROUP_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "You can only use this method on a supergroup.",
+        "messageZh":  "当前操作需要MEGAGROUP"
+    },
+    {
+        "officialKey":  "MESSAGE_AUTHOR_REQUIRED",
+        "wtelegramKey":  "MESSAGE_AUTHOR_REQUIRED",
+        "statusCode":  403,
+        "descriptionEn":  "Message author required.",
+        "messageZh":  "当前操作需要消息AUTHOR"
+    },
+    {
+        "officialKey":  "MESSAGE_DELETE_FORBIDDEN",
+        "wtelegramKey":  "MESSAGE_DELETE_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t delete one of the messages you tried to delete, most likely because it is a service message.",
+        "messageZh":  "当前账号无权执行与消息删除相关的操作"
+    },
+    {
+        "officialKey":  "MESSAGE_EDIT_TIME_EXPIRED",
+        "wtelegramKey":  "MESSAGE_EDIT_TIME_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t edit this message anymore, too much time has passed since its creation.",
+        "messageZh":  "消息EDITTIME已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "MESSAGE_EMPTY",
+        "wtelegramKey":  "MESSAGE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The provided message is empty.",
+        "messageZh":  "请填写消息"
+    },
+    {
+        "officialKey":  "MESSAGE_ID_INVALID",
+        "wtelegramKey":  "MESSAGE_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided message id is invalid.",
+        "messageZh":  "消息 ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MESSAGE_IDS_EMPTY",
+        "wtelegramKey":  "MESSAGE_IDS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "No message ids were provided.",
+        "messageZh":  "请填写消息IDS"
+    },
+    {
+        "officialKey":  "MESSAGE_NOT_MODIFIED",
+        "wtelegramKey":  "MESSAGE_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "The provided message data is identical to the previous message data, the message wasn\u0027t modified.",
+        "messageZh":  "消息内容未变化，无需重复提交"
+    },
+    {
+        "officialKey":  "MESSAGE_NOT_READ_YET",
+        "wtelegramKey":  "MESSAGE_NOT_READ_YET",
+        "statusCode":  400,
+        "descriptionEn":  "The specified message wasn\u0027t read yet.",
+        "messageZh":  "该消息尚未被读取"
+    },
+    {
+        "officialKey":  "MESSAGE_POLL_CLOSED",
+        "wtelegramKey":  "MESSAGE_POLL_CLOSED",
+        "statusCode":  400,
+        "descriptionEn":  "Poll closed.",
+        "messageZh":  "消息投票已关闭"
+    },
+    {
+        "officialKey":  "MESSAGE_TOO_LONG",
+        "wtelegramKey":  "MESSAGE_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "The provided message is too long.",
+        "messageZh":  "消息过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "MESSAGE_TOO_OLD",
+        "wtelegramKey":  "MESSAGE_TOO_OLD",
+        "statusCode":  400,
+        "descriptionEn":  "The message is too old, the requested information is not available.",
+        "messageZh":  "消息已过旧，请稍后重试"
+    },
+    {
+        "officialKey":  "METHOD_INVALID",
+        "wtelegramKey":  "METHOD_INVALID",
+        "statusCode":  404,
+        "descriptionEn":  "The specified method is invalid.",
+        "messageZh":  "方法无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MIN_DATE_INVALID",
+        "wtelegramKey":  "MIN_DATE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified minimum date is invalid.",
+        "messageZh":  "分钟时间无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MONTH_INVALID",
+        "wtelegramKey":  "MONTH_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The number of months specified in inputInvoicePremiumGiftStars.months is invalid.",
+        "messageZh":  "MONTH无效，请检查后重试"
+    },
+    {
+        "officialKey":  "MSG_ID_INVALID",
+        "wtelegramKey":  "MSG_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid message ID provided.",
+        "messageZh":  "消息 ID 无效"
+    },
+    {
+        "officialKey":  "MSG_TOO_OLD",
+        "wtelegramKey":  "MSG_TOO_OLD",
+        "statusCode":  400,
+        "descriptionEn":  "[`chat_read_mark_expire_period` seconds](https://core.telegram.org/api/config#chat-read-mark-expire-period) have passed since the message was sent, read receipts were deleted.",
+        "messageZh":  "MSG已过旧，请稍后重试"
+    },
+    {
+        "officialKey":  "MSG_VOICE_MISSING",
+        "wtelegramKey":  "MSG_VOICE_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "The specified message is not a voice message.",
+        "messageZh":  "缺少MSG语音，请补充后重试"
+    },
+    {
+        "officialKey":  "MSG_WAIT_FAILED",
+        "wtelegramKey":  "MSG_WAIT_FAILED",
+        "statusCode":  500,
+        "descriptionEn":  "A waiting call returned an error.",
+        "messageZh":  "MSG等待失败，请稍后重试"
+    },
+    {
+        "officialKey":  "MSG_WAIT_TIMEOUT",
+        "wtelegramKey":  "MSG_WAIT_TIMEOUT",
+        "statusCode":  -503,
+        "descriptionEn":  "Spent too much time waiting for a previous query in the invokeAfterMsg request queue, aborting!",
+        "messageZh":  "前序请求等待超时，请稍后重试"
+    },
+    {
+        "officialKey":  "MULTI_MEDIA_TOO_LONG",
+        "wtelegramKey":  "MULTI_MEDIA_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "Too many media files for album.",
+        "messageZh":  "MULTI媒体过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "NETWORK_MIGRATE_%d",
+        "wtelegramKey":  "NETWORK_MIGRATE_X",
+        "statusCode":  303,
+        "descriptionEn":  "Your IP address is associated to DC %d, please re-send the query to that DC.",
+        "messageZh":  "网络所在数据中心不同，请切换到 %d 号数据中心后重试"
+    },
+    {
+        "officialKey":  "NEW_SALT_INVALID",
+        "wtelegramKey":  "NEW_SALT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The new salt is invalid.",
+        "messageZh":  "NEWSALT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "NEW_SETTINGS_EMPTY",
+        "wtelegramKey":  "NEW_SETTINGS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "No password is set on the current account, and no new password was specified in `new_settings`.",
+        "messageZh":  "请填写NEWSETTINGS"
+    },
+    {
+        "officialKey":  "NEW_SETTINGS_INVALID",
+        "wtelegramKey":  "NEW_SETTINGS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The new password settings are invalid.",
+        "messageZh":  "NEWSETTINGS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "NEXT_OFFSET_INVALID",
+        "wtelegramKey":  "NEXT_OFFSET_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified offset is longer than 64 bytes.",
+        "messageZh":  "NEXTOFFSET无效，请检查后重试"
+    },
+    {
+        "officialKey":  "NO_PAYMENT_NEEDED",
+        "wtelegramKey":  "NO_PAYMENT_NEEDED",
+        "statusCode":  400,
+        "descriptionEn":  "The upgrade/transfer of the specified gift was already paid for or is free.",
+        "messageZh":  "当前操作需要NO支付"
+    },
+    {
+        "officialKey":  "NOGENERAL_HIDE_FORBIDDEN",
+        "wtelegramKey":  "NOGENERAL_HIDE_FORBIDDEN",
+        "statusCode":  400,
+        "descriptionEn":  "Only the \"General\" topic with `id=1` can be hidden.",
+        "messageZh":  "当前账号无权执行与NOGENERALHIDE相关的操作"
+    },
+    {
+        "officialKey":  "NOT_ELIGIBLE",
+        "wtelegramKey":  "NOT_ELIGIBLE",
+        "statusCode":  403,
+        "descriptionEn":  "The current user is not eligible to join the Peer-to-Peer Login Program.",
+        "messageZh":  "当前账号暂无资格加入点对点登录计划"
+    },
+    {
+        "officialKey":  "NOT_JOINED",
+        "wtelegramKey":  "NOT_JOINED",
+        "statusCode":  400,
+        "descriptionEn":  "The current user hasn\u0027t joined the Peer-to-Peer Login Program.",
+        "messageZh":  "当前账号尚未加入点对点登录计划"
+    },
+    {
+        "officialKey":  "OFFSET_INVALID",
+        "wtelegramKey":  "OFFSET_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided offset is invalid.",
+        "messageZh":  "OFFSET无效，请检查后重试"
+    },
+    {
+        "officialKey":  "OFFSET_PEER_ID_INVALID",
+        "wtelegramKey":  "OFFSET_PEER_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided offset peer is invalid.",
+        "messageZh":  "OFFSET会话对象ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "OPTION_INVALID",
+        "wtelegramKey":  "OPTION_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid option selected.",
+        "messageZh":  "选项无效，请检查后重试"
+    },
+    {
+        "officialKey":  "OPTIONS_TOO_MUCH",
+        "wtelegramKey":  "OPTIONS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "Too many options provided.",
+        "messageZh":  "OPTIONS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "ORDER_INVALID",
+        "wtelegramKey":  "ORDER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified username order is invalid.",
+        "messageZh":  "ORDER无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PACK_SHORT_NAME_INVALID",
+        "wtelegramKey":  "PACK_SHORT_NAME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Short pack name invalid.",
+        "messageZh":  "PACKSHORT名称无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PACK_SHORT_NAME_OCCUPIED",
+        "wtelegramKey":  "PACK_SHORT_NAME_OCCUPIED",
+        "statusCode":  400,
+        "descriptionEn":  "A stickerpack with this name already exists.",
+        "messageZh":  "PACKSHORT名称已被占用"
+    },
+    {
+        "officialKey":  "PACK_TITLE_INVALID",
+        "wtelegramKey":  "PACK_TITLE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The stickerpack title is invalid.",
+        "messageZh":  "PACKTITLE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PACK_TYPE_INVALID",
+        "wtelegramKey":  "PACK_TYPE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The masks and emojis flags are mutually exclusive.",
+        "messageZh":  "PACKTYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PARENT_PEER_INVALID",
+        "wtelegramKey":  "PARENT_PEER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `parent_peer` is invalid.",
+        "messageZh":  "PARENT会话对象无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PARTICIPANT_ID_INVALID",
+        "wtelegramKey":  "PARTICIPANT_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified participant ID is invalid.",
+        "messageZh":  "参与者ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PARTICIPANT_JOIN_MISSING",
+        "wtelegramKey":  "PARTICIPANT_JOIN_MISSING",
+        "statusCode":  403,
+        "descriptionEn":  "Trying to enable a presentation, when the user hasn\u0027t joined the Video Chat with [phone.joinGroupCall](https://core.telegram.org/method/phone.joinGroupCall).",
+        "messageZh":  "缺少参与者加入，请补充后重试"
+    },
+    {
+        "officialKey":  "PARTICIPANT_VERSION_OUTDATED",
+        "wtelegramKey":  "PARTICIPANT_VERSION_OUTDATED",
+        "statusCode":  400,
+        "descriptionEn":  "The other participant does not use an up to date telegram client with support for calls.",
+        "messageZh":  "参与者VERSION已过期或过旧，请刷新后重试"
+    },
+    {
+        "officialKey":  "PARTICIPANTS_TOO_FEW",
+        "wtelegramKey":  "PARTICIPANTS_TOO_FEW",
+        "statusCode":  400,
+        "descriptionEn":  "Not enough participants.",
+        "messageZh":  "参与人数不足"
+    },
+    {
+        "officialKey":  "PASSWORD_EMPTY",
+        "wtelegramKey":  "PASSWORD_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The provided password is empty.",
+        "messageZh":  "请填写密码"
+    },
+    {
+        "officialKey":  "PASSWORD_HASH_INVALID",
+        "wtelegramKey":  "PASSWORD_HASH_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided password hash is invalid.",
+        "messageZh":  "二步验证密码错误，请重新输入"
+    },
+    {
+        "officialKey":  "PASSWORD_MISSING",
+        "wtelegramKey":  "PASSWORD_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "You must [enable 2FA](https://core.telegram.org/api/srp) before executing this operation.",
+        "messageZh":  "请输入二步验证密码"
+    },
+    {
+        "officialKey":  "PASSWORD_RECOVERY_EXPIRED",
+        "wtelegramKey":  "PASSWORD_RECOVERY_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The recovery code has expired.",
+        "messageZh":  "密码恢复已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "PASSWORD_RECOVERY_NA",
+        "wtelegramKey":  "PASSWORD_RECOVERY_NA",
+        "statusCode":  400,
+        "descriptionEn":  "No email was set, can\u0027t recover password via email.",
+        "messageZh":  "密码恢复当前不可用，请稍后再试"
+    },
+    {
+        "officialKey":  "PASSWORD_REQUIRED",
+        "wtelegramKey":  "PASSWORD_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "A [2FA password](https://core.telegram.org/api/srp) must be configured to use Telegram Passport.",
+        "messageZh":  "当前操作需要密码"
+    },
+    {
+        "officialKey":  "PASSWORD_TOO_FRESH_%d",
+        "wtelegramKey":  "PASSWORD_TOO_FRESH_X",
+        "statusCode":  400,
+        "descriptionEn":  "The password was modified less than 24 hours ago, try again in %d seconds.",
+        "messageZh":  "刚修改过密码，请在 %d 秒后再试"
+    },
+    {
+        "officialKey":  "PAYMENT_CREDENTIALS_INVALID",
+        "wtelegramKey":  "PAYMENT_CREDENTIALS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified payment credentials are invalid.",
+        "messageZh":  "支付CREDENTIALS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PAYMENT_PROVIDER_INVALID",
+        "wtelegramKey":  "PAYMENT_PROVIDER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified payment provider is invalid.",
+        "messageZh":  "支付PROVIDER无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PAYMENT_REQUIRED",
+        "wtelegramKey":  "PAYMENT_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "Payment is required for this action, see [here \u0026raquo;](https://core.telegram.org/api/gifts) for more info.",
+        "messageZh":  "当前操作需要支付"
+    },
+    {
+        "officialKey":  "PAYMENT_UNSUPPORTED",
+        "wtelegramKey":  "PAYMENT_UNSUPPORTED",
+        "statusCode":  406,
+        "descriptionEn":  "A detailed description of the error will be received separately as described [here \u0026raquo;](https://core.telegram.org/api/errors#406-not-acceptable).",
+        "messageZh":  "当前不支持支付"
+    },
+    {
+        "officialKey":  "PEER_FLOOD",
+        "wtelegramKey":  "PEER_FLOOD",
+        "statusCode":  400,
+        "descriptionEn":  "The current account is spamreported, you cannot execute this action, check @spambot for more info.",
+        "messageZh":  "会话对象请求过于频繁，请稍后再试"
+    },
+    {
+        "officialKey":  "PEER_HISTORY_EMPTY",
+        "wtelegramKey":  "PEER_HISTORY_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t pin an empty chat with a user.",
+        "messageZh":  "请填写会话对象历史记录"
+    },
+    {
+        "officialKey":  "PEER_ID_INVALID",
+        "wtelegramKey":  "PEER_ID_INVALID",
+        "statusCode":  404,
+        "descriptionEn":  "The provided peer id is invalid.",
+        "messageZh":  "目标会话无效"
+    },
+    {
+        "officialKey":  "PEER_ID_NOT_SUPPORTED",
+        "wtelegramKey":  "PEER_ID_NOT_SUPPORTED",
+        "statusCode":  400,
+        "descriptionEn":  "The provided peer ID is not supported.",
+        "messageZh":  "当前不支持会话对象"
+    },
+    {
+        "officialKey":  "PEER_TYPES_INVALID",
+        "wtelegramKey":  "PEER_TYPES_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The passed [keyboardButtonSwitchInline](https://core.telegram.org/constructor/keyboardButtonSwitchInline).`peer_types` field is invalid.",
+        "messageZh":  "会话对象TYPES无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PEERS_LIST_EMPTY",
+        "wtelegramKey":  "PEERS_LIST_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified list of peers is empty.",
+        "messageZh":  "请填写PEERSLIST"
+    },
+    {
+        "officialKey":  "PERSISTENT_TIMESTAMP_EMPTY",
+        "wtelegramKey":  "PERSISTENT_TIMESTAMP_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "Persistent timestamp empty.",
+        "messageZh":  "请填写PERSISTENT时间戳"
+    },
+    {
+        "officialKey":  "PERSISTENT_TIMESTAMP_INVALID",
+        "wtelegramKey":  "PERSISTENT_TIMESTAMP_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Persistent timestamp invalid.",
+        "messageZh":  "PERSISTENT时间戳无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PERSISTENT_TIMESTAMP_OUTDATED",
+        "wtelegramKey":  "PERSISTENT_TIMESTAMP_OUTDATED",
+        "statusCode":  500,
+        "descriptionEn":  "Channel internal replication issues, try again later (treat this like an RPC_CALL_FAIL).",
+        "messageZh":  "PERSISTENT时间戳已过期或过旧，请刷新后重试"
+    },
+    {
+        "officialKey":  "PHONE_CODE_EMPTY",
+        "wtelegramKey":  "PHONE_CODE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "phone_code is missing.",
+        "messageZh":  "请输入验证码"
+    },
+    {
+        "officialKey":  "PHONE_CODE_EXPIRED",
+        "wtelegramKey":  "PHONE_CODE_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The phone code you provided has expired.",
+        "messageZh":  "验证码已过期，请重新获取"
+    },
+    {
+        "officialKey":  "PHONE_CODE_HASH_EMPTY",
+        "wtelegramKey":  "PHONE_CODE_HASH_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "phone_code_hash is missing.",
+        "messageZh":  "验证码凭据缺失，请重新获取验证码"
+    },
+    {
+        "officialKey":  "PHONE_CODE_INVALID",
+        "wtelegramKey":  "PHONE_CODE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided phone code is invalid.",
+        "messageZh":  "验证码错误，请重新输入"
+    },
+    {
+        "officialKey":  "PHONE_HASH_EXPIRED",
+        "wtelegramKey":  "PHONE_HASH_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "An invalid or expired `phone_code_hash` was provided.",
+        "messageZh":  "手机号哈希已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "PHONE_MIGRATE_%d",
+        "wtelegramKey":  "PHONE_MIGRATE_X",
+        "statusCode":  303,
+        "descriptionEn":  "Your phone number is associated to DC %d, please re-send the query to that DC.",
+        "messageZh":  "手机号所在数据中心不同，请切换到 %d 号数据中心后重试"
+    },
+    {
+        "officialKey":  "PHONE_NOT_OCCUPIED",
+        "wtelegramKey":  "PHONE_NOT_OCCUPIED",
+        "statusCode":  400,
+        "descriptionEn":  "No user is associated to the specified phone number.",
+        "messageZh":  "手机号未已被占用"
+    },
+    {
+        "officialKey":  "PHONE_NUMBER_APP_SIGNUP_FORBIDDEN",
+        "wtelegramKey":  "PHONE_NUMBER_APP_SIGNUP_FORBIDDEN",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t sign up using this app.",
+        "messageZh":  "该手机号不允许通过当前应用注册"
+    },
+    {
+        "officialKey":  "PHONE_NUMBER_BANNED",
+        "wtelegramKey":  "PHONE_NUMBER_BANNED",
+        "statusCode":  400,
+        "descriptionEn":  "The provided phone number is banned from telegram.",
+        "messageZh":  "该手机号已被 Telegram 封禁"
+    },
+    {
+        "officialKey":  "PHONE_NUMBER_FLOOD",
+        "wtelegramKey":  "PHONE_NUMBER_FLOOD",
+        "statusCode":  400,
+        "descriptionEn":  "You asked for the code too many times.",
+        "messageZh":  "该手机号请求过于频繁，请稍后再试"
+    },
+    {
+        "officialKey":  "PHONE_NUMBER_INVALID",
+        "wtelegramKey":  "PHONE_NUMBER_INVALID",
+        "statusCode":  406,
+        "descriptionEn":  "The phone number is invalid.",
+        "messageZh":  "手机号格式无效，请检查区号和号码"
+    },
+    {
+        "officialKey":  "PHONE_NUMBER_OCCUPIED",
+        "wtelegramKey":  "PHONE_NUMBER_OCCUPIED",
+        "statusCode":  400,
+        "descriptionEn":  "The phone number is already in use.",
+        "messageZh":  "该手机号已注册"
+    },
+    {
+        "officialKey":  "PHONE_NUMBER_UNOCCUPIED",
+        "wtelegramKey":  "PHONE_NUMBER_UNOCCUPIED",
+        "statusCode":  400,
+        "descriptionEn":  "The phone number is not yet being used.",
+        "messageZh":  "该手机号尚未注册 Telegram"
+    },
+    {
+        "officialKey":  "PHONE_PASSWORD_FLOOD",
+        "wtelegramKey":  "PHONE_PASSWORD_FLOOD",
+        "statusCode":  406,
+        "descriptionEn":  "You have tried logging in too many times.",
+        "messageZh":  "密码尝试过于频繁，请稍后再试"
+    },
+    {
+        "officialKey":  "PHONE_PASSWORD_PROTECTED",
+        "wtelegramKey":  "PHONE_PASSWORD_PROTECTED",
+        "statusCode":  400,
+        "descriptionEn":  "This phone is password protected.",
+        "messageZh":  "该账号已开启二步验证，请输入二步验证密码"
+    },
+    {
+        "officialKey":  "PHOTO_CONTENT_TYPE_INVALID",
+        "wtelegramKey":  "PHOTO_CONTENT_TYPE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Photo mime-type invalid.",
+        "messageZh":  "图片内容TYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PHOTO_CONTENT_URL_EMPTY",
+        "wtelegramKey":  "PHOTO_CONTENT_URL_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "Photo URL invalid.",
+        "messageZh":  "请填写图片内容链接"
+    },
+    {
+        "officialKey":  "PHOTO_CROP_FILE_MISSING",
+        "wtelegramKey":  "PHOTO_CROP_FILE_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "Photo crop file missing.",
+        "messageZh":  "缺少图片裁剪文件，请补充后重试"
+    },
+    {
+        "officialKey":  "PHOTO_CROP_SIZE_SMALL",
+        "wtelegramKey":  "PHOTO_CROP_SIZE_SMALL",
+        "statusCode":  400,
+        "descriptionEn":  "Photo is too small.",
+        "messageZh":  "图片裁剪大小过小，请调整后重试"
+    },
+    {
+        "officialKey":  "PHOTO_EXT_INVALID",
+        "wtelegramKey":  "PHOTO_EXT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The extension of the photo is invalid.",
+        "messageZh":  "图片EXT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PHOTO_FILE_MISSING",
+        "wtelegramKey":  "PHOTO_FILE_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "Profile photo file missing.",
+        "messageZh":  "缺少图片文件，请补充后重试"
+    },
+    {
+        "officialKey":  "PHOTO_ID_INVALID",
+        "wtelegramKey":  "PHOTO_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Photo ID invalid.",
+        "messageZh":  "图片ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PHOTO_INVALID",
+        "wtelegramKey":  "PHOTO_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Photo invalid.",
+        "messageZh":  "图片无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PHOTO_INVALID_DIMENSIONS",
+        "wtelegramKey":  "PHOTO_INVALID_DIMENSIONS",
+        "statusCode":  400,
+        "descriptionEn":  "The photo dimensions are invalid.",
+        "messageZh":  "图片INVALID尺寸不符合要求，请调整后重试"
+    },
+    {
+        "officialKey":  "PHOTO_SAVE_FILE_INVALID",
+        "wtelegramKey":  "PHOTO_SAVE_FILE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Internal issues, try again later.",
+        "messageZh":  "图片SAVE文件无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PHOTO_THUMB_URL_EMPTY",
+        "wtelegramKey":  "PHOTO_THUMB_URL_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "Photo thumbnail URL is empty.",
+        "messageZh":  "请填写图片缩略图链接"
+    },
+    {
+        "officialKey":  "PIN_RESTRICTED",
+        "wtelegramKey":  "PIN_RESTRICTED",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t pin messages.",
+        "messageZh":  "PIN 码已被限制"
+    },
+    {
+        "officialKey":  "PINNED_DIALOGS_TOO_MUCH",
+        "wtelegramKey":  "PINNED_DIALOGS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "Too many pinned dialogs.",
+        "messageZh":  "PINNEDDIALOGS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "PINNED_TOO_MUCH",
+        "wtelegramKey":  "PINNED_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "There are too many pinned topics, unpin some first.",
+        "messageZh":  "PINNED过多，请减少后重试"
+    },
+    {
+        "officialKey":  "POLL_ANSWER_INVALID",
+        "wtelegramKey":  "POLL_ANSWER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "One of the poll answers is not acceptable.",
+        "messageZh":  "投票ANSWER无效，请检查后重试"
+    },
+    {
+        "officialKey":  "POLL_ANSWERS_INVALID",
+        "wtelegramKey":  "POLL_ANSWERS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid poll answers were provided.",
+        "messageZh":  "投票ANSWERS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "POLL_OPTION_DUPLICATE",
+        "wtelegramKey":  "POLL_OPTION_DUPLICATE",
+        "statusCode":  400,
+        "descriptionEn":  "Duplicate poll options provided.",
+        "messageZh":  "投票选项重复，请检查后重试"
+    },
+    {
+        "officialKey":  "POLL_OPTION_INVALID",
+        "wtelegramKey":  "POLL_OPTION_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid poll option provided.",
+        "messageZh":  "投票选项无效，请检查后重试"
+    },
+    {
+        "officialKey":  "POLL_QUESTION_INVALID",
+        "wtelegramKey":  "POLL_QUESTION_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "One of the poll questions is not acceptable.",
+        "messageZh":  "投票QUESTION无效，请检查后重试"
+    },
+    {
+        "officialKey":  "POLL_VOTE_REQUIRED",
+        "wtelegramKey":  "POLL_VOTE_REQUIRED",
+        "statusCode":  403,
+        "descriptionEn":  "Cast a vote in the poll before calling this method.",
+        "messageZh":  "当前操作需要投票VOTE"
+    },
+    {
+        "officialKey":  "PRECHECKOUT_FAILED",
+        "wtelegramKey":  "PRECHECKOUT_FAILED",
+        "statusCode":  406,
+        "descriptionEn":  "Precheckout failed, a detailed and localized description for the error will be emitted via an [updateServiceNotification as specified here \u0026raquo;](https://core.telegram.org/api/errors#406-not-acceptable).",
+        "messageZh":  "PRECHECKOUT失败，请稍后重试"
+    },
+    {
+        "officialKey":  "PREMIUM_ACCOUNT_REQUIRED",
+        "wtelegramKey":  "PREMIUM_ACCOUNT_REQUIRED",
+        "statusCode":  403,
+        "descriptionEn":  "A premium account is required to execute this action.",
+        "messageZh":  "当前操作需要会员账号"
+    },
+    {
+        "officialKey":  "PREMIUM_CURRENTLY_UNAVAILABLE",
+        "wtelegramKey":  "PREMIUM_CURRENTLY_UNAVAILABLE",
+        "statusCode":  406,
+        "descriptionEn":  "You cannot currently purchase a Premium subscription.",
+        "messageZh":  "会员CURRENTLY当前不可用，请稍后再试"
+    },
+    {
+        "officialKey":  "PREMIUM_SUB_ACTIVE_UNTIL_%d",
+        "wtelegramKey":  "PREMIUM_SUB_ACTIVE_UNTIL_X",
+        "statusCode":  420,
+        "descriptionEn":  "You already have a premium subscription active until unixtime %d .",
+        "messageZh":  "当前账号的 Premium 订阅仍在有效期内，截止时间为 %d"
+    },
+    {
+        "officialKey":  "PREVIOUS_CHAT_IMPORT_ACTIVE_WAIT_%dMIN",
+        "wtelegramKey":  "PREVIOUS_CHAT_IMPORT_ACTIVE_WAIT_XMIN",
+        "statusCode":  406,
+        "descriptionEn":  "Import for this chat is already in progress, wait %d minutes before starting a new one.",
+        "messageZh":  "该会话的导入任务仍在进行中，请在 %d 分钟后重试"
+    },
+    {
+        "officialKey":  "PRICING_CHAT_INVALID",
+        "wtelegramKey":  "PRICING_CHAT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The pricing for the [subscription](https://core.telegram.org/api/subscriptions) is invalid, the maximum price is specified in the [`stars_subscription_amount_max` config key \u0026raquo;](https://core.telegram.org/api/config#stars-subscription-amount-max).",
+        "messageZh":  "PRICING会话无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PRIVACY_KEY_INVALID",
+        "wtelegramKey":  "PRIVACY_KEY_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The privacy key is invalid.",
+        "messageZh":  "隐私密钥无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PRIVACY_PREMIUM_REQUIRED",
+        "wtelegramKey":  "PRIVACY_PREMIUM_REQUIRED",
+        "statusCode":  403,
+        "descriptionEn":  "You need a [Telegram Premium subscription](https://core.telegram.org/api/premium) to send a message to this user.",
+        "messageZh":  "当前操作需要隐私会员"
+    },
+    {
+        "officialKey":  "PRIVACY_TOO_LONG",
+        "wtelegramKey":  "PRIVACY_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "Too many privacy rules were specified, the current limit is 1000.",
+        "messageZh":  "隐私过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "PRIVACY_VALUE_INVALID",
+        "wtelegramKey":  "PRIVACY_VALUE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified privacy rule combination is invalid.",
+        "messageZh":  "隐私VALUE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "PUBLIC_CHANNEL_MISSING",
+        "wtelegramKey":  "PUBLIC_CHANNEL_MISSING",
+        "statusCode":  403,
+        "descriptionEn":  "You can only export group call invite links for public chats or channels.",
+        "messageZh":  "缺少PUBLIC频道，请补充后重试"
+    },
+    {
+        "officialKey":  "PUBLIC_KEY_REQUIRED",
+        "wtelegramKey":  "PUBLIC_KEY_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "A public key is required.",
+        "messageZh":  "当前操作需要PUBLIC密钥"
+    },
+    {
+        "officialKey":  "PURPOSE_INVALID",
+        "wtelegramKey":  "PURPOSE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified payment purpose is invalid.",
+        "messageZh":  "PURPOSE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "QUERY_ID_EMPTY",
+        "wtelegramKey":  "QUERY_ID_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The query ID is empty.",
+        "messageZh":  "请填写请求标识"
+    },
+    {
+        "officialKey":  "QUERY_ID_INVALID",
+        "wtelegramKey":  "QUERY_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The query ID is invalid.",
+        "messageZh":  "请求标识无效，请重试"
+    },
+    {
+        "officialKey":  "QUERY_TOO_SHORT",
+        "wtelegramKey":  "QUERY_TOO_SHORT",
+        "statusCode":  400,
+        "descriptionEn":  "The query string is too short.",
+        "messageZh":  "请求过短，请补充后重试"
+    },
+    {
+        "officialKey":  "QUICK_REPLIES_BOT_NOT_ALLOWED",
+        "wtelegramKey":  "QUICK_REPLIES_BOT_NOT_ALLOWED",
+        "statusCode":  400,
+        "descriptionEn":  "[Quick replies](https://core.telegram.org/api/business#quick-reply-shortcuts) cannot be used by bots.",
+        "messageZh":  "当前不允许QUICKREPLIES机器人"
+    },
+    {
+        "officialKey":  "QUICK_REPLIES_TOO_MUCH",
+        "wtelegramKey":  "QUICK_REPLIES_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "A maximum of [appConfig.`quick_replies_limit`](https://core.telegram.org/api/config#quick-replies-limit) shortcuts may be created, the limit was reached.",
+        "messageZh":  "QUICKREPLIES过多，请减少后重试"
+    },
+    {
+        "officialKey":  "QUIZ_ANSWER_MISSING",
+        "wtelegramKey":  "QUIZ_ANSWER_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "You can forward a quiz while hiding the original author only after choosing an option in the quiz.",
+        "messageZh":  "缺少QUIZANSWER，请补充后重试"
+    },
+    {
+        "officialKey":  "QUIZ_CORRECT_ANSWER_INVALID",
+        "wtelegramKey":  "QUIZ_CORRECT_ANSWER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "An invalid value was provided to the correct_answers field.",
+        "messageZh":  "QUIZCORRECTANSWER无效，请检查后重试"
+    },
+    {
+        "officialKey":  "QUIZ_CORRECT_ANSWERS_EMPTY",
+        "wtelegramKey":  "QUIZ_CORRECT_ANSWERS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "No correct quiz answer was specified.",
+        "messageZh":  "请填写QUIZCORRECTANSWERS"
+    },
+    {
+        "officialKey":  "QUIZ_CORRECT_ANSWERS_TOO_MUCH",
+        "wtelegramKey":  "QUIZ_CORRECT_ANSWERS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "You specified too many correct answers in a quiz, quizzes can only have one right answer!",
+        "messageZh":  "QUIZCORRECTANSWERS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "QUIZ_MULTIPLE_INVALID",
+        "wtelegramKey":  "QUIZ_MULTIPLE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Quizzes can\u0027t have the multiple_choice flag set!",
+        "messageZh":  "QUIZMULTIPLE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "QUOTE_TEXT_INVALID",
+        "wtelegramKey":  "QUOTE_TEXT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `reply_to`.`quote_text` field is invalid.",
+        "messageZh":  "QUOTE文本无效，请检查后重试"
+    },
+    {
+        "officialKey":  "RAISE_HAND_FORBIDDEN",
+        "wtelegramKey":  "RAISE_HAND_FORBIDDEN",
+        "statusCode":  400,
+        "descriptionEn":  "You cannot raise your hand.",
+        "messageZh":  "当前账号无权执行与RAISEHAND相关的操作"
+    },
+    {
+        "officialKey":  "RANDOM_ID_DUPLICATE",
+        "wtelegramKey":  "RANDOM_ID_DUPLICATE",
+        "statusCode":  500,
+        "descriptionEn":  "You provided a random ID that was already used.",
+        "messageZh":  "RANDOMID重复，请检查后重试"
+    },
+    {
+        "officialKey":  "RANDOM_ID_EMPTY",
+        "wtelegramKey":  "RANDOM_ID_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "Random ID empty.",
+        "messageZh":  "请填写RANDOMID"
+    },
+    {
+        "officialKey":  "RANDOM_ID_EXPIRED",
+        "wtelegramKey":  "RANDOM_ID_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `random_id` was expired (most likely it didn\u0027t follow the required `uint64_t random_id = (time() \u003c\u003c 32) | ((uint64_t)random_uint32_t())` format, or the specified time is too far in the past).",
+        "messageZh":  "RANDOMID已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "RANDOM_ID_INVALID",
+        "wtelegramKey":  "RANDOM_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "A provided random ID is invalid.",
+        "messageZh":  "RANDOMID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "RANDOM_LENGTH_INVALID",
+        "wtelegramKey":  "RANDOM_LENGTH_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Random length invalid.",
+        "messageZh":  "RANDOMLENGTH无效，请检查后重试"
+    },
+    {
+        "officialKey":  "RANGES_INVALID",
+        "wtelegramKey":  "RANGES_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid range provided.",
+        "messageZh":  "RANGES无效，请检查后重试"
+    },
+    {
+        "officialKey":  "REACTION_EMPTY",
+        "wtelegramKey":  "REACTION_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "Empty reaction provided.",
+        "messageZh":  "请填写回应"
+    },
+    {
+        "officialKey":  "REACTION_INVALID",
+        "wtelegramKey":  "REACTION_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified reaction is invalid.",
+        "messageZh":  "回应无效，请检查后重试"
+    },
+    {
+        "officialKey":  "REACTIONS_COUNT_INVALID",
+        "wtelegramKey":  "REACTIONS_COUNT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified number of reactions is invalid.",
+        "messageZh":  "回应COUNT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "REACTIONS_TOO_MANY",
+        "wtelegramKey":  "REACTIONS_TOO_MANY",
+        "statusCode":  400,
+        "descriptionEn":  "The message already has exactly `reactions_uniq_max` reaction emojis, you can\u0027t react with a new emoji, see [the docs for more info \u0026raquo;](https://core.telegram.org/api/config#client-configuration).",
+        "messageZh":  "回应过多，请减少后重试"
+    },
+    {
+        "officialKey":  "RECEIPT_EMPTY",
+        "wtelegramKey":  "RECEIPT_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified receipt is empty.",
+        "messageZh":  "请填写RECEIPT"
+    },
+    {
+        "officialKey":  "REPLY_MARKUP_BUY_EMPTY",
+        "wtelegramKey":  "REPLY_MARKUP_BUY_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "Reply markup for buy button empty.",
+        "messageZh":  "请填写回复MARKUPBUY"
+    },
+    {
+        "officialKey":  "REPLY_MARKUP_GAME_EMPTY",
+        "wtelegramKey":  "REPLY_MARKUP_GAME_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "A game message is being edited, but the newly provided keyboard doesn\u0027t have a keyboardButtonGame button.",
+        "messageZh":  "请填写回复MARKUPGAME"
+    },
+    {
+        "officialKey":  "REPLY_MARKUP_INVALID",
+        "wtelegramKey":  "REPLY_MARKUP_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided reply markup is invalid.",
+        "messageZh":  "回复MARKUP无效，请检查后重试"
+    },
+    {
+        "officialKey":  "REPLY_MARKUP_TOO_LONG",
+        "wtelegramKey":  "REPLY_MARKUP_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "The specified reply_markup is too long.",
+        "messageZh":  "回复MARKUP过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "REPLY_MESSAGE_ID_INVALID",
+        "wtelegramKey":  "REPLY_MESSAGE_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified reply-to message ID is invalid.",
+        "messageZh":  "回复消息ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "REPLY_MESSAGES_TOO_MUCH",
+        "wtelegramKey":  "REPLY_MESSAGES_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "Each shortcut can contain a maximum of [appConfig.`quick_reply_messages_limit`](https://core.telegram.org/api/config#quick-reply-messages-limit) messages, the limit was reached.",
+        "messageZh":  "回复MESSAGES过多，请减少后重试"
+    },
+    {
+        "officialKey":  "REPLY_TO_INVALID",
+        "wtelegramKey":  "REPLY_TO_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `reply_to` field is invalid.",
+        "messageZh":  "回复TO无效，请检查后重试"
+    },
+    {
+        "officialKey":  "REPLY_TO_MONOFORUM_PEER_INVALID",
+        "wtelegramKey":  "REPLY_TO_MONOFORUM_PEER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified inputReplyToMonoForum.monoforum_peer_id is invalid.",
+        "messageZh":  "回复TOMONOFORUM会话对象无效，请检查后重试"
+    },
+    {
+        "officialKey":  "REPLY_TO_USER_INVALID",
+        "wtelegramKey":  "REPLY_TO_USER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The replied-to user is invalid.",
+        "messageZh":  "回复TO用户无效，请检查后重试"
+    },
+    {
+        "officialKey":  "REQUEST_TOKEN_INVALID",
+        "wtelegramKey":  "REQUEST_TOKEN_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The master DC did not accept the `request_token` from the CDN DC. Continue downloading the file from the master DC using upload.getFile.",
+        "messageZh":  "REQUEST令牌无效，请检查后重试"
+    },
+    {
+        "officialKey":  "RESET_REQUEST_MISSING",
+        "wtelegramKey":  "RESET_REQUEST_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "No password reset is in progress.",
+        "messageZh":  "缺少RESETREQUEST，请补充后重试"
+    },
+    {
+        "officialKey":  "RESULT_ID_DUPLICATE",
+        "wtelegramKey":  "RESULT_ID_DUPLICATE",
+        "statusCode":  400,
+        "descriptionEn":  "You provided a duplicate result ID.",
+        "messageZh":  "结果ID重复，请检查后重试"
+    },
+    {
+        "officialKey":  "RESULT_ID_EMPTY",
+        "wtelegramKey":  "RESULT_ID_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "Result ID empty.",
+        "messageZh":  "请填写结果ID"
+    },
+    {
+        "officialKey":  "RESULT_ID_INVALID",
+        "wtelegramKey":  "RESULT_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "One of the specified result IDs is invalid.",
+        "messageZh":  "结果ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "RESULT_TYPE_INVALID",
+        "wtelegramKey":  "RESULT_TYPE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Result type invalid.",
+        "messageZh":  "结果TYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "RESULTS_TOO_MUCH",
+        "wtelegramKey":  "RESULTS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "Too many results were provided.",
+        "messageZh":  "RESULTS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "REVOTE_NOT_ALLOWED",
+        "wtelegramKey":  "REVOTE_NOT_ALLOWED",
+        "statusCode":  400,
+        "descriptionEn":  "You cannot change your vote.",
+        "messageZh":  "当前不允许REVOTE"
+    },
+    {
+        "officialKey":  "RIGHT_FORBIDDEN",
+        "wtelegramKey":  "RIGHT_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "Your admin rights do not allow you to do this.",
+        "messageZh":  "当前账号无权执行与RIGHT相关的操作"
+    },
+    {
+        "officialKey":  "RIGHTS_NOT_MODIFIED",
+        "wtelegramKey":  "RIGHTS_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "The new admin rights are equal to the old rights, no change was made.",
+        "messageZh":  "权限未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "RINGTONE_INVALID",
+        "wtelegramKey":  "RINGTONE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified ringtone is invalid.",
+        "messageZh":  "RINGTONE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "RINGTONE_MIME_INVALID",
+        "wtelegramKey":  "RINGTONE_MIME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The MIME type for the ringtone is invalid.",
+        "messageZh":  "RINGTONEMIME无效，请检查后重试"
+    },
+    {
+        "officialKey":  "RSA_DECRYPT_FAILED",
+        "wtelegramKey":  "RSA_DECRYPT_FAILED",
+        "statusCode":  400,
+        "descriptionEn":  "Internal RSA decryption failed.",
+        "messageZh":  "RSADECRYPT失败，请稍后重试"
+    },
+    {
+        "officialKey":  "SAVED_ID_EMPTY",
+        "wtelegramKey":  "SAVED_ID_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The passed inputSavedStarGiftChat.saved_id is empty.",
+        "messageZh":  "请填写SAVEDID"
+    },
+    {
+        "officialKey":  "SCHEDULE_BOT_NOT_ALLOWED",
+        "wtelegramKey":  "SCHEDULE_BOT_NOT_ALLOWED",
+        "statusCode":  400,
+        "descriptionEn":  "Bots cannot schedule messages.",
+        "messageZh":  "当前不允许定时机器人"
+    },
+    {
+        "officialKey":  "SCHEDULE_DATE_INVALID",
+        "wtelegramKey":  "SCHEDULE_DATE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid schedule date provided.",
+        "messageZh":  "定时时间无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SCHEDULE_DATE_TOO_LATE",
+        "wtelegramKey":  "SCHEDULE_DATE_TOO_LATE",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t schedule a message this far in the future.",
+        "messageZh":  "定时时间时间过晚，请调整后重试"
+    },
+    {
+        "officialKey":  "SCHEDULE_STATUS_PRIVATE",
+        "wtelegramKey":  "SCHEDULE_STATUS_PRIVATE",
+        "statusCode":  400,
+        "descriptionEn":  "Can\u0027t schedule until user is online, if the user\u0027s last seen timestamp is hidden by their privacy settings.",
+        "messageZh":  "对方在线状态受隐私保护，不能按对方上线时发送进行定时"
+    },
+    {
+        "officialKey":  "SCHEDULE_TOO_MUCH",
+        "wtelegramKey":  "SCHEDULE_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "There are too many scheduled messages.",
+        "messageZh":  "定时过多，请减少后重试"
+    },
+    {
+        "officialKey":  "SCORE_INVALID",
+        "wtelegramKey":  "SCORE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified game score is invalid.",
+        "messageZh":  "SCORE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SEARCH_QUERY_EMPTY",
+        "wtelegramKey":  "SEARCH_QUERY_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The search query is empty.",
+        "messageZh":  "请填写搜索请求"
+    },
+    {
+        "officialKey":  "SEARCH_WITH_LINK_NOT_SUPPORTED",
+        "wtelegramKey":  "SEARCH_WITH_LINK_NOT_SUPPORTED",
+        "statusCode":  400,
+        "descriptionEn":  "You cannot provide a search query and an invite link at the same time.",
+        "messageZh":  "当前不支持搜索附带链接"
+    },
+    {
+        "officialKey":  "SECONDS_INVALID",
+        "wtelegramKey":  "SECONDS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid duration provided.",
+        "messageZh":  "SECONDS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SECURE_SECRET_REQUIRED",
+        "wtelegramKey":  "SECURE_SECRET_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "A secure secret is required.",
+        "messageZh":  "当前操作需要安全SECRET"
+    },
+    {
+        "officialKey":  "SELF_DELETE_RESTRICTED",
+        "wtelegramKey":  "SELF_DELETE_RESTRICTED",
+        "statusCode":  400,
+        "descriptionEn":  "Business bots can\u0027t delete messages just for the user, `revoke` **must** be set.",
+        "messageZh":  "SELF删除已被限制"
+    },
+    {
+        "officialKey":  "SEND_AS_PEER_INVALID",
+        "wtelegramKey":  "SEND_AS_PEER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t send messages as the specified peer.",
+        "messageZh":  "发送AS会话对象无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SEND_CODE_UNAVAILABLE",
+        "wtelegramKey":  "SEND_CODE_UNAVAILABLE",
+        "statusCode":  406,
+        "descriptionEn":  "Returned when all available options for this type of number were already used (e.g. flash-call, then SMS, then this error might be returned to trigger a second resend).",
+        "messageZh":  "发送验证码当前不可用，请稍后再试"
+    },
+    {
+        "officialKey":  "SEND_MEDIA_INVALID",
+        "wtelegramKey":  "SEND_MEDIA_INVALID",
+        "statusCode":  500,
+        "descriptionEn":  "The specified media is invalid.",
+        "messageZh":  "发送媒体无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SEND_MESSAGE_GAME_INVALID",
+        "wtelegramKey":  "SEND_MESSAGE_GAME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "An inputBotInlineMessageGame can only be contained in an inputBotInlineResultGame, not in an inputBotInlineResult/inputBotInlineResultPhoto/etc.",
+        "messageZh":  "发送消息GAME无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SEND_MESSAGE_MEDIA_INVALID",
+        "wtelegramKey":  "SEND_MESSAGE_MEDIA_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid media provided.",
+        "messageZh":  "发送消息媒体无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SEND_MESSAGE_TYPE_INVALID",
+        "wtelegramKey":  "SEND_MESSAGE_TYPE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The message type is invalid.",
+        "messageZh":  "发送消息TYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SENSITIVE_CHANGE_FORBIDDEN",
+        "wtelegramKey":  "SENSITIVE_CHANGE_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t change your sensitive content settings.",
+        "messageZh":  "当前账号无权执行与SENSITIVECHANGE相关的操作"
+    },
+    {
+        "officialKey":  "SESSION_EXPIRED",
+        "wtelegramKey":  "SESSION_EXPIRED",
+        "statusCode":  401,
+        "descriptionEn":  "The session has expired.",
+        "messageZh":  "当前会话已过期，请重新登录"
+    },
+    {
+        "officialKey":  "SESSION_PASSWORD_NEEDED",
+        "wtelegramKey":  "SESSION_PASSWORD_NEEDED",
+        "statusCode":  401,
+        "descriptionEn":  "2FA is enabled, use a password to login.",
+        "messageZh":  "该账号已开启二步验证，请输入二步验证密码"
+    },
+    {
+        "officialKey":  "SESSION_REVOKED",
+        "wtelegramKey":  "SESSION_REVOKED",
+        "statusCode":  401,
+        "descriptionEn":  "The session was revoked by the user.",
+        "messageZh":  "当前会话已被撤销，请重新登录"
+    },
+    {
+        "officialKey":  "SESSION_TOO_FRESH_%d",
+        "wtelegramKey":  "SESSION_TOO_FRESH_X",
+        "statusCode":  400,
+        "descriptionEn":  "This session was created less than 24 hours ago, try again in %d seconds.",
+        "messageZh":  "当前会话刚登录不久，请在 %d 秒后再试"
+    },
+    {
+        "officialKey":  "SETTINGS_INVALID",
+        "wtelegramKey":  "SETTINGS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid settings were provided.",
+        "messageZh":  "SETTINGS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SHA256_HASH_INVALID",
+        "wtelegramKey":  "SHA256_HASH_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided SHA256 hash is invalid.",
+        "messageZh":  "SHA256哈希无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SHORT_NAME_INVALID",
+        "wtelegramKey":  "SHORT_NAME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified short name is invalid.",
+        "messageZh":  "SHORT名称无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SHORT_NAME_OCCUPIED",
+        "wtelegramKey":  "SHORT_NAME_OCCUPIED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified short name is already in use.",
+        "messageZh":  "SHORT名称已被占用"
+    },
+    {
+        "officialKey":  "SHORTCUT_INVALID",
+        "wtelegramKey":  "SHORTCUT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified shortcut is invalid.",
+        "messageZh":  "SHORTCUT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SIGN_IN_FAILED",
+        "wtelegramKey":  "SIGN_IN_FAILED",
+        "statusCode":  500,
+        "descriptionEn":  "Failure while signing in.",
+        "messageZh":  "SIGNIN失败，请稍后重试"
+    },
+    {
+        "officialKey":  "SLOTS_EMPTY",
+        "wtelegramKey":  "SLOTS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified slot list is empty.",
+        "messageZh":  "请填写SLOTS"
+    },
+    {
+        "officialKey":  "SLOWMODE_MULTI_MSGS_DISABLED",
+        "wtelegramKey":  "SLOWMODE_MULTI_MSGS_DISABLED",
+        "statusCode":  400,
+        "descriptionEn":  "Slowmode is enabled, you cannot forward multiple messages to this group.",
+        "messageZh":  "慢速模式MULTIMSGS已被禁用"
+    },
+    {
+        "officialKey":  "SLOWMODE_WAIT_%d",
+        "wtelegramKey":  "SLOWMODE_WAIT_X",
+        "statusCode":  420,
+        "descriptionEn":  "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat.",
+        "messageZh":  "当前群已开启慢速模式，请在 %d 秒后再发送"
+    },
+    {
+        "officialKey":  "SLUG_INVALID",
+        "wtelegramKey":  "SLUG_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified invoice slug is invalid.",
+        "messageZh":  "SLUG无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SMS_CODE_CREATE_FAILED",
+        "wtelegramKey":  "SMS_CODE_CREATE_FAILED",
+        "statusCode":  400,
+        "descriptionEn":  "An error occurred while creating the SMS code.",
+        "messageZh":  "SMS验证码CREATE失败，请稍后重试"
+    },
+    {
+        "officialKey":  "SMSJOB_ID_INVALID",
+        "wtelegramKey":  "SMSJOB_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified job ID is invalid.",
+        "messageZh":  "SMSJOBID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SRP_A_INVALID",
+        "wtelegramKey":  "SRP_A_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified inputCheckPasswordSRP.A value is invalid.",
+        "messageZh":  "安全验证A无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SRP_ID_INVALID",
+        "wtelegramKey":  "SRP_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid SRP ID provided.",
+        "messageZh":  "安全验证标识无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SRP_PASSWORD_CHANGED",
+        "wtelegramKey":  "SRP_PASSWORD_CHANGED",
+        "statusCode":  400,
+        "descriptionEn":  "Password has changed.",
+        "messageZh":  "安全验证密码已变更，请重新获取后重试"
+    },
+    {
+        "officialKey":  "STARGIFT_ALREADY_CONVERTED",
+        "wtelegramKey":  "STARGIFT_ALREADY_CONVERTED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified star gift was already converted to Stars.",
+        "messageZh":  "星礼物CONVERTED已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "STARGIFT_ALREADY_REFUNDED",
+        "wtelegramKey":  "STARGIFT_ALREADY_REFUNDED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified star gift was already refunded.",
+        "messageZh":  "星礼物REFUNDED已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "STARGIFT_ALREADY_UPGRADED",
+        "wtelegramKey":  "STARGIFT_ALREADY_UPGRADED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified gift was already upgraded to a collectible gift.",
+        "messageZh":  "星礼物UPGRADED已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "STARGIFT_EXPORT_IN_PROGRESS",
+        "wtelegramKey":  "STARGIFT_EXPORT_IN_PROGRESS",
+        "statusCode":  406,
+        "descriptionEn":  "A gift export is in progress, a detailed and localized description for the error will be emitted via an [updateServiceNotification as specified here \u0026raquo;](https://core.telegram.org/api/errors#406-not-acceptable).",
+        "messageZh":  "星礼物导出正在处理中，请稍后再试"
+    },
+    {
+        "officialKey":  "STARGIFT_INVALID",
+        "wtelegramKey":  "STARGIFT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The passed gift is invalid.",
+        "messageZh":  "星礼物无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STARGIFT_NOT_FOUND",
+        "wtelegramKey":  "STARGIFT_NOT_FOUND",
+        "statusCode":  400,
+        "descriptionEn":  "The specified gift was not found.",
+        "messageZh":  "未找到星礼物"
+    },
+    {
+        "officialKey":  "STARGIFT_OWNER_INVALID",
+        "wtelegramKey":  "STARGIFT_OWNER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "You cannot transfer or sell a gift owned by another user.",
+        "messageZh":  "星礼物OWNER无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STARGIFT_PEER_INVALID",
+        "wtelegramKey":  "STARGIFT_PEER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified inputSavedStarGiftChat.peer is invalid.",
+        "messageZh":  "星礼物会话对象无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STARGIFT_RESELL_CURRENCY_NOT_ALLOWED",
+        "wtelegramKey":  "STARGIFT_RESELL_CURRENCY_NOT_ALLOWED",
+        "statusCode":  400,
+        "descriptionEn":  "You can\u0027t buy the gift using the specified currency (i.e. trying to pay in Stars for TON gifts).",
+        "messageZh":  "当前不允许星礼物RESELLCURRENCY"
+    },
+    {
+        "officialKey":  "STARGIFT_SLUG_INVALID",
+        "wtelegramKey":  "STARGIFT_SLUG_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified gift slug is invalid.",
+        "messageZh":  "星礼物SLUG无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STARGIFT_TRANSFER_TOO_EARLY_%d",
+        "wtelegramKey":  "STARGIFT_TRANSFER_TOO_EARLY_X",
+        "statusCode":  400,
+        "descriptionEn":  "You cannot transfer this gift yet, wait %d seconds.",
+        "messageZh":  "星礼物转移时间过早，请在 %d 秒后重试"
+    },
+    {
+        "officialKey":  "STARGIFT_UPGRADE_UNAVAILABLE",
+        "wtelegramKey":  "STARGIFT_UPGRADE_UNAVAILABLE",
+        "statusCode":  400,
+        "descriptionEn":  "A received gift can only be upgraded to a collectible gift if the [messageActionStarGift](https://core.telegram.org/constructor/messageActionStarGift)/[savedStarGift](https://core.telegram.org/constructor/savedStarGift).`can_upgrade` flag is set.",
+        "messageZh":  "星礼物UPGRADE当前不可用，请稍后再试"
+    },
+    {
+        "officialKey":  "STARGIFT_USAGE_LIMITED",
+        "wtelegramKey":  "STARGIFT_USAGE_LIMITED",
+        "statusCode":  400,
+        "descriptionEn":  "The gift is sold out.",
+        "messageZh":  "星礼物USAGE已受限，请稍后再试"
+    },
+    {
+        "officialKey":  "STARGIFT_USER_USAGE_LIMITED",
+        "wtelegramKey":  "STARGIFT_USER_USAGE_LIMITED",
+        "statusCode":  400,
+        "descriptionEn":  "You\u0027ve reached the starGift.limited_per_user limit, you can\u0027t buy any more gifts of this type.",
+        "messageZh":  "星礼物用户USAGE已受限，请稍后再试"
+    },
+    {
+        "officialKey":  "STARREF_AWAITING_END",
+        "wtelegramKey":  "STARREF_AWAITING_END",
+        "statusCode":  400,
+        "descriptionEn":  "The previous referral program was terminated less than 24 hours ago: further changes can be made after the date specified in userFull.starref_program.end_date.",
+        "messageZh":  "星标推广尚未结束，请稍后再试"
+    },
+    {
+        "officialKey":  "STARREF_EXPIRED",
+        "wtelegramKey":  "STARREF_EXPIRED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified referral link is invalid.",
+        "messageZh":  "星标推广已过期，请重新获取或稍后再试"
+    },
+    {
+        "officialKey":  "STARREF_HASH_REVOKED",
+        "wtelegramKey":  "STARREF_HASH_REVOKED",
+        "statusCode":  400,
+        "descriptionEn":  "The specified affiliate link was already revoked.",
+        "messageZh":  "星标推广哈希已撤销或失效，请重新获取后重试"
+    },
+    {
+        "officialKey":  "STARREF_PERMILLE_INVALID",
+        "wtelegramKey":  "STARREF_PERMILLE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified commission_permille is invalid: the minimum and maximum values for this parameter are contained in the [starref_min_commission_permille](https://core.telegram.org/api/config#starref-min-commission-permille) and [starref_max_commission_permille](https://core.telegram.org/api/config#starref-max-commission-permille) client configuration parameters.",
+        "messageZh":  "星标推广千分比无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STARREF_PERMILLE_TOO_LOW",
+        "wtelegramKey":  "STARREF_PERMILLE_TOO_LOW",
+        "statusCode":  400,
+        "descriptionEn":  "The specified commission_permille is too low: the minimum and maximum values for this parameter are contained in the [starref_min_commission_permille](https://core.telegram.org/api/config#starref-min-commission-permille) and [starref_max_commission_permille](https://core.telegram.org/api/config#starref-max-commission-permille) client configuration parameters.",
+        "messageZh":  "星标推广千分比过低，请调整后重试"
+    },
+    {
+        "officialKey":  "STARS_AMOUNT_INVALID",
+        "wtelegramKey":  "STARS_AMOUNT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified amount in stars is invalid.",
+        "messageZh":  "星币AMOUNT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STARS_FORM_AMOUNT_MISMATCH",
+        "wtelegramKey":  "STARS_FORM_AMOUNT_MISMATCH",
+        "statusCode":  406,
+        "descriptionEn":  "The form amount has changed, please fetch the new form using [payments.getPaymentForm](https://core.telegram.org/method/payments.getPaymentForm) and restart the process.",
+        "messageZh":  "星币表单AMOUNT不匹配，请检查后重试"
+    },
+    {
+        "officialKey":  "STARS_INVOICE_INVALID",
+        "wtelegramKey":  "STARS_INVOICE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified Telegram Star invoice is invalid.",
+        "messageZh":  "星币INVOICE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STARS_PAYMENT_REQUIRED",
+        "wtelegramKey":  "STARS_PAYMENT_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "To import this chat invite link, you must first [pay for the associated Telegram Star subscription \u0026raquo;](https://core.telegram.org/api/subscriptions#channel-subscriptions).",
+        "messageZh":  "当前操作需要星币支付"
+    },
+    {
+        "officialKey":  "START_PARAM_EMPTY",
+        "wtelegramKey":  "START_PARAM_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The start parameter is empty.",
+        "messageZh":  "请填写STARTPARAM"
+    },
+    {
+        "officialKey":  "START_PARAM_INVALID",
+        "wtelegramKey":  "START_PARAM_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Start parameter invalid.",
+        "messageZh":  "STARTPARAM无效，请检查后重试"
+    },
+    {
+        "officialKey":  "START_PARAM_TOO_LONG",
+        "wtelegramKey":  "START_PARAM_TOO_LONG",
+        "statusCode":  400,
+        "descriptionEn":  "Start parameter is too long.",
+        "messageZh":  "STARTPARAM过长，请缩短后重试"
+    },
+    {
+        "officialKey":  "STATS_MIGRATE_%d",
+        "wtelegramKey":  "STATS_MIGRATE_X",
+        "statusCode":  303,
+        "descriptionEn":  "Channel statistics for the specified channel are stored on DC %d, please re-send the query to that DC.",
+        "messageZh":  "统计数据所在数据中心不同，请切换到 %d 号数据中心后重试"
+    },
+    {
+        "officialKey":  "STICKER_DOCUMENT_INVALID",
+        "wtelegramKey":  "STICKER_DOCUMENT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified sticker document is invalid.",
+        "messageZh":  "贴纸文档无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_EMOJI_INVALID",
+        "wtelegramKey":  "STICKER_EMOJI_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Sticker emoji invalid.",
+        "messageZh":  "贴纸表情无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_FILE_INVALID",
+        "wtelegramKey":  "STICKER_FILE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Sticker file invalid.",
+        "messageZh":  "贴纸文件无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_GIF_DIMENSIONS",
+        "wtelegramKey":  "STICKER_GIF_DIMENSIONS",
+        "statusCode":  400,
+        "descriptionEn":  "The specified video sticker has invalid dimensions.",
+        "messageZh":  "贴纸GIF尺寸不符合要求，请调整后重试"
+    },
+    {
+        "officialKey":  "STICKER_ID_INVALID",
+        "wtelegramKey":  "STICKER_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided sticker ID is invalid.",
+        "messageZh":  "贴纸ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_INVALID",
+        "wtelegramKey":  "STICKER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided sticker is invalid.",
+        "messageZh":  "贴纸无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_MIME_INVALID",
+        "wtelegramKey":  "STICKER_MIME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified sticker MIME type is invalid.",
+        "messageZh":  "贴纸MIME无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_PNG_DIMENSIONS",
+        "wtelegramKey":  "STICKER_PNG_DIMENSIONS",
+        "statusCode":  400,
+        "descriptionEn":  "Sticker png dimensions invalid.",
+        "messageZh":  "贴纸PNG尺寸不符合要求，请调整后重试"
+    },
+    {
+        "officialKey":  "STICKER_PNG_NOPNG",
+        "wtelegramKey":  "STICKER_PNG_NOPNG",
+        "statusCode":  400,
+        "descriptionEn":  "One of the specified stickers is not a valid PNG file.",
+        "messageZh":  "贴纸PNG缺少 PNG 文件，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_TGS_NODOC",
+        "wtelegramKey":  "STICKER_TGS_NODOC",
+        "statusCode":  400,
+        "descriptionEn":  "You must send the animated sticker as a document.",
+        "messageZh":  "贴纸TGS缺少文档内容，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_TGS_NOTGS",
+        "wtelegramKey":  "STICKER_TGS_NOTGS",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid TGS sticker provided.",
+        "messageZh":  "贴纸TGS格式不是 TGS，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_THUMB_PNG_NOPNG",
+        "wtelegramKey":  "STICKER_THUMB_PNG_NOPNG",
+        "statusCode":  400,
+        "descriptionEn":  "Incorrect stickerset thumb file provided, PNG / WEBP expected.",
+        "messageZh":  "贴纸缩略图PNG缺少 PNG 文件，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_THUMB_TGS_NOTGS",
+        "wtelegramKey":  "STICKER_THUMB_TGS_NOTGS",
+        "statusCode":  400,
+        "descriptionEn":  "Incorrect stickerset TGS thumb file provided.",
+        "messageZh":  "贴纸缩略图TGS格式不是 TGS，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_VIDEO_BIG",
+        "wtelegramKey":  "STICKER_VIDEO_BIG",
+        "statusCode":  400,
+        "descriptionEn":  "The specified video sticker is too big.",
+        "messageZh":  "贴纸视频过大，请调整后重试"
+    },
+    {
+        "officialKey":  "STICKER_VIDEO_NODOC",
+        "wtelegramKey":  "STICKER_VIDEO_NODOC",
+        "statusCode":  400,
+        "descriptionEn":  "You must send the video sticker as a document.",
+        "messageZh":  "贴纸视频缺少文档内容，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKER_VIDEO_NOWEBM",
+        "wtelegramKey":  "STICKER_VIDEO_NOWEBM",
+        "statusCode":  400,
+        "descriptionEn":  "The specified video sticker is not in webm format.",
+        "messageZh":  "贴纸视频格式不是 WEBM，请检查后重试"
+    },
+    {
+        "officialKey":  "STICKERPACK_STICKERS_TOO_MUCH",
+        "wtelegramKey":  "STICKERPACK_STICKERS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "There are too many stickers in this stickerpack, you can\u0027t add any more.",
+        "messageZh":  "STICKERPACKSTICKERS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "STICKERS_EMPTY",
+        "wtelegramKey":  "STICKERS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "No sticker provided.",
+        "messageZh":  "请填写STICKERS"
+    },
+    {
+        "officialKey":  "STICKERS_TOO_MUCH",
+        "wtelegramKey":  "STICKERS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "There are too many stickers in this stickerpack, you can\u0027t add any more.",
+        "messageZh":  "STICKERS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "STICKERSET_INVALID",
+        "wtelegramKey":  "STICKERSET_INVALID",
+        "statusCode":  406,
+        "descriptionEn":  "The provided sticker set is invalid.",
+        "messageZh":  "贴纸包无效"
+    },
+    {
+        "officialKey":  "STICKERSET_NOT_MODIFIED",
+        "wtelegramKey":  "STICKERSET_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "The passed stickerset information is equal to the current information.",
+        "messageZh":  "贴纸包未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "STICKERSET_OWNER_ANONYMOUS",
+        "wtelegramKey":  "STICKERSET_OWNER_ANONYMOUS",
+        "statusCode":  406,
+        "descriptionEn":  "Provided stickerset can\u0027t be installed as group stickerset to prevent admin deanonymization.",
+        "messageZh":  "为防止暴露管理员身份，当前贴纸包不能设置为群贴纸包"
+    },
+    {
+        "officialKey":  "STORIES_NEVER_CREATED",
+        "wtelegramKey":  "STORIES_NEVER_CREATED",
+        "statusCode":  400,
+        "descriptionEn":  "This peer hasn\u0027t ever posted any stories.",
+        "messageZh":  "动态尚未创建"
+    },
+    {
+        "officialKey":  "STORIES_TOO_MUCH",
+        "wtelegramKey":  "STORIES_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "You have hit the maximum active stories limit as specified by the [`story_expiring_limit_*` client configuration parameters](https://core.telegram.org/api/config#story-expiring-limit-default): you should buy a [Premium](https://core.telegram.org/api/premium) subscription, delete an active story, or wait for the oldest story to expire.",
+        "messageZh":  "动态过多，请减少后重试"
+    },
+    {
+        "officialKey":  "STORY_ID_EMPTY",
+        "wtelegramKey":  "STORY_ID_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "You specified no story IDs.",
+        "messageZh":  "请填写动态ID"
+    },
+    {
+        "officialKey":  "STORY_ID_INVALID",
+        "wtelegramKey":  "STORY_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified story ID is invalid.",
+        "messageZh":  "动态ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STORY_NOT_MODIFIED",
+        "wtelegramKey":  "STORY_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "The new story information you passed is equal to the previous story information, thus it wasn\u0027t modified.",
+        "messageZh":  "动态未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "STORY_PERIOD_INVALID",
+        "wtelegramKey":  "STORY_PERIOD_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified story period is invalid for this account.",
+        "messageZh":  "动态PERIOD无效，请检查后重试"
+    },
+    {
+        "officialKey":  "STORY_SEND_FLOOD_MONTHLY_%d",
+        "wtelegramKey":  "STORY_SEND_FLOOD_MONTHLY_X",
+        "statusCode":  400,
+        "descriptionEn":  "You\u0027ve hit the monthly story limit as specified by the [`stories_sent_monthly_limit_*` client configuration parameters](https://core.telegram.org/api/config#stories-sent-monthly-limit-default): wait %d seconds before posting a new story.",
+        "messageZh":  "已达到本月动态发送上限，请在 %d 秒后重试"
+    },
+    {
+        "officialKey":  "STORY_SEND_FLOOD_WEEKLY_%d",
+        "wtelegramKey":  "STORY_SEND_FLOOD_WEEKLY_X",
+        "statusCode":  400,
+        "descriptionEn":  "You\u0027ve hit the weekly story limit as specified by the [`stories_sent_weekly_limit_*` client configuration parameters](https://core.telegram.org/api/config#stories-sent-weekly-limit-default): wait for %d seconds before posting a new story.",
+        "messageZh":  "已达到本周动态发送上限，请在 %d 秒后重试"
+    },
+    {
+        "officialKey":  "SUBSCRIPTION_EXPORT_MISSING",
+        "wtelegramKey":  "SUBSCRIPTION_EXPORT_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "You cannot send a [bot subscription invoice](https://core.telegram.org/api/subscriptions#bot-subscriptions) directly, you may only create invoice links using [payments.exportInvoice](https://core.telegram.org/method/payments.exportInvoice).",
+        "messageZh":  "缺少SUBSCRIPTION导出，请补充后重试"
+    },
+    {
+        "officialKey":  "SUBSCRIPTION_ID_INVALID",
+        "wtelegramKey":  "SUBSCRIPTION_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified subscription_id is invalid.",
+        "messageZh":  "SUBSCRIPTIONID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SUBSCRIPTION_PERIOD_INVALID",
+        "wtelegramKey":  "SUBSCRIPTION_PERIOD_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified subscription_pricing.period is invalid.",
+        "messageZh":  "SUBSCRIPTIONPERIOD无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SUGGESTED_POST_AMOUNT_INVALID",
+        "wtelegramKey":  "SUGGESTED_POST_AMOUNT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified price for the suggested post is invalid.",
+        "messageZh":  "SUGGESTEDPOSTAMOUNT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SUGGESTED_POST_PEER_INVALID",
+        "wtelegramKey":  "SUGGESTED_POST_PEER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "You cannot send suggested posts to non-[monoforum](https://core.telegram.org/api/monoforum) peers.",
+        "messageZh":  "SUGGESTEDPOST会话对象无效，请检查后重试"
+    },
+    {
+        "officialKey":  "SWITCH_PM_TEXT_EMPTY",
+        "wtelegramKey":  "SWITCH_PM_TEXT_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The switch_pm.text field was empty.",
+        "messageZh":  "请填写SWITCHPM文本"
+    },
+    {
+        "officialKey":  "SWITCH_WEBVIEW_URL_INVALID",
+        "wtelegramKey":  "SWITCH_WEBVIEW_URL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The URL specified in switch_webview.url is invalid!",
+        "messageZh":  "SWITCHWEBVIEW链接无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TAKEOUT_INIT_DELAY_%d",
+        "wtelegramKey":  "TAKEOUT_INIT_DELAY_X",
+        "statusCode":  420,
+        "descriptionEn":  "Sorry, for security reasons, you will be able to begin downloading your data in %d seconds. We have notified all your devices about the export request to make sure it\u0027s authorized and to give you time to react if it\u0027s not.",
+        "messageZh":  "导出操作受限，请在 %d 秒后重试"
+    },
+    {
+        "officialKey":  "TAKEOUT_INVALID",
+        "wtelegramKey":  "TAKEOUT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified takeout ID is invalid.",
+        "messageZh":  "导出无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TAKEOUT_REQUIRED",
+        "wtelegramKey":  "TAKEOUT_REQUIRED",
+        "statusCode":  403,
+        "descriptionEn":  "A [takeout](https://core.telegram.org/api/takeout) session needs to be initialized first, [see here \u0026raquo; for more info](https://core.telegram.org/api/takeout).",
+        "messageZh":  "当前操作需要导出"
+    },
+    {
+        "officialKey":  "TASK_ALREADY_EXISTS",
+        "wtelegramKey":  "TASK_ALREADY_EXISTS",
+        "statusCode":  400,
+        "descriptionEn":  "An email reset was already requested.",
+        "messageZh":  "TASK已存在"
+    },
+    {
+        "officialKey":  "TEMP_AUTH_KEY_ALREADY_BOUND",
+        "wtelegramKey":  "TEMP_AUTH_KEY_ALREADY_BOUND",
+        "statusCode":  400,
+        "descriptionEn":  "The passed temporary key is already bound to another **perm_auth_key_id**.",
+        "messageZh":  "TEMP认证密钥BOUND已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "TEMP_AUTH_KEY_EMPTY",
+        "wtelegramKey":  "TEMP_AUTH_KEY_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "No temporary auth key provided.",
+        "messageZh":  "请填写TEMP认证密钥"
+    },
+    {
+        "officialKey":  "TERMS_URL_INVALID",
+        "wtelegramKey":  "TERMS_URL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified [invoice](https://core.telegram.org/constructor/invoice).`terms_url` is invalid.",
+        "messageZh":  "TERMS链接无效，请检查后重试"
+    },
+    {
+        "officialKey":  "THEME_FILE_INVALID",
+        "wtelegramKey":  "THEME_FILE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid theme file provided.",
+        "messageZh":  "主题文件无效，请检查后重试"
+    },
+    {
+        "officialKey":  "THEME_FORMAT_INVALID",
+        "wtelegramKey":  "THEME_FORMAT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid theme format provided.",
+        "messageZh":  "主题格式无效，请检查后重试"
+    },
+    {
+        "officialKey":  "THEME_INVALID",
+        "wtelegramKey":  "THEME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid theme provided.",
+        "messageZh":  "主题无效，请检查后重试"
+    },
+    {
+        "officialKey":  "THEME_MIME_INVALID",
+        "wtelegramKey":  "THEME_MIME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The theme\u0027s MIME type is invalid.",
+        "messageZh":  "主题MIME无效，请检查后重试"
+    },
+    {
+        "officialKey":  "THEME_PARAMS_INVALID",
+        "wtelegramKey":  "THEME_PARAMS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `theme_params` field is invalid.",
+        "messageZh":  "主题PARAMS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "THEME_SLUG_INVALID",
+        "wtelegramKey":  "THEME_SLUG_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified theme slug is invalid.",
+        "messageZh":  "主题SLUG无效，请检查后重试"
+    },
+    {
+        "officialKey":  "THEME_TITLE_INVALID",
+        "wtelegramKey":  "THEME_TITLE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified theme title is invalid.",
+        "messageZh":  "主题TITLE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TIMEOUT",
+        "wtelegramKey":  "TIMEOUT",
+        "statusCode":  -503,
+        "descriptionEn":  "Timeout while fetching data.",
+        "messageZh":  "获取数据超时，请稍后重试"
+    },
+    {
+        "officialKey":  "TIMEZONE_INVALID",
+        "wtelegramKey":  "TIMEZONE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified timezone does not exist.",
+        "messageZh":  "TIMEZONE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TITLE_INVALID",
+        "wtelegramKey":  "TITLE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified stickerpack title is invalid.",
+        "messageZh":  "TITLE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TMP_PASSWORD_DISABLED",
+        "wtelegramKey":  "TMP_PASSWORD_DISABLED",
+        "statusCode":  400,
+        "descriptionEn":  "The temporary password is disabled.",
+        "messageZh":  "TMP密码已被禁用"
+    },
+    {
+        "officialKey":  "TMP_PASSWORD_INVALID",
+        "wtelegramKey":  "TMP_PASSWORD_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The passed tmp_password is invalid.",
+        "messageZh":  "TMP密码无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TO_ID_INVALID",
+        "wtelegramKey":  "TO_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified `to_id` of the passed inputInvoiceStarGiftResale or inputInvoiceStarGiftTransfer is invalid.",
+        "messageZh":  "TOID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TO_LANG_INVALID",
+        "wtelegramKey":  "TO_LANG_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified destination language is invalid.",
+        "messageZh":  "TO语言无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TODO_ITEM_DUPLICATE",
+        "wtelegramKey":  "TODO_ITEM_DUPLICATE",
+        "statusCode":  400,
+        "descriptionEn":  "Duplicate [checklist items](https://core.telegram.org/api/todo) detected.",
+        "messageZh":  "TODOITEM重复，请检查后重试"
+    },
+    {
+        "officialKey":  "TODO_ITEMS_EMPTY",
+        "wtelegramKey":  "TODO_ITEMS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "A checklist was specified, but no [checklist items](https://core.telegram.org/api/todo) were passed.",
+        "messageZh":  "请填写TODOITEMS"
+    },
+    {
+        "officialKey":  "TODO_NOT_MODIFIED",
+        "wtelegramKey":  "TODO_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "No todo items were specified, so no changes were made to the todo list.",
+        "messageZh":  "TODO未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "TOKEN_EMPTY",
+        "wtelegramKey":  "TOKEN_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified token is empty.",
+        "messageZh":  "请填写令牌"
+    },
+    {
+        "officialKey":  "TOKEN_INVALID",
+        "wtelegramKey":  "TOKEN_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided token is invalid.",
+        "messageZh":  "令牌无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TOKEN_TYPE_INVALID",
+        "wtelegramKey":  "TOKEN_TYPE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified token type is invalid.",
+        "messageZh":  "令牌TYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TOPIC_CLOSE_SEPARATELY",
+        "wtelegramKey":  "TOPIC_CLOSE_SEPARATELY",
+        "statusCode":  400,
+        "descriptionEn":  "The `close` flag cannot be provided together with any of the other flags.",
+        "messageZh":  "关闭话题时不能同时设置其他话题标记"
+    },
+    {
+        "officialKey":  "TOPIC_CLOSED",
+        "wtelegramKey":  "TOPIC_CLOSED",
+        "statusCode":  406,
+        "descriptionEn":  "This topic was closed, you can\u0027t send messages to it anymore.",
+        "messageZh":  "话题已关闭"
+    },
+    {
+        "officialKey":  "TOPIC_DELETED",
+        "wtelegramKey":  "TOPIC_DELETED",
+        "statusCode":  406,
+        "descriptionEn":  "The specified topic was deleted.",
+        "messageZh":  "该话题已被删除"
+    },
+    {
+        "officialKey":  "TOPIC_HIDE_SEPARATELY",
+        "wtelegramKey":  "TOPIC_HIDE_SEPARATELY",
+        "statusCode":  400,
+        "descriptionEn":  "The `hide` flag cannot be provided together with any of the other flags.",
+        "messageZh":  "隐藏话题时不能同时设置其他话题标记"
+    },
+    {
+        "officialKey":  "TOPIC_ID_INVALID",
+        "wtelegramKey":  "TOPIC_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified topic ID is invalid.",
+        "messageZh":  "话题ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TOPIC_NOT_MODIFIED",
+        "wtelegramKey":  "TOPIC_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "The updated topic info is equal to the current topic info, nothing was changed.",
+        "messageZh":  "话题未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "TOPIC_TITLE_EMPTY",
+        "wtelegramKey":  "TOPIC_TITLE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified topic title is empty.",
+        "messageZh":  "请填写话题TITLE"
+    },
+    {
+        "officialKey":  "TOPICS_EMPTY",
+        "wtelegramKey":  "TOPICS_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "You specified no topic IDs.",
+        "messageZh":  "请填写TOPICS"
+    },
+    {
+        "officialKey":  "TRANSACTION_ID_INVALID",
+        "wtelegramKey":  "TRANSACTION_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified transaction ID is invalid.",
+        "messageZh":  "TRANSACTIONID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TRANSCRIPTION_FAILED",
+        "wtelegramKey":  "TRANSCRIPTION_FAILED",
+        "statusCode":  400,
+        "descriptionEn":  "Audio transcription failed.",
+        "messageZh":  "TRANSCRIPTION失败，请稍后重试"
+    },
+    {
+        "officialKey":  "TRANSLATE_REQ_FAILED",
+        "wtelegramKey":  "TRANSLATE_REQ_FAILED",
+        "statusCode":  500,
+        "descriptionEn":  "Translation failed, please try again later.",
+        "messageZh":  "TRANSLATEREQ失败，请稍后重试"
+    },
+    {
+        "officialKey":  "TRANSLATE_REQ_QUOTA_EXCEEDED",
+        "wtelegramKey":  "TRANSLATE_REQ_QUOTA_EXCEEDED",
+        "statusCode":  400,
+        "descriptionEn":  "Translation is currently unavailable due to a temporary server-side lack of resources.",
+        "messageZh":  "翻译服务当前繁忙，请稍后再试"
+    },
+    {
+        "officialKey":  "TRANSLATION_TIMEOUT",
+        "wtelegramKey":  "TRANSLATION_TIMEOUT",
+        "statusCode":  500,
+        "descriptionEn":  "A timeout occurred while translating the specified text.",
+        "messageZh":  "文本翻译超时，请稍后重试"
+    },
+    {
+        "officialKey":  "TRANSLATIONS_DISABLED",
+        "wtelegramKey":  "TRANSLATIONS_DISABLED",
+        "statusCode":  406,
+        "descriptionEn":  "Translations are unavailable, a detailed and localized description for the error will be emitted via an [updateServiceNotification as specified here \u0026raquo;](https://core.telegram.org/api/errors#406-not-acceptable).",
+        "messageZh":  "TRANSLATIONS已被禁用"
+    },
+    {
+        "officialKey":  "TTL_DAYS_INVALID",
+        "wtelegramKey":  "TTL_DAYS_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided TTL is invalid.",
+        "messageZh":  "TTLDAYS无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TTL_MEDIA_INVALID",
+        "wtelegramKey":  "TTL_MEDIA_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid media Time To Live was provided.",
+        "messageZh":  "TTL媒体无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TTL_PERIOD_INVALID",
+        "wtelegramKey":  "TTL_PERIOD_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified TTL period is invalid.",
+        "messageZh":  "TTLPERIOD无效，请检查后重试"
+    },
+    {
+        "officialKey":  "TYPES_EMPTY",
+        "wtelegramKey":  "TYPES_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "No top peer type was provided.",
+        "messageZh":  "请填写TYPES"
+    },
+    {
+        "officialKey":  "UNSUPPORTED",
+        "wtelegramKey":  "UNSUPPORTED",
+        "statusCode":  400,
+        "descriptionEn":  "`require_payment` cannot be *set* by users, only by monoforums: users must instead use the [inputPrivacyKeyNoPaidMessages](https://core.telegram.org/constructor/inputPrivacyKeyNoPaidMessages) privacy setting to remove a previously added exemption.",
+        "messageZh":  "当前操作不受支持，请检查调用方式"
+    },
+    {
+        "officialKey":  "UNTIL_DATE_INVALID",
+        "wtelegramKey":  "UNTIL_DATE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid until date provided.",
+        "messageZh":  "截止时间无效，请检查后重试"
+    },
+    {
+        "officialKey":  "UPDATE_APP_TO_LOGIN",
+        "wtelegramKey":  "UPDATE_APP_TO_LOGIN",
+        "statusCode":  406,
+        "descriptionEn":  "Please update your client to login.",
+        "messageZh":  "客户端版本过低，请升级后再登录"
+    },
+    {
+        "officialKey":  "URL_INVALID",
+        "wtelegramKey":  "URL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid URL provided.",
+        "messageZh":  "链接无效，请检查后重试"
+    },
+    {
+        "officialKey":  "USAGE_LIMIT_INVALID",
+        "wtelegramKey":  "USAGE_LIMIT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified usage limit is invalid.",
+        "messageZh":  "USAGE限制无效，请检查后重试"
+    },
+    {
+        "officialKey":  "USER_ADMIN_INVALID",
+        "wtelegramKey":  "USER_ADMIN_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "You\u0027re not an admin.",
+        "messageZh":  "用户管理员无效，请检查后重试"
+    },
+    {
+        "officialKey":  "USER_ALREADY_INVITED",
+        "wtelegramKey":  "USER_ALREADY_INVITED",
+        "statusCode":  400,
+        "descriptionEn":  "You have already invited this user.",
+        "messageZh":  "用户INVITED已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "USER_ALREADY_PARTICIPANT",
+        "wtelegramKey":  "USER_ALREADY_PARTICIPANT",
+        "statusCode":  400,
+        "descriptionEn":  "The user is already in the group.",
+        "messageZh":  "用户参与者已处理，请勿重复操作"
+    },
+    {
+        "officialKey":  "USER_BANNED_IN_CHANNEL",
+        "wtelegramKey":  "USER_BANNED_IN_CHANNEL",
+        "statusCode":  400,
+        "descriptionEn":  "You\u0027re banned from sending messages in supergroups/channels.",
+        "messageZh":  "你已被该频道或群组封禁"
+    },
+    {
+        "officialKey":  "USER_BLOCKED",
+        "wtelegramKey":  "USER_BLOCKED",
+        "statusCode":  400,
+        "descriptionEn":  "User blocked.",
+        "messageZh":  "用户已被限制"
+    },
+    {
+        "officialKey":  "USER_BOT",
+        "wtelegramKey":  "USER_BOT",
+        "statusCode":  400,
+        "descriptionEn":  "Bots can only be admins in channels.",
+        "messageZh":  "机器人只能在频道中担任管理员"
+    },
+    {
+        "officialKey":  "USER_BOT_INVALID",
+        "wtelegramKey":  "USER_BOT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "User accounts must provide the `bot` method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts.",
+        "messageZh":  "用户机器人无效，请检查后重试"
+    },
+    {
+        "officialKey":  "USER_BOT_REQUIRED",
+        "wtelegramKey":  "USER_BOT_REQUIRED",
+        "statusCode":  400,
+        "descriptionEn":  "This method can only be called by a bot.",
+        "messageZh":  "当前操作需要用户机器人"
+    },
+    {
+        "officialKey":  "USER_CHANNELS_TOO_MUCH",
+        "wtelegramKey":  "USER_CHANNELS_TOO_MUCH",
+        "statusCode":  403,
+        "descriptionEn":  "One of the users you tried to add is already in too many channels/supergroups.",
+        "messageZh":  "用户频道过多，请减少后重试"
+    },
+    {
+        "officialKey":  "USER_CREATOR",
+        "wtelegramKey":  "USER_CREATOR",
+        "statusCode":  400,
+        "descriptionEn":  "For channels.editAdmin: you\u0027ve tried to edit the admin rights of the owner, but you\u0027re not the owner; for channels.leaveChannel: you can\u0027t leave this channel, because you\u0027re its creator.",
+        "messageZh":  "当前对象是创建者，无法执行该操作"
+    },
+    {
+        "officialKey":  "USER_DEACTIVATED",
+        "wtelegramKey":  "USER_DEACTIVATED",
+        "statusCode":  401,
+        "descriptionEn":  "The current account was deleted by the user.",
+        "messageZh":  "该账号已停用"
+    },
+    {
+        "officialKey":  "USER_DEACTIVATED_BAN",
+        "wtelegramKey":  "USER_DEACTIVATED_BAN",
+        "statusCode":  401,
+        "descriptionEn":  "The current account was deleted and banned by Telegram\u0027s antispam system.",
+        "messageZh":  "该账号已被 Telegram 封禁"
+    },
+    {
+        "officialKey":  "USER_DELETED",
+        "wtelegramKey":  "USER_DELETED",
+        "statusCode":  403,
+        "descriptionEn":  "You can\u0027t send this secret message because the other participant deleted their account.",
+        "messageZh":  "对方账号已删除，无法继续发送该消息"
+    },
+    {
+        "officialKey":  "USER_GIFT_UNAVAILABLE",
+        "wtelegramKey":  "USER_GIFT_UNAVAILABLE",
+        "statusCode":  400,
+        "descriptionEn":  "Gifts are not available in the current region ([stars_gifts_enabled](https://core.telegram.org/api/config#stars-gifts-enabled) is equal to false).",
+        "messageZh":  "用户礼物当前不可用，请稍后再试"
+    },
+    {
+        "officialKey":  "USER_ID_INVALID",
+        "wtelegramKey":  "USER_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided user ID is invalid.",
+        "messageZh":  "用户 ID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "USER_INVALID",
+        "wtelegramKey":  "USER_INVALID",
+        "statusCode":  403,
+        "descriptionEn":  "Invalid user provided.",
+        "messageZh":  "用户无效，请检查后重试"
+    },
+    {
+        "officialKey":  "USER_IS_BLOCKED",
+        "wtelegramKey":  "USER_IS_BLOCKED",
+        "statusCode":  403,
+        "descriptionEn":  "You were blocked by this user.",
+        "messageZh":  "用户IS已被限制"
+    },
+    {
+        "officialKey":  "USER_IS_BOT",
+        "wtelegramKey":  "USER_IS_BOT",
+        "statusCode":  400,
+        "descriptionEn":  "Bots can\u0027t send messages to other bots.",
+        "messageZh":  "机器人不能向其他机器人发送消息"
+    },
+    {
+        "officialKey":  "USER_KICKED",
+        "wtelegramKey":  "USER_KICKED",
+        "statusCode":  400,
+        "descriptionEn":  "This user was kicked from this supergroup/channel.",
+        "messageZh":  "该用户已被移出当前频道或群组"
+    },
+    {
+        "officialKey":  "USER_MIGRATE_%d",
+        "wtelegramKey":  "USER_MIGRATE_X",
+        "statusCode":  303,
+        "descriptionEn":  "Your account is associated to DC %d, please re-send the query to that DC.",
+        "messageZh":  "用户所在数据中心不同，请切换到 %d 号数据中心后重试"
+    },
+    {
+        "officialKey":  "USER_NOT_MUTUAL_CONTACT",
+        "wtelegramKey":  "USER_NOT_MUTUAL_CONTACT",
+        "statusCode":  403,
+        "descriptionEn":  "The provided user is not a mutual contact.",
+        "messageZh":  "对方不是双向联系人"
+    },
+    {
+        "officialKey":  "USER_NOT_PARTICIPANT",
+        "wtelegramKey":  "USER_NOT_PARTICIPANT",
+        "statusCode":  403,
+        "descriptionEn":  "You\u0027re not a member of this supergroup/channel.",
+        "messageZh":  "当前账号不是该频道或群组成员"
+    },
+    {
+        "officialKey":  "USER_PERMISSION_DENIED",
+        "wtelegramKey":  "USER_PERMISSION_DENIED",
+        "statusCode":  403,
+        "descriptionEn":  "The user hasn\u0027t granted or has revoked the bot\u0027s access to change their emoji status using [bots.toggleUserEmojiStatusPermission](https://core.telegram.org/method/bots.toggleUserEmojiStatusPermission).",
+        "messageZh":  "用户PERMISSION被拒绝，请检查权限后重试"
+    },
+    {
+        "officialKey":  "USER_PRIVACY_RESTRICTED",
+        "wtelegramKey":  "USER_PRIVACY_RESTRICTED",
+        "statusCode":  403,
+        "descriptionEn":  "The user\u0027s privacy settings do not allow you to do this.",
+        "messageZh":  "用户隐私已被限制"
+    },
+    {
+        "officialKey":  "USER_PUBLIC_MISSING",
+        "wtelegramKey":  "USER_PUBLIC_MISSING",
+        "statusCode":  400,
+        "descriptionEn":  "Cannot generate a link to stories posted by a peer without a username.",
+        "messageZh":  "缺少用户PUBLIC，请补充后重试"
+    },
+    {
+        "officialKey":  "USER_RESTRICTED",
+        "wtelegramKey":  "USER_RESTRICTED",
+        "statusCode":  403,
+        "descriptionEn":  "You\u0027re spamreported, you can\u0027t create channels or chats.",
+        "messageZh":  "用户已被限制"
+    },
+    {
+        "officialKey":  "USER_VOLUME_INVALID",
+        "wtelegramKey":  "USER_VOLUME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified user volume is invalid.",
+        "messageZh":  "用户VOLUME无效，请检查后重试"
+    },
+    {
+        "officialKey":  "USERNAME_INVALID",
+        "wtelegramKey":  "USERNAME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The provided username is not valid.",
+        "messageZh":  "用户名格式无效"
+    },
+    {
+        "officialKey":  "USERNAME_NOT_MODIFIED",
+        "wtelegramKey":  "USERNAME_NOT_MODIFIED",
+        "statusCode":  400,
+        "descriptionEn":  "The username was not modified.",
+        "messageZh":  "用户名未发生变化，无需重复提交"
+    },
+    {
+        "officialKey":  "USERNAME_NOT_OCCUPIED",
+        "wtelegramKey":  "USERNAME_NOT_OCCUPIED",
+        "statusCode":  400,
+        "descriptionEn":  "The provided username is not occupied.",
+        "messageZh":  "用户名不存在"
+    },
+    {
+        "officialKey":  "USERNAME_OCCUPIED",
+        "wtelegramKey":  "USERNAME_OCCUPIED",
+        "statusCode":  400,
+        "descriptionEn":  "The provided username is already occupied.",
+        "messageZh":  "用户名已被占用"
+    },
+    {
+        "officialKey":  "USERNAME_PURCHASE_AVAILABLE",
+        "wtelegramKey":  "USERNAME_PURCHASE_AVAILABLE",
+        "statusCode":  400,
+        "descriptionEn":  "The specified username can be purchased on https://fragment.com.",
+        "messageZh":  "该用户名可在 Fragment 上购买，暂不能直接占用"
+    },
+    {
+        "officialKey":  "USERNAMES_ACTIVE_TOO_MUCH",
+        "wtelegramKey":  "USERNAMES_ACTIVE_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "The maximum number of active usernames was reached.",
+        "messageZh":  "USERNAMESACTIVE过多，请减少后重试"
+    },
+    {
+        "officialKey":  "USERPIC_PRIVACY_REQUIRED",
+        "wtelegramKey":  "USERPIC_PRIVACY_REQUIRED",
+        "statusCode":  406,
+        "descriptionEn":  "You need to disable privacy settings for your profile picture in order to make your geolocation public.",
+        "messageZh":  "当前操作需要USERPIC隐私"
+    },
+    {
+        "officialKey":  "USERPIC_UPLOAD_REQUIRED",
+        "wtelegramKey":  "USERPIC_UPLOAD_REQUIRED",
+        "statusCode":  406,
+        "descriptionEn":  "You must have a profile picture to publish your geolocation.",
+        "messageZh":  "当前操作需要USERPICUPLOAD"
+    },
+    {
+        "officialKey":  "USERS_TOO_FEW",
+        "wtelegramKey":  "USERS_TOO_FEW",
+        "statusCode":  400,
+        "descriptionEn":  "Not enough users (to create a chat, for example).",
+        "messageZh":  "用户数量不足"
+    },
+    {
+        "officialKey":  "USERS_TOO_MUCH",
+        "wtelegramKey":  "USERS_TOO_MUCH",
+        "statusCode":  400,
+        "descriptionEn":  "The maximum number of users has been exceeded (to create a chat, for example).",
+        "messageZh":  "USERS过多，请减少后重试"
+    },
+    {
+        "officialKey":  "VENUE_ID_INVALID",
+        "wtelegramKey":  "VENUE_ID_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified venue ID is invalid.",
+        "messageZh":  "VENUEID无效，请检查后重试"
+    },
+    {
+        "officialKey":  "VIDEO_CONTENT_TYPE_INVALID",
+        "wtelegramKey":  "VIDEO_CONTENT_TYPE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The video\u0027s content type is invalid.",
+        "messageZh":  "视频内容TYPE无效，请检查后重试"
+    },
+    {
+        "officialKey":  "VIDEO_FILE_INVALID",
+        "wtelegramKey":  "VIDEO_FILE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified video file is invalid.",
+        "messageZh":  "视频文件无效，请检查后重试"
+    },
+    {
+        "officialKey":  "VIDEO_PAUSE_FORBIDDEN",
+        "wtelegramKey":  "VIDEO_PAUSE_FORBIDDEN",
+        "statusCode":  400,
+        "descriptionEn":  "You cannot pause the video stream.",
+        "messageZh":  "当前账号无权执行与视频PAUSE相关的操作"
+    },
+    {
+        "officialKey":  "VIDEO_STOP_FORBIDDEN",
+        "wtelegramKey":  "VIDEO_STOP_FORBIDDEN",
+        "statusCode":  400,
+        "descriptionEn":  "You cannot stop the video stream.",
+        "messageZh":  "当前账号无权执行与视频STOP相关的操作"
+    },
+    {
+        "officialKey":  "VIDEO_TITLE_EMPTY",
+        "wtelegramKey":  "VIDEO_TITLE_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The specified video title is empty.",
+        "messageZh":  "请填写视频TITLE"
+    },
+    {
+        "officialKey":  "VOICE_MESSAGES_FORBIDDEN",
+        "wtelegramKey":  "VOICE_MESSAGES_FORBIDDEN",
+        "statusCode":  403,
+        "descriptionEn":  "This user\u0027s privacy settings forbid you from sending voice messages.",
+        "messageZh":  "当前账号无权执行与语音MESSAGES相关的操作"
+    },
+    {
+        "officialKey":  "WALLPAPER_FILE_INVALID",
+        "wtelegramKey":  "WALLPAPER_FILE_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified wallpaper file is invalid.",
+        "messageZh":  "壁纸文件无效，请检查后重试"
+    },
+    {
+        "officialKey":  "WALLPAPER_INVALID",
+        "wtelegramKey":  "WALLPAPER_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified wallpaper is invalid.",
+        "messageZh":  "壁纸无效，请检查后重试"
+    },
+    {
+        "officialKey":  "WALLPAPER_MIME_INVALID",
+        "wtelegramKey":  "WALLPAPER_MIME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified wallpaper MIME type is invalid.",
+        "messageZh":  "壁纸MIME无效，请检查后重试"
+    },
+    {
+        "officialKey":  "WALLPAPER_NOT_FOUND",
+        "wtelegramKey":  "WALLPAPER_NOT_FOUND",
+        "statusCode":  400,
+        "descriptionEn":  "The specified wallpaper could not be found.",
+        "messageZh":  "未找到壁纸"
+    },
+    {
+        "officialKey":  "WC_CONVERT_URL_INVALID",
+        "wtelegramKey":  "WC_CONVERT_URL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "WC convert URL invalid.",
+        "messageZh":  "WCCONVERT链接无效，请检查后重试"
+    },
+    {
+        "officialKey":  "WEBDOCUMENT_INVALID",
+        "wtelegramKey":  "WEBDOCUMENT_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid webdocument URL provided.",
+        "messageZh":  "WEBDOCUMENT无效，请检查后重试"
+    },
+    {
+        "officialKey":  "WEBDOCUMENT_MIME_INVALID",
+        "wtelegramKey":  "WEBDOCUMENT_MIME_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "Invalid webdocument mime type provided.",
+        "messageZh":  "WEBDOCUMENTMIME无效，请检查后重试"
+    },
+    {
+        "officialKey":  "WEBDOCUMENT_SIZE_TOO_BIG",
+        "wtelegramKey":  "WEBDOCUMENT_SIZE_TOO_BIG",
+        "statusCode":  400,
+        "descriptionEn":  "Webdocument is too big!",
+        "messageZh":  "WEBDOCUMENT大小过大，请调整后重试"
+    },
+    {
+        "officialKey":  "WEBDOCUMENT_URL_EMPTY",
+        "wtelegramKey":  "WEBDOCUMENT_URL_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "The passed web document URL is empty.",
+        "messageZh":  "请填写WEBDOCUMENT链接"
+    },
+    {
+        "officialKey":  "WEBDOCUMENT_URL_INVALID",
+        "wtelegramKey":  "WEBDOCUMENT_URL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified webdocument URL is invalid.",
+        "messageZh":  "WEBDOCUMENT链接无效，请检查后重试"
+    },
+    {
+        "officialKey":  "WEBPAGE_CURL_FAILED",
+        "wtelegramKey":  "WEBPAGE_CURL_FAILED",
+        "statusCode":  400,
+        "descriptionEn":  "Failure while fetching the webpage with cURL.",
+        "messageZh":  "网页CURL失败，请稍后重试"
+    },
+    {
+        "officialKey":  "WEBPAGE_MEDIA_EMPTY",
+        "wtelegramKey":  "WEBPAGE_MEDIA_EMPTY",
+        "statusCode":  400,
+        "descriptionEn":  "Webpage media empty.",
+        "messageZh":  "请填写网页媒体"
+    },
+    {
+        "officialKey":  "WEBPAGE_NOT_FOUND",
+        "wtelegramKey":  "WEBPAGE_NOT_FOUND",
+        "statusCode":  400,
+        "descriptionEn":  "A preview for the specified webpage `url` could not be generated.",
+        "messageZh":  "未找到网页"
+    },
+    {
+        "officialKey":  "WEBPAGE_URL_INVALID",
+        "wtelegramKey":  "WEBPAGE_URL_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified webpage `url` is invalid.",
+        "messageZh":  "网页链接无效，请检查后重试"
+    },
+    {
+        "officialKey":  "WEBPUSH_AUTH_INVALID",
+        "wtelegramKey":  "WEBPUSH_AUTH_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified web push authentication secret is invalid.",
+        "messageZh":  "WEBPUSH认证无效，请检查后重试"
+    },
+    {
+        "officialKey":  "WEBPUSH_KEY_INVALID",
+        "wtelegramKey":  "WEBPUSH_KEY_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified web push elliptic curve Diffie-Hellman public key is invalid.",
+        "messageZh":  "WEBPUSH密钥无效，请检查后重试"
+    },
+    {
+        "officialKey":  "WEBPUSH_TOKEN_INVALID",
+        "wtelegramKey":  "WEBPUSH_TOKEN_INVALID",
+        "statusCode":  400,
+        "descriptionEn":  "The specified web push token is invalid.",
+        "messageZh":  "WEBPUSH令牌无效，请检查后重试"
+    },
+    {
+        "officialKey":  "YOU_BLOCKED_USER",
+        "wtelegramKey":  "YOU_BLOCKED_USER",
+        "statusCode":  400,
+        "descriptionEn":  "You blocked this user.",
+        "messageZh":  "你已屏蔽该用户"
+    },
+    {
+        "officialKey":  "YOUR_PRIVACY_RESTRICTED",
+        "wtelegramKey":  "YOUR_PRIVACY_RESTRICTED",
+        "statusCode":  403,
+        "descriptionEn":  "You cannot fetch the read date of this message because you have disallowed other users to do so for *your* messages; to fix, allow other users to see *your* exact last online date OR purchase a [Telegram Premium](https://core.telegram.org/api/premium) subscription.",
+        "messageZh":  "YOUR隐私已被限制"
+    }
+]

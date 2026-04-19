@@ -1,4 +1,4 @@
-﻿namespace TelegramMonitor;
+namespace TelegramMonitor;
 
 public static class SqlSugarSetup
 {
@@ -7,9 +7,7 @@ public static class SqlSugarSetup
         var config = App.GetConfig<DbConnectionOptions>("DbConnection");
 
         if (!Enum.TryParse<DbType>(config.DbType, true, out var dbType))
-        {
             throw new InvalidOperationException($"无效的数据库类型: {config.DbType}");
-        }
 
         var sqlSugar = new SqlSugarScope(
             new ConnectionConfig
@@ -18,14 +16,14 @@ public static class SqlSugarSetup
                 ConnectionString = config.ConnectionString,
                 IsAutoCloseConnection = true
             },
-            db => { }
-        );
+            db => { });
 
         services.AddSingleton<ISqlSugarClient>(sqlSugar);
         services.AddScoped<SqlSugarScope>(s => sqlSugar);
 
         InitializeDatabase(sqlSugar);
-        services.AddSingleton<SystemCacheServices>();
+        services.AddSingleton<IKeywordRepository, KeywordRepository>();
+        services.AddSingleton<IKeywordService, KeywordService>();
     }
 
     private static void InitializeDatabase(ISqlSugarClient db)
@@ -33,16 +31,20 @@ public static class SqlSugarSetup
         db.DbMaintenance.CreateDatabase();
 
         InitializeTable<KeywordConfig>(db);
+        InitializeTable<TelegramAccount>(db);
+        InitializeTable<TelegramMessageRecord>(db);
+        InitializeTable<BotNotifyTarget>(db);
     }
 
     private static void InitializeTable<T>(ISqlSugarClient db) where T : class, new()
     {
-        string tableName = db.EntityMaintenance.GetEntityInfo<T>().DbTableName;
+        var tableName = db.EntityMaintenance.GetEntityInfo<T>().DbTableName;
+        var existed = db.DbMaintenance.IsAnyTable(tableName);
 
-        if (!db.DbMaintenance.IsAnyTable(tableName))
-        {
-            db.CodeFirst.InitTables<T>();
-            Log.Information($"表 {tableName} 已创建");
-        }
+        db.CodeFirst.InitTables<T>();
+
+        Log.Information(existed
+            ? $"表 {tableName} 已同步"
+            : $"表 {tableName} 已创建");
     }
 }

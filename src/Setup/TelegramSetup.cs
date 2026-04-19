@@ -7,8 +7,8 @@ public static class TelegramSetup
         var logDirectory = Path.Combine(AppContext.BaseDirectory, "logs");
         Directory.CreateDirectory(logDirectory);
 
-        if (!Directory.Exists(TelegramMonitorConstants.SessionPath))
-            Directory.CreateDirectory(TelegramMonitorConstants.SessionPath);
+        var options = App.GetConfig<TelegramOptions>("Telegram") ?? new TelegramOptions();
+        Directory.CreateDirectory(Path.GetFullPath(options.SessionsPath));
 
         var logLock = new object();
         DateTime currentDate = DateTime.Today;
@@ -30,8 +30,14 @@ public static class TelegramSetup
             }
         };
 
-        services.AddSingleton<TelegramClientManager>();
-
+        services.AddSingleton<ITelegramAccountRepository, TelegramAccountRepository>();
+        services.AddSingleton<ITelegramMessageArchiveService, TelegramMessageArchiveService>();
+        services.AddSingleton<IBotNotifyTargetRepository, BotNotifyTargetRepository>();
+        services.AddSingleton<BotNotifyChannel>();
+        services.AddSingleton<IBotService, BotService>();
+        services.AddSingleton<ITelegramAccountRuntimeHub, TelegramAccountRuntimeHub>();
+        services.AddHostedService<TelegramRuntimeBootstrapHostedService>();
+        services.AddHostedService<BotCallbackHostedService>();
         return services;
 
         static StreamWriter CreateWriterForDate(DateTime date)

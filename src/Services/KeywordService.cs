@@ -1,41 +1,86 @@
 namespace TelegramMonitor;
 
-public class KeywordService : IDynamicApiController, ITransient
+public class KeywordService : IKeywordService
 {
-    private readonly SystemCacheServices _cache;
+    private readonly IKeywordRepository _keywordRepository;
 
-    public KeywordService(SystemCacheServices cache) => _cache = cache;
-
-    [ApiDescriptionSettings(Name = "List", Description = "关键词列表", Order = 10)]
-    [HttpGet, DisplayName("关键词列表")]
-    public async Task<IReadOnlyList<KeywordConfig>> ListAsync()
-        => await _cache.GetKeywordsAsync();
-
-    [ApiDescriptionSettings(Name = "Add", Description = "添加关键词", Order = 8)]
-    [HttpPost, DisplayName("添加关键词")]
-    public async Task AddAsync([FromBody] KeywordConfig keyword)
-        => await _cache.AddKeywordsAsync(keyword);
-
-    [ApiDescriptionSettings(Name = "BatchAdd", Description = "批量添加关键词", Order = 7)]
-    [HttpPost, DisplayName("批量添加关键词")]
-    public async Task BatchAddAsync([FromBody] List<KeywordConfig> keywords)
-        => await _cache.BatchAddKeywordsAsync(keywords);
-
-    [ApiDescriptionSettings(Name = "Update", Description = "更新关键词", Order = 6)]
-    [HttpPut, DisplayName("更新关键词")]
-    public async Task UpdateAsync([FromBody] KeywordConfig keyword)
-        => await _cache.UpdateKeywordsAsync(keyword);
-
-    [ApiDescriptionSettings(Name = "Delete", Description = "删除关键词", Order = 5)]
-    [HttpDelete, DisplayName("删除关键词")]
-    public async Task DeleteAsync(int id)
-        => await _cache.DeleteKeywordsAsync(id);
-
-    [ApiDescriptionSettings(Name = "BatchDelete", Description = "批量删除关键词", Order = 4)]
-    [HttpDelete, DisplayName("批量删除关键词")]
-    public async Task BatchDeleteAsync([FromBody] IEnumerable<int> ids)
+    public KeywordService(IKeywordRepository keywordRepository)
     {
-        var list = ids.Select(i => i).ToList();
-        await _cache.BatchDeleteKeywordsAsync(list);
+        _keywordRepository = keywordRepository;
     }
+
+    public async Task<IReadOnlyList<KeywordRuleDto>> ListAsync(int? accountId = null)
+    {
+        var entities = await _keywordRepository.ListAsync(accountId);
+        return entities.Select(ToDto).ToList();
+    }
+
+    public async Task AddAsync(KeywordRuleUpsertRequest request) =>
+        await _keywordRepository.AddAsync(ToEntity(request));
+
+    public async Task BatchAddAsync(List<KeywordRuleUpsertRequest> requests)
+    {
+        if (requests == null || requests.Count == 0)
+            throw Oops.Oh("关键词规则不能为空");
+
+        var entities = requests.Select(ToEntity).ToList();
+        await _keywordRepository.BatchAddAsync(entities);
+    }
+
+    public async Task UpdateAsync(KeywordRuleUpsertRequest request)
+    {
+        if (request.Id <= 0)
+            throw Oops.Oh("关键词规则 ID 无效");
+
+        await _keywordRepository.UpdateAsync(ToEntity(request));
+    }
+
+    public Task DeleteAsync(int id) =>
+        _keywordRepository.DeleteAsync(id);
+
+    public Task BatchDeleteAsync(IEnumerable<int> ids) =>
+        _keywordRepository.BatchDeleteAsync(ids);
+
+    private static KeywordConfig ToEntity(KeywordRuleUpsertRequest request)
+    {
+        if (request == null)
+            throw Oops.Oh("关键词规则不能为空");
+
+        return new KeywordConfig
+        {
+            Id = request.Id,
+            AccountId = request.AccountId,
+            RuleName = request.RuleName?.Trim(),
+            KeywordPattern = KeywordPatternBuilder.BuildTextPattern(request.KeywordValue, request.MatchMode),
+            MatchMode = request.MatchMode,
+            IsMatchUser = request.IsMatchUser,
+            UserPattern = request.IsMatchUser
+                ? KeywordPatternBuilder.BuildUserPattern(request.UserValue ?? string.Empty)
+                : null,
+            KeywordAction = request.KeywordAction,
+            IsCaseSensitive = request.IsCaseSensitive,
+            IsEnabled = request.IsEnabled,
+            Priority = request.Priority,
+            Remark = request.Remark?.Trim()
+        };
+    }
+
+    private static KeywordRuleDto ToDto(KeywordConfig entity) =>
+        new()
+        {
+            Id = entity.Id,
+            AccountId = entity.AccountId,
+            RuleName = entity.RuleName,
+            KeywordPattern = entity.KeywordPattern,
+            MatchMode = entity.MatchMode,
+            IsMatchUser = entity.IsMatchUser,
+            UserPattern = entity.UserPattern,
+            KeywordAction = entity.KeywordAction,
+            IsCaseSensitive = entity.IsCaseSensitive,
+            IsEnabled = entity.IsEnabled,
+            Priority = entity.Priority,
+            Remark = entity.Remark,
+            CreatedAt = entity.CreatedAt,
+            UpdatedAt = entity.UpdatedAt
+        };
 }

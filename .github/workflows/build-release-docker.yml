@@ -1,4 +1,4 @@
-name: Build & Release + Docker
+name: Build, Release and Docker
 
 on:
   push:
@@ -8,13 +8,14 @@ on:
       - '**.md'
       - '.gitignore'
       - '.editorconfig'
+  workflow_dispatch:
 
 permissions:
   contents: write
   packages: write
 
 env:
-  DOTNET_VERSION: '9.0.x'
+  DOTNET_VERSION: '10.0.x'
   CONFIGURATION: Release
   PROJECT_PATH: 'src/TelegramMonitor.csproj'
   IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/telegrammonitor
@@ -50,16 +51,13 @@ jobs:
     strategy:
       matrix:
         include:
-          
-          - { name: linux-x64,      rid: linux-x64,   arch: amd64, artifact: TelegramMonitor-linux-x64.tar.gz,  pack: "tar -czf", docker: true }
-          - { name: linux-arm64,    rid: linux-arm64, arch: arm64, artifact: TelegramMonitor-linux-arm64.tar.gz,pack: "tar -czf", docker: true }
-          
-          - { name: osx-x64,        rid: osx-x64,     artifact: TelegramMonitor-osx-x64.zip,       pack: "zip -r -q", docker: false }
-          - { name: osx-arm64,      rid: osx-arm64,   artifact: TelegramMonitor-osx-arm64.zip,     pack: "zip -r -q", docker: false }
-          
-          - { name: windows-x86,    rid: win-x86,     artifact: TelegramMonitor-windows-x86.zip,   pack: "zip -r -q", docker: false }
-          - { name: windows-x64,    rid: win-x64,     artifact: TelegramMonitor-windows-x64.zip,   pack: "zip -r -q", docker: false }
-          - { name: windows-arm64,  rid: win-arm64,   artifact: TelegramMonitor-windows-arm64.zip,pack: "zip -r -q", docker: false }
+          - { name: linux-x64, rid: linux-x64, artifact: TelegramMonitor-linux-x64.tar.gz }
+          - { name: linux-arm64, rid: linux-arm64, artifact: TelegramMonitor-linux-arm64.tar.gz }
+          - { name: osx-x64, rid: osx-x64, artifact: TelegramMonitor-osx-x64.zip }
+          - { name: osx-arm64, rid: osx-arm64, artifact: TelegramMonitor-osx-arm64.zip }
+          - { name: windows-x86, rid: win-x86, artifact: TelegramMonitor-windows-x86.zip }
+          - { name: windows-x64, rid: win-x64, artifact: TelegramMonitor-windows-x64.zip }
+          - { name: windows-arm64, rid: win-arm64, artifact: TelegramMonitor-windows-arm64.zip }
     steps:
       - uses: actions/checkout@v4
         with:
@@ -68,16 +66,26 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
       - name: Publish
+        shell: bash
         run: |
           dotnet publish "${{ env.PROJECT_PATH }}" \
             --configuration "$CONFIGURATION" \
-            -r "${{ matrix.rid }}" \
+            --runtime "${{ matrix.rid }}" \
             --self-contained true \
             -p:PublishSingleFile=true \
             -o "out/${{ matrix.rid }}"
+
           find "out/${{ matrix.rid }}" -type f \( -name '*.pdb' -o -name '*.xml' \) -delete
+
           cd "out/${{ matrix.rid }}"
-          ${{ matrix.pack }} "../${{ matrix.artifact }}" .
+          case "${{ matrix.artifact }}" in
+            *.tar.gz)
+              tar -czf "../${{ matrix.artifact }}" .
+              ;;
+            *.zip)
+              zip -r -q "../${{ matrix.artifact }}" .
+              ;;
+          esac
           cd ../..
       - uses: actions/upload-artifact@v4
         with:
@@ -103,12 +111,11 @@ jobs:
           name: version
           path: .
       - name: Prepare binaries
+        shell: bash
         run: |
-          
           tar -xzf out/linux-amd64/TelegramMonitor-linux-x64.tar.gz -C out/linux-amd64 --strip-components=1
           chmod +x out/linux-amd64/TelegramMonitor
-          
-          
+
           tar -xzf out/linux-arm64/TelegramMonitor-linux-arm64.tar.gz -C out/linux-arm64 --strip-components=1
           chmod +x out/linux-arm64/TelegramMonitor
       - uses: docker/setup-qemu-action@v3
@@ -119,12 +126,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - id: ver
+        shell: bash
         run: echo "VERSION=$(cat version.txt)" >> "$GITHUB_OUTPUT"
       - name: Build and push multi-platform image
+        shell: bash
         run: |
           IMAGE_NAME_LC=$(echo "$IMAGE_NAME" | tr '[:upper:]' '[:lower:]')
-          
-          
+
           docker buildx build \
             --platform linux/amd64,linux/arm64 \
             --build-arg BIN_NAME=TelegramMonitor \
@@ -134,14 +142,12 @@ jobs:
             --provenance=false \
             --sbom=false \
             --push \
-            -t $IMAGE_NAME_LC:latest \
-            -t $IMAGE_NAME_LC:${{ steps.ver.outputs.VERSION }} \
+            -t "$IMAGE_NAME_LC:latest" \
+            -t "$IMAGE_NAME_LC:${{ steps.ver.outputs.VERSION }}" \
             .
-          
-          
-          echo "=== Verifying multi-platform manifest ==="
-          docker buildx imagetools inspect $IMAGE_NAME_LC:latest
-          docker buildx imagetools inspect $IMAGE_NAME_LC:${{ steps.ver.outputs.VERSION }}
+
+          docker buildx imagetools inspect "$IMAGE_NAME_LC:latest"
+          docker buildx imagetools inspect "$IMAGE_NAME_LC:${{ steps.ver.outputs.VERSION }}"
 
   release:
     if: github.repository == 'Riniba/TelegramMonitor'
@@ -153,8 +159,9 @@ jobs:
         with:
           path: artifacts
       - id: meta
+        shell: bash
         run: |
-          echo "DATETIME=$(TZ='Asia/Shanghai' date +'%Y年%m月%d日 %H:%M:%S')" >> "$GITHUB_OUTPUT"
+          echo "DATETIME=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S CST')" >> "$GITHUB_OUTPUT"
           echo "COMMIT_MSG=$(git log -1 --pretty=format:'%s')" >> "$GITHUB_OUTPUT"
       - uses: softprops/action-gh-release@v1
         env:
@@ -163,28 +170,33 @@ jobs:
           tag_name: ${{ needs.prepare.outputs.VERSION }}
           name: "Release ${{ needs.prepare.outputs.VERSION }}"
           body: |
-            **发布时间：** ${{ steps.meta.outputs.DATETIME }}  
-            **发布者：** ${{ github.actor }}
+            Release date: `${{ steps.meta.outputs.DATETIME }}`
+            Published by: `${{ github.actor }}`
 
-            **更新内容**  
-            ${{ steps.meta.outputs.COMMIT_MSG }}
+            Latest commit:
+            `${{ steps.meta.outputs.COMMIT_MSG }}`
 
-            Windows (x64 / x86 / ARM64)  
-            Linux (x64 / ARM64)  
-            macOS (Intel / Apple Silicon)  
+            Supported platforms:
+            - Windows (`x64` / `x86` / `ARM64`)
+            - Linux (`x64` / `ARM64`)
+            - macOS (`Intel` / `Apple Silicon`)
 
-            Windows 用户请下载对应系统架构的 zip 文件  
-            • 64 位系统：`TelegramMonitor-windows-x64.zip`  
-            • 32 位系统：`TelegramMonitor-windows-x86.zip`  
-            • ARM64 系统：`TelegramMonitor-windows-arm64.zip`  
+            Docker images:
+            - `${{ needs.prepare.outputs.IMAGE_NAME_LC }}:latest`
+            - `${{ needs.prepare.outputs.IMAGE_NAME_LC }}:${{ needs.prepare.outputs.VERSION }}`
 
-            Linux 用户请下载对应架构的 tar.gz 文件  
-            • x64 架构：`TelegramMonitor-linux-x64.tar.gz`  
-            • ARM64 架构：`TelegramMonitor-linux-arm64.tar.gz`  
+            Documentation:
+            - README: https://github.com/${{ github.repository }}/blob/main/README.md
+            - Wiki: https://github.com/${{ github.repository }}/wiki
 
-            macOS 用户请下载对应架构的 zip 文件  
-            • Intel 芯片：`TelegramMonitor-osx-x64.zip`  
-            • Apple Silicon：`TelegramMonitor-osx-arm64.zip`
+            Release assets:
+            - `TelegramMonitor-windows-x64.zip`
+            - `TelegramMonitor-windows-x86.zip`
+            - `TelegramMonitor-windows-arm64.zip`
+            - `TelegramMonitor-linux-x64.tar.gz`
+            - `TelegramMonitor-linux-arm64.tar.gz`
+            - `TelegramMonitor-osx-x64.zip`
+            - `TelegramMonitor-osx-arm64.zip`
           files: |
             artifacts/**/*.zip
             artifacts/**/*.tar.gz

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bot 通知 - TelegramMonitor</title>
+  <link rel="stylesheet" href="/assets/panel.css?v=2" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">TelegramMonitor</div>
+      <nav class="nav">
+        <a class="nav-link" data-page="accounts" href="/dashboard.html">账号管理</a>
+        <a class="nav-link" data-page="messages" href="/messages.html">消息查询</a>
+        <a class="nav-link" data-page="keywords" href="/keywords.html">关键词设置</a>
+        <a class="nav-link" data-page="bot" href="/bot.html">Bot 通知</a>
+      </nav>
+      <div class="toolbar">
+        <span id="currentUser" class="muted small"></span>
+        <button id="btnLogout" class="btn danger small">退出登录</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Bot 状态 -->
+    <section class="card">
+      <h2>Bot 状态</h2>
+      <div class="inline-badges">
+        <span id="badgeEnabled" class="badge">-</span>
+        <span id="badgeConnected" class="badge">-</span>
+        <span id="badgeBotName" class="badge">-</span>
+      </div>
+      <button id="btnRefreshStatus" class="btn small" style="margin-top:8px;">刷新状态</button>
+    </section>
+
+    <!-- 添加发送目标 -->
+    <section class="card">
+      <h2>添加发送目标</h2>
+      <p>输入 @用户名 或 Chat ID（数字），Bot 需已加入该会话并拥有发消息权限。</p>
+      <div class="row three">
+        <input id="inputChatId" placeholder="@用户名 或 Chat ID" type="text" />
+        <input id="inputRemark" placeholder="备注（可选）" />
+        <button id="btnAddTarget" class="btn">添加目标</button>
+      </div>
+      <p id="addStatus" class="status"></p>
+    </section>
+
+    <!-- 发送目标列表 -->
+    <section class="card">
+      <h2>发送目标列表</h2>
+      <div class="table-wrap">
+        <table id="targetTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Chat ID</th>
+              <th>标题</th>
+              <th>用户名</th>
+              <th>类型</th>
+              <th>备注</th>
+              <th>状态</th>
+              <th>创建时间</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p id="emptyHint" class="muted" style="display:none;">暂无发送目标</p>
+    </section>
+  </main>
+
+  <script src="/assets/common.js?v=2"></script>
+  <script>
+    (async function () {
+      const profile = await tm.ensureAuth();
+      tm.setCurrentNav("bot");
+      tm.bindLogoutButton();
+      tm.fillCurrentUser(profile);
+
+      await refreshStatus();
+      await loadTargets();
+
+      document.getElementById("btnRefreshStatus").addEventListener("click", refreshStatus);
+      document.getElementById("btnAddTarget").addEventListener("click", addTarget);
+    })();
+
+    async function refreshStatus() {
+      try {
+        const s = await tm.request("/api/bot/status");
+        const enabled = tm.read(s, "enabled");
+        const botCount = tm.read(s, "botCount") || 0;
+        const connectedCount = tm.read(s, "connectedCount") || 0;
+        const botUsernames = tm.read(s, "botUsernames") || [];
+
+        const be = document.getElementById("badgeEnabled");
+        be.textContent = enabled ? "已启用" : "未启用";
+        be.className = "badge " + (enabled ? "ok" : "err");
+
+        const bc = document.getElementById("badgeConnected");
+        bc.textContent = connectedCount > 0 ? `已连接 ${connectedCount}/${botCount}` : "未连接";
+        bc.className = "badge " + (connectedCount > 0 ? "ok" : "err");
+
+        const bn = document.getElementById("badgeBotName");
+        bn.textContent = botUsernames.length > 0 ? botUsernames.map(u => "@" + u).join(", ") : "-";
+        bn.className = "badge";
+      } catch (e) {
+        tm.setStatus(document.getElementById("badgeEnabled"), "获取状态失败: " + e.message, false);
+      }
+    }
+
+    async function loadTargets() {
+      try {
+        const targets = await tm.request("/api/bot/targets");
+        renderTargets(targets || []);
+      } catch (e) {
+        tm.setStatus(document.getElementById("addStatus"), "加载失败: " + e.message, false);
+      }
+    }
+
+    function renderTargets(targets) {
+      const tbody = document.querySelector("#targetTable tbody");
+      const hint = document.getElementById("emptyHint");
+      tbody.innerHTML = "";
+
+      if (!targets.length) {
+        hint.style.display = "";
+        return;
+      }
+      hint.style.display = "none";
+
+      for (const t of targets) {
+        const id = tm.read(t, "id");
+        const chatId = tm.read(t, "chatId");
+        const title = tm.read(t, "chatTitle") || "-";
+        const username = tm.read(t, "chatUsername");
+        const chatType = tm.read(t, "chatType") || "-";
+        const remark = tm.read(t, "remark") || "-";
+        const enabled = tm.read(t, "isEnabled");
+        const createdAt = tm.read(t, "createdAt");
+
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${tm.esc(id)}</td>
+          <td>${tm.esc(chatId)}</td>
+          <td>${tm.esc(title)}</td>
+          <td>${username ? "@" + tm.esc(username) : "-"}</td>
+          <td>${tm.esc(chatType)}</td>
+          <td>${tm.esc(remark)}</td>
+          <td><span class="badge ${enabled ? "ok" : "err"}">${enabled ? "启用" : "禁用"}</span></td>
+          <td>${tm.formatDateTime(createdAt)}</td>
+          <td>
+            <button class="btn small ${enabled ? "secondary" : ""}" onclick="toggleTarget(${id}, ${!enabled})">${enabled ? "禁用" : "启用"}</button>
+            <button class="btn small danger" onclick="deleteTarget(${id})">删除</button>
+          </td>`;
+        tbody.appendChild(tr);
+      }
+    }
+
+    async function addTarget() {
+      const chatIdInput = document.getElementById("inputChatId");
+      const remarkInput = document.getElementById("inputRemark");
+      const btn = document.getElementById("btnAddTarget");
+      const status = document.getElementById("addStatus");
+
+      const chatId = chatIdInput.value.trim();
+      if (!chatId) {
+        tm.setStatus(status, "请输入 @用户名 或 Chat ID", false);
+        return;
+      }
+
+      btn.disabled = true;
+      try {
+        tm.setStatus(status, "正在验证并添加（需检查所有 Bot 权限，请耐心等待）...", true);
+        await tm.request("/api/bot/targets", {
+          method: "POST",
+          body: JSON.stringify({ chatIdentifier: chatId, remark: remarkInput.value.trim() || null })
+        });
+        chatIdInput.value = "";
+        remarkInput.value = "";
+        tm.setStatus(status, "添加成功", true);
+        await loadTargets();
+      } catch (e) {
+        tm.setStatus(status, e.message, false);
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    async function toggleTarget(id, enabled) {
+      try {
+        await tm.request(`/api/bot/targets/${id}/toggle?enabled=${enabled}`, { method: "PUT" });
+        await loadTargets();
+      } catch (e) {
+        alert("操作失败: " + e.message);
+      }
+    }
+
+    async function deleteTarget(id) {
+      if (!confirm("确认删除此发送目标？")) return;
+      try {
+        await tm.request(`/api/bot/targets/${id}`, { method: "DELETE" });
+        await loadTargets();
+      } catch (e) {
+        alert("删除失败: " + e.message);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>消息查询 - TelegramMonitor</title>
+  <link rel="stylesheet" href="/assets/panel.css?v=2" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">TelegramMonitor</div>
+      <nav class="nav">
+        <a class="nav-link" data-page="accounts" href="/dashboard.html">账号管理</a>
+        <a class="nav-link" data-page="messages" href="/messages.html">消息查询</a>
+        <a class="nav-link" data-page="keywords" href="/keywords.html">关键词设置</a>
+        <a class="nav-link" data-page="bot" href="/bot.html">Bot 通知</a>
+      </nav>
+      <div class="toolbar">
+        <span id="currentUser" class="muted small"></span>
+        <button id="btnLogout" class="btn danger small">退出登录</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>消息查询</h2>
+      <p>按账号筛选已入库消息。支持关键词搜索与分页。</p>
+
+      <div class="row three">
+        <select id="accountId"></select>
+        <input id="keyword" placeholder="关键词（可选）" />
+        <button id="btnSearch" class="btn">查询</button>
+      </div>
+
+      <div class="row three" style="margin-top:8px;">
+        <select id="filterOutgoing">
+          <option value="">发送方向：全部</option>
+          <option value="true">仅自己发出</option>
+          <option value="false">仅收到的</option>
+        </select>
+        <select id="filterEdited">
+          <option value="">编辑状态：全部</option>
+          <option value="true">仅编辑过的</option>
+          <option value="false">仅原始消息</option>
+        </select>
+        <select id="filterChannelPost">
+          <option value="">消息来源：全部</option>
+          <option value="true">仅频道帖子</option>
+          <option value="false">排除频道帖子</option>
+        </select>
+      </div>
+
+      <div class="row three" style="margin-top:8px;">
+        <select id="pageSize">
+          <option value="20">每页 20 条</option>
+          <option value="50" selected>每页 50 条</option>
+          <option value="100">每页 100 条</option>
+        </select>
+        <div class="toolbar">
+          <button id="btnPrev" class="btn ghost">上一页</button>
+          <button id="btnNext" class="btn ghost">下一页</button>
+        </div>
+        <div id="pageInfo" class="muted small" style="align-self:center;">第 1 页</div>
+      </div>
+
+      <div id="queryStatus" class="status"></div>
+    </section>
+
+    <section class="card" style="margin-top:12px;">
+      <div class="meta-row">
+        <h2 style="margin:0;">消息列表</h2>
+        <span id="totalInfo" class="muted small">总计 0 条</span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>账号ID</th>
+              <th>会话</th>
+              <th>发送者</th>
+              <th>文本</th>
+              <th>发出</th>
+              <th>编辑</th>
+              <th>频道</th>
+              <th>消息时间</th>
+              <th>入库时间</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="messagesTbody">
+            <tr><td colspan="11">暂无数据</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="divider"></div>
+      <div class="small muted">消息详情（原始 JSON 快照）</div>
+      <pre id="detailBox" class="code-box">{}</pre>
+    </section>
+  </main>
+
+  <script src="/assets/common.js?v=2"></script>
+  <script>
+    const accountId = document.getElementById("accountId");
+    const keyword = document.getElementById("keyword");
+    const pageSize = document.getElementById("pageSize");
+    const pageInfo = document.getElementById("pageInfo");
+    const totalInfo = document.getElementById("totalInfo");
+    const queryStatus = document.getElementById("queryStatus");
+    const messagesTbody = document.getElementById("messagesTbody");
+    const detailBox = document.getElementById("detailBox");
+    const filterOutgoing = document.getElementById("filterOutgoing");
+    const filterEdited = document.getElementById("filterEdited");
+    const filterChannelPost = document.getElementById("filterChannelPost");
+    const btnPrev = document.getElementById("btnPrev");
+    const btnNext = document.getElementById("btnNext");
+
+    let accountRows = [];
+    let currentPage = 1;
+    let currentTotal = 0;
+    let currentItems = [];
+
+    function getAccountName(id) {
+      const account = accountRows.find(item => tm.toInt(tm.read(item, "id"), 0) === Number(id));
+      if (!account) return "-";
+      return tm.asText(tm.read(account, "displayName"), tm.read(account, "phone") || "-");
+    }
+
+    function renderAccountOptions(rows) {
+      accountRows = Array.isArray(rows) ? rows : [];
+      const options = [
+        `<option value="">全部账号</option>`,
+        ...accountRows.map(row => {
+          const id = tm.toInt(tm.read(row, "id"), 0);
+          const phone = tm.asText(tm.read(row, "phone"), "-");
+          const username = tm.read(row, "username");
+          const label = username ? `${id} - ${phone} (@${username})` : `${id} - ${phone}`;
+          return `<option value="${id}">${tm.esc(label)}</option>`;
+        })
+      ];
+      accountId.innerHTML = options.join("");
+    }
+
+    function renderMessages(result) {
+      currentItems = Array.isArray(tm.read(result, "items")) ? tm.read(result, "items") : [];
+      currentTotal = tm.toInt(tm.read(result, "total"), 0);
+      currentPage = tm.toInt(tm.read(result, "page"), 1);
+      const size = tm.toInt(tm.read(result, "pageSize"), 50);
+
+      totalInfo.textContent = `总计 ${currentTotal} 条`;
+      pageInfo.textContent = `第 ${currentPage} 页 · 每页 ${size} 条`;
+
+      if (currentItems.length === 0) {
+        messagesTbody.innerHTML = "<tr><td colspan='11'>暂无数据</td></tr>";
+      } else {
+        messagesTbody.innerHTML = currentItems.map(item => {
+          const id = tm.toInt(tm.read(item, "id"), 0);
+          const accId = tm.toInt(tm.read(item, "accountId"), 0);
+          const chatLabel = `${tm.asText(tm.read(item, "chatTitle"))} (${tm.asText(tm.read(item, "chatId"))})`;
+          const senderLabel = `${tm.asText(tm.read(item, "senderTitle"))} (${tm.asText(tm.read(item, "senderId"))})`;
+
+          return `
+            <tr>
+              <td>${tm.esc(id)}</td>
+              <td>${tm.esc(accId)}<br><span class="small muted">${tm.esc(getAccountName(accId))}</span></td>
+              <td>${tm.esc(chatLabel)}</td>
+              <td>${tm.esc(senderLabel)}</td>
+              <td title="${tm.esc(tm.asText(tm.read(item, "text"), ""))}">${tm.esc(tm.shorten(tm.read(item, "text"), 60) || "-")}</td>
+              <td>${tm.esc(tm.yesNo(!!tm.read(item, "isOutgoing")))}</td>
+              <td>${tm.esc(tm.yesNo(!!tm.read(item, "isEdited")))}</td>
+              <td>${tm.esc(tm.yesNo(!!tm.read(item, "isChannelPost")))}</td>
+              <td>${tm.esc(tm.formatDateTime(tm.read(item, "messageDate")))}</td>
+              <td>${tm.esc(tm.formatDateTime(tm.read(item, "receivedAt")))}</td>
+              <td><button class="btn small ghost" data-id="${id}" data-action="detail">详情</button></td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      btnPrev.disabled = currentPage <= 1;
+      btnNext.disabled = currentPage * size >= currentTotal;
+    }
+
+    function findItemById(id) {
+      return currentItems.find(item => tm.toInt(tm.read(item, "id"), 0) === Number(id));
+    }
+
+    async function query(page) {
+      const params = new URLSearchParams();
+      const accountValue = accountId.value.trim();
+      const keywordValue = keyword.value.trim();
+      const size = pageSize.value.trim() || "50";
+
+      if (accountValue) params.set("accountId", accountValue);
+      if (keywordValue) params.set("keyword", keywordValue);
+      if (filterOutgoing.value) params.set("isOutgoing", filterOutgoing.value);
+      if (filterEdited.value) params.set("isEdited", filterEdited.value);
+      if (filterChannelPost.value) params.set("isChannelPost", filterChannelPost.value);
+      params.set("page", String(page));
+      params.set("pageSize", size);
+
+      const result = await tm.request(`/api/messages?${params.toString()}`, { method: "GET" });
+      renderMessages(result);
+      tm.setStatus(queryStatus, "查询成功", true);
+    }
+
+    document.getElementById("btnSearch").addEventListener("click", async () => {
+      try {
+        await query(1);
+      } catch (error) {
+        tm.setStatus(queryStatus, error instanceof Error ? error.message : "查询失败", false);
+      }
+    });
+
+    btnPrev.addEventListener("click", async () => {
+      if (currentPage <= 1) return;
+      try {
+        await query(currentPage - 1);
+      } catch (error) {
+        tm.setStatus(queryStatus, error instanceof Error ? error.message : "翻页失败", false);
+      }
+    });
+
+    btnNext.addEventListener("click", async () => {
+      try {
+        await query(currentPage + 1);
+      } catch (error) {
+        tm.setStatus(queryStatus, error instanceof Error ? error.message : "翻页失败", false);
+      }
+    });
+
+    pageSize.addEventListener("change", async () => {
+      try {
+        await query(1);
+      } catch (error) {
+        tm.setStatus(queryStatus, error instanceof Error ? error.message : "查询失败", false);
+      }
+    });
+
+    accountId.addEventListener("change", async () => {
+      try {
+        await query(1);
+      } catch (error) {
+        tm.setStatus(queryStatus, error instanceof Error ? error.message : "查询失败", false);
+      }
+    });
+
+    filterOutgoing.addEventListener("change", async () => {
+      try { await query(1); } catch (error) { tm.setStatus(queryStatus, error instanceof Error ? error.message : "查询失败", false); }
+    });
+    filterEdited.addEventListener("change", async () => {
+      try { await query(1); } catch (error) { tm.setStatus(queryStatus, error instanceof Error ? error.message : "查询失败", false); }
+    });
+    filterChannelPost.addEventListener("change", async () => {
+      try { await query(1); } catch (error) { tm.setStatus(queryStatus, error instanceof Error ? error.message : "查询失败", false); }
+    });
+
+    messagesTbody.addEventListener("click", event => {
+      const button = event.target.closest("button[data-action='detail']");
+      if (!button) return;
+      const id = Number(button.dataset.id || 0);
+      const row = findItemById(id);
+      if (!row) return;
+
+      const rawJson = tm.read(row, "rawJson");
+      if (rawJson && typeof rawJson === "string") {
+        detailBox.textContent = rawJson;
+      } else {
+        detailBox.textContent = JSON.stringify(row, null, 2);
+      }
+    });
+
+    (async function bootstrap() {
+      const profile = await tm.ensureAuth();
+      if (!profile) return;
+
+      tm.fillCurrentUser(profile);
+      tm.bindLogoutButton();
+      tm.setCurrentNav("messages");
+
+      try {
+        const accounts = await tm.request("/api/accounts", { method: "GET" });
+        renderAccountOptions(accounts);
+        await query(1);
+      } catch (error) {
+        tm.setStatus(queryStatus, error instanceof Error ? error.message : "初始化失败", false);
+      }
+    })();
+  </script>
+</body>
+</html>
