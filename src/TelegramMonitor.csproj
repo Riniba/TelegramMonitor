@@ -19,9 +19,9 @@
 		<DebugSymbols>false</DebugSymbols>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Furion.Extras.ObjectMapper.Mapster" Version="4.9.8.34" />
-		<PackageReference Include="Furion.Pure" Version="4.9.8.34" />
-		<PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.5" />
+		<PackageReference Include="Furion.Extras.ObjectMapper.Mapster" Version="4.9.8.46" />
+		<PackageReference Include="Furion.Pure" Version="4.9.8.46" />
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.6" />
 		<PackageReference Include="SqlSugarCore" Version="5.1.4.214" />
 		<PackageReference Include="WTelegramBot" Version="9.5.1" />
 		<PackageReference Include="WTelegramClient" Version="4.4.3" />
