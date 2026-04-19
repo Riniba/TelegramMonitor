@@ -1,0 +1,67 @@
+name: Publish Wiki
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'wiki/**'
+      - '.github/workflows/publish-wiki.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-wiki-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish-wiki:
+    if: github.repository == 'Riniba/TelegramMonitor'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Ensure wiki repository exists
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          if ! git ls-remote "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.wiki.git" >/dev/null 2>&1; then
+            echo "::error::GitHub Wiki is not initialized yet. Open the Wiki tab and create the first page manually, then rerun this workflow."
+            exit 1
+          fi
+
+      - name: Publish wiki content
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          temp_dir="$(mktemp -d)"
+          trap 'rm -rf "$temp_dir"' EXIT
+
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.wiki.git" "$temp_dir"
+
+          find "$temp_dir" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -a wiki/. "$temp_dir"/
+
+          cd "$temp_dir"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add --all
+
+          if git diff --cached --quiet; then
+            echo "No wiki changes to publish."
+            exit 0
+          fi
+
+          git commit -m "Update wiki from ${GITHUB_SHA}"
+          git push origin HEAD

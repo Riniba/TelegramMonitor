@@ -188,8 +188,8 @@ docker run -d \
 
 ## 文档
 
-- GitHub Wiki：https://github.com/Riniba/TelegramMonitor/wiki
-- 仓库内已准备新的 Wiki 源文件：[wiki/Home.md](./wiki/Home.md)
+- 在线 GitHub Wiki：https://github.com/Riniba/TelegramMonitor/wiki
+- 仓库内的 Wiki 源文件目录：[wiki/](./wiki/)
 
 ## 许可证
 
