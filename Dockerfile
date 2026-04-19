@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/runtime-deps:10.0-bookworm-slim
+FROM mcr.microsoft.com/dotnet/runtime-deps:10.0-noble
 
 WORKDIR /app
 
